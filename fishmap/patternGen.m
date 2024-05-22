@@ -1,38 +1,45 @@
 close all; clear; clc;
 
 darkLevel = 0.5;
+spacing = 16;
+width = 4;
+center = 1024.5;
 
-% patterns = double(cat(4, 1+imread("blank.png"), ...
-%     imread("diagonal.png"), ... % green
-%     imread("confetti.png"), ... % magenta
-%     imread("plaid.png"), ... % sea
-%     imread("brick.png"), ... % red
-%     imread("checkerboard.png"), ... % porp
-%     imread("bubble.png"), ... % clay
-%     imread("wave.png"), ... % cyan
-%     imread("grid.png"), ... % blue
-%     1-imread("trellis.png"), ... % other green
-%     1-imread("shingles.png"), ... % mauve
-%     1+imread("blank.png")));
+patterns =  ones(2048, 2048, 3, 12);
+blankPattern = ones(2048, 2048, 3);
 
-patternName = ["blank.png", ...
-    "forward diagonal.png", ... % sea
-    "backwards diagonal.png", ... % red
-    "vertical.png", ... % magenta
-    "horizontal.png", ... % green
-    "large grid.png", ... % porp
-    "forward diagonal.png", ... % clay
-    "backwards diagonal.png", ... % blue
-    "horizontal.png", ... % mauve
-    "diagonal cross.png", ... % cyan
-    "vertical.png", ... % dark green
-    "blank.png"];
+patternAngles = [{[]}, ...
+    {45}, ... % sea
+    {-45}, ... % red
+    {90}, ... % magenta
+    {0}, ... % green
+    {-45}, ... % porp
+    {45}, ... % clay
+    {[0 90]}, ... % blue
+    {0}, ... % mauve
+    {[45 -45]}, ... % cyan
+    {90}, ... % dark green
+    {[]}];
 
-patterns =  zeros(2048, 2048, 3, 12);
-for iP = 1:length(patternName)
-    [X, map] = imread(patternName(iP));
-    pattern = double(ind2rgb(X, map));
-    % patternMax = max(pattern, [], 'all');
+baseLine = -2047:spacing:4096;
+% offset = center - spacing/2 - median(baseLine);
+offset = 0;
+baseLine = [repmat(center, size(baseLine)); offset+baseLine; ones(size(baseLine))];
+for iP = 1:length(patternAngles)
+    angles = patternAngles{iP};
+    pattern = blankPattern;
+    for angle = angles
+        rotMatrix = [cosd(angle) -sind(angle) -center*cosd(angle)+center*sind(angle)+center; 
+            sind(angle) cosd(angle) -center*sind(angle)-center*cosd(angle)+center];
+        centerLine = (rotMatrix*baseLine)';
+        offsetPoint = (rotMatrix*[-2048; center; 1])'-[center center];
+        pattern = insertShape(pattern,"line",[centerLine+offsetPoint, ...
+            centerLine-offsetPoint], ...
+            "LineWidth", width, "ShapeColor", 'k');
+    end
+
+    % pattern = insertShape(pattern, "circle", [center center 7.5]);
+    % figure; imshow(pattern)
     patterns(:, :, :, iP) = pattern*(1-darkLevel)+darkLevel;
 end
 
