@@ -1,5 +1,6 @@
 function mapGenerator(ms)
     load("cmap.mat", "cmap")
+    load("spots.mat", "spots")
 
     zonename = regexprep(pwd, regexprep(matlab.project.rootProject().RootFolder, '\', '\\\')+"\\fishmap\\", "");
     
@@ -21,6 +22,7 @@ function mapGenerator(ms)
     alphaLayers = zeros([size(bgimage, [1 2]) 1 length(files)-1]);
     for iI = 1:size(alphaLayers, 4)
         [~, ~, alphaLayers(:, :, :, iI)] = imread(path+files(iI+1).name);
+        
         if iI > 1 || ms.enable0
             alphaLayers(ms.legendY + (00:(lineHeight-1)) + lineSpacing*(ms.skip(iI)+iI-1), ms.legendX + (00:(lineHeight-1)), :, iI) = 255;
         end
