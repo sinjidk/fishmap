@@ -14,7 +14,7 @@ files = dir(path);
 files = files([3 end-1 (end-2):-1:4]);
 
 bgimage = imread(path+files(1).name);
-defaultimage = imread("default.00.jpg");
+defaultimage = imread("default.jpg");
 rgbLayers = zeros([size(bgimage) length(files)-1]);
 alphaLayers = zeros([size(bgimage, [1 2]) 1 length(files)-1]);
 for iI = 1:size(alphaLayers, 4)
