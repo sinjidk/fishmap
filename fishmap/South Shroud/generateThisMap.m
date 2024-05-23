@@ -1,11 +1,10 @@
-legendX = 1079;
-legendY = 1400;
-legendW = 951;
-legendBox = true;
-enable0 = true;
-specialLayer = [];
-skip = zeros(1, 8);
-highlight = false;
-zonename = regexprep(pwd, "^D:\\Documents\\MATLAB\\FishTBH\\Map\\", "");
+mapSettings.legendX = 1079;
+mapSettings.legendY = 1400;
+mapSettings.legendW = 951;
+mapSettings.legendBox = true;
+mapSettings.enable0 = true;
+mapSettings.specialLayer = [];
+mapSettings.skip = zeros(1, 8);
+mapSettings.highlight = false;
 
-run ..\mapGenerator.m
+mapGenerator(mapSettings)
