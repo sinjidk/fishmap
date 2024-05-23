@@ -32,7 +32,7 @@ function mapGenerator(ms)
         if iI > 1
             spotIndex = spots.LayerName == spot(iI);
             if any(spotIndex)
-                imwrite(alphaLayers(:, :, :, iI), matlab.project.rootProject().RootFolder+"\fishmap\spots\map"+spots.MapID(spotIndex)+"_spot"+spots.SpotID(spotIndex)+".png");
+                imwrite(alphaLayers(:, :, :, iI), matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(spotIndex)+"_spot"+spots.SpotID(spotIndex)+".png");
             else
                 error("No matching spot name to " + spot(iI));
             end
