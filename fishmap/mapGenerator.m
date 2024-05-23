@@ -1,5 +1,6 @@
 function mapGenerator(ms)
     load("cmap.mat", "cmap")
+    load("spots.mat", "spots")
 
     zonename = regexprep(pwd, regexprep(matlab.project.rootProject().RootFolder, '\', '\\\')+"\\fishmap\\", "");
     
@@ -19,8 +20,23 @@ function mapGenerator(ms)
     defaultimage = imread("default.jpg");
     rgbLayers = zeros([size(bgimage) length(files)-1]);
     alphaLayers = zeros([size(bgimage, [1 2]) 1 length(files)-1]);
-    for iI = 1:size(alphaLayers, 4)
+    spot = strings(length(files)-1, 1);
+    for iI = 1:(length(files)-1)
+        spot(iI) = regexp(files(iI+1).name, "C1,(.*),visible", "tokens");
+        spot(iI) = regexprep(spot(iI), "%0026", "&");
+        spot(iI) = regexprep(spot(iI), "%0027", "'");
+        spot(iI) = regexprep(spot(iI), "%0028", "(");
+        spot(iI) = regexprep(spot(iI), "%0029", ")");
+        spot(iI) = regexprep(spot(iI), "%002E", ".");
         [~, ~, alphaLayers(:, :, :, iI)] = imread(path+files(iI+1).name);
+        if iI > 1
+            spotIndex = spots.LayerName == spot(iI);
+            if any(spotIndex)
+                imwrite(alphaLayers(:, :, :, iI), matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(spotIndex)+"_spot"+spots.SpotID(spotIndex)+".png");
+            else
+                error("No matching spot name to " + spot(iI));
+            end
+        end
         if iI > 1 || ms.enable0
             alphaLayers(ms.legendY + (00:(lineHeight-1)) + lineSpacing*(ms.skip(iI)+iI-1), ms.legendX + (00:(lineHeight-1)), :, iI) = 255;
         end
@@ -52,20 +68,14 @@ function mapGenerator(ms)
     sumSpecial = 0;
     % http://xahlee.info/comp/unicode_circled_numbers.html
     for iF = (3 - ms.enable0):length(files)
-        spot = regexp(files(iF).name, "C1,(.*),visible", "tokens");
-        spot = regexprep(spot{1}{1}, "%0026", "&");
-        spot = regexprep(spot, "%0027", "'");
-        spot = regexprep(spot, "%0028", "(");
-        spot = regexprep(spot, "%0029", ")");
-        spot = regexprep(spot, "%002E", ".");
         if iF-1 == ms.specialLayer
             sumSpecial = sumSpecial+1;
             finalImage = insertText(finalImage, [ms.legendX + 9 + 50, ms.legendY + 25 + lineSpacing*(ms.skip(iF-1)+iF-2)], ...
-                sprintf("%s. %s", '@'+sumSpecial, spot), "FontSize", 53, ...
+                sprintf("%s. %s", '@'+sumSpecial, spot(iF-1)), "FontSize", 53, ...
                 "AnchorPoint", "LeftCenter", "BoxOpacity", 1*ms.highlight, "BoxColor", [202 182 112]/255);
         else
             finalImage = insertText(finalImage, [ms.legendX + 9 + 50, ms.legendY + 25 + lineSpacing*(ms.skip(iF-1)+iF-2)], ...
-                sprintf("%.0f. %s", iF-2-sumSpecial, spot), "FontSize", 53, ...
+                sprintf("%.0f. %s", iF-2-sumSpecial, spot(iF-1)), "FontSize", 53, ...
                 'AnchorPoint', 'LeftCenter', "BoxOpacity", 1*ms.highlight, "BoxColor", [202 182 112]/255);
         end
     end
