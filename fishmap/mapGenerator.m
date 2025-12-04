@@ -5,8 +5,10 @@ function mapGenerator(ms)
     zonename = regexprep(pwd, regexprep(matlab.project.rootProject().RootFolder, '\', '\\\')+"\\fishmap\\", "");
     
     intensity = 1;
+    intensity2 = 0.5;
     cmap = cmap/255;
     cmap = min((cmap - 0.5*(1-intensity)*[202 182 112]/255)/(intensity), 1);
+    cmapSpot = permute([0 0.3835 0.5824] - (1-intensity2)*[202 182 112]/255, [1 3 2])/intensity2;
     lineSpacing = 75;
     lineHeight = 50;
     
@@ -16,10 +18,11 @@ function mapGenerator(ms)
     files = dir(path);
     files = files([3 end-1 (end-2):-1:4]);
     
-    bgimage = imread(path+files(1).name);
-    defaultimage = imread("default.jpg");
-    rgbLayers = zeros([size(bgimage) length(files)-1]);
-    alphaLayers = zeros([size(bgimage, [1 2]) 1 length(files)-1]);
+    bgImage = imread(path+files(1).name);
+    bgImageClean = double(bgImage)/255;
+    defaultImage = imread("default.jpg");
+    rgbLayers = zeros([size(bgImage) length(files)-1]);
+    alphaLayers = zeros([size(bgImage, [1 2]) 1 length(files)-1]);
     spot = strings(length(files)-1, 1);
     for iI = 1:(length(files)-1)
         spot(iI) = regexp(files(iI+1).name, "C1,(.*),visible", "tokens");
@@ -32,7 +35,12 @@ function mapGenerator(ms)
         if iI > 1
             spotIndex = spots.LayerName == spot(iI);
             if any(spotIndex)
-                imwrite(alphaLayers(:, :, :, iI), matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(spotIndex)+"_spot"+spots.SpotID(spotIndex)+".png");
+                imwrite(alphaLayers(:, :, :, iI), matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(spotIndex)+"_spot"+spots.SpotID(spotIndex)+"_mask.png");
+
+                spotAlpha = imgaussfilt(double(alphaLayers(:, :, :, iI))/255, 0.75);
+                spotIntensity = intensity2 .* spotAlpha;
+                spotImage = (bgImageClean.*(1-spotIntensity) + cmapSpot.*spotAlpha.*spotIntensity);
+                imwrite(spotImage, matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(spotIndex)+"_spot"+spots.SpotID(spotIndex)+"_map.png");
             else
                 error("No matching spot name to " + spot(iI));
             end
@@ -45,9 +53,9 @@ function mapGenerator(ms)
         rgbLayers(:, :, 3, iI) = cmap(iI, 3)*(alphaLayers(:, :, :, iI) > 0);
         if ms.legendBox && (iI > 1 || ms.enable0)
             if iI < size(alphaLayers, 4)
-                bgimage(ms.legendY - 25 + (00:(lineSpacing+25-1)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :) = defaultimage(ms.legendY - 25 + (00:(lineSpacing-1+25)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :);
+                bgImage(ms.legendY - 25 + (00:(lineSpacing+25-1)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :) = defaultImage(ms.legendY - 25 + (00:(lineSpacing-1+25)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :);
             else
-                bgimage(ms.legendY - 25 + (00:(lineHeight+50-1)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :) = defaultimage(ms.legendY - 25 + (00:(lineHeight-1+50)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :);
+                bgImage(ms.legendY - 25 + (00:(lineHeight+50-1)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :) = defaultImage(ms.legendY - 25 + (00:(lineHeight-1+50)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :);
             end
         end
     end
@@ -56,7 +64,7 @@ function mapGenerator(ms)
     patterns(:, :, :, length(files):end) = [];
     
     intensity = intensity .* any(alphaLayers > 0, 4);
-    finalImage = double(bgimage);
+    finalImage = double(bgImage);
     finalImage = (finalImage.*(1-intensity) + sum(patterns.*rgbLayers.*double(alphaLayers).*intensity, 4))/255;
     
     if ms.legendBox
