@@ -37,9 +37,11 @@ function mapGenerator(ms)
             if any(spotIndex)
                 imwrite(alphaLayers(:, :, :, iI), matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(spotIndex)+"_spot"+spots.SpotID(spotIndex)+"_mask.png");
 
-                spotAlpha = imgaussfilt(double(alphaLayers(:, :, :, iI))/255, 0.75);
+                spotAlpha = imgaussfilt(double(alphaLayers(:, :, :, iI))/255, 1);
                 spotIntensity = intensity2 .* spotAlpha;
-                spotImage = (bgImageClean.*(1-spotIntensity) + cmapSpot.*spotAlpha.*spotIntensity);
+                spotAlpha2 = spotAlpha;
+                spotAlpha2(spotAlpha == 0) = 1;
+                spotImage = (bgImageClean.*(1-spotIntensity) + cmapSpot.*spotAlpha.*spotIntensity).*spotAlpha2;
                 imwrite(spotImage, matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(spotIndex)+"_spot"+spots.SpotID(spotIndex)+"_map.png");
             else
                 error("No matching spot name to " + spot(iI));
