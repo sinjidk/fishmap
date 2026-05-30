@@ -1,0 +1,13 @@
+Software: Paint.net
+Mapping Brush: Paintbrush, Hardness 100%, Spacing 0%, Brush size 10 for areas or 15 for points, Aliased rendering, White
+	Brush should be drawn on the coastline but not cover non-traversable walls
+
+Font: Lucida Sans
+Signature: Size 30 but scaled down 50%
+Text: Size 20, Bold
+Labels: "Black Circled Number" http://xahlee.info/comp/unicode_circled_numbers.html
+Single digit labels: Size 20, Bold
+Double digit labels: Size 32, Normal
+
+Lines/Arrows: Size 20
+Dividing Lines: Dashes

@@ -32,7 +32,7 @@ function mapGenerator(ms)
         spot(iI) = regexprep(spot(iI), "%0029", ")");
         spot(iI) = regexprep(spot(iI), "%002E", ".");
         [~, ~, alphaLayers(:, :, :, iI)] = imread(path+files(iI+1).name);
-        if iI > 1
+        if iI > 1 && (~isfield(ms, "makeAlts") || ms.makeAlts)
             spotIndex = spots.LayerName == spot(iI);
             if any(spotIndex)
                 imwrite(alphaLayers(:, :, :, iI), matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(spotIndex)+"_spot"+spots.SpotID(spotIndex)+"_mask.png");
