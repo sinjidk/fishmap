@@ -62,7 +62,7 @@ function mapGenerator(ms)
         end
     end
     
-    load("patterns.mat")
+    load("patterns.mat", "patterns")
     patterns(:, :, :, length(files):end) = [];
     
     intensity = intensity .* any(alphaLayers > 0, 4);
