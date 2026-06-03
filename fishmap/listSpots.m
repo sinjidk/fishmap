@@ -19,10 +19,11 @@ spotData.TerritoryType(any(spotData.PlaceName == [5286 5287 5288 5289 5290 5291 
 spotData.TerritoryType(any(spotData.PlaceName == [5425 5426 5427 5428 5429 5430 5431], 2)) = 1310; % Oizys
 spotData.TerritoryType(any(spotData.PlaceName == [5537 5538 5539 5540 5541 5542 5543 5544], 2)) = 1319; % Auxesia
 
-%% Remove duplicates and build info
+%% Build info
 spots = table('Size', [0, 5], 'VariableNames', ["SpotID", "MapID", "SpotName", "MapName", "LayerName"], 'VariableTypes', ["uint16", "uint16", "string", "string", "string"]);
 
 iS = 0;
+% the loop is weird and upside down because of obsolete restrictions, no longer needs to be this way but I'm too lazy to change it
 while iS < height(spotData)
     spot = spotData(end-iS, :);
     spotName = placeData.Name{spot.PlaceName == placeData.x_};
@@ -38,11 +39,6 @@ while iS < height(spotData)
         end
     end
     
-    duplicate = find(spotData.PlaceName == spot.PlaceName & ((height(spotData)-1):-1:0)'>iS);
-    if ~isempty(duplicate)
-        "Deleting duplicates of " + spotName
-        spotData(duplicate, :) = [];
-    end
     iS = iS+1;
 end
     
@@ -81,10 +77,10 @@ spots(spots.MapName == "Sinus Ardorum" & spots.MapID ~= 1031, :) = []; % Only ke
 spots(spots.MapName == "Phaenna" & spots.MapID ~= 1086, :) = []; % Only keep final version
 spots(spots.MapName == "Oizys" & spots.MapID ~= 1160, :) = []; % Only keep final version
 spots(spots.MapName == "Auxesia" & spots.MapID ~= 1266, :) = []; % Only keep final version
-spots.LayerName(spots.SpotID == 10140) = "Upper SL Float";
-spots.LayerName(spots.SpotID == 10142) = "Central SL Channel";
-spots.LayerName(spots.SpotID == 10143) = "Western SL Tributary";
-spots.LayerName(spots.SpotID == 10147) = "Lower SL Float";
+spots.LayerName(any(spots.SpotID == [10121 10139 10140], 2)) = "Upper SL Float";
+spots.LayerName(any(spots.SpotID == [10122 10133 10141 10142], 2)) = "Central SL Channel";
+spots.LayerName(any(spots.SpotID == [10123 10134 10143], 2)) = "Western SL Tributary";
+spots.LayerName(any(spots.SpotID == [10124 10135 10144 10147], 2)) = "Lower SL Float";
 
 %%
 save spots spots

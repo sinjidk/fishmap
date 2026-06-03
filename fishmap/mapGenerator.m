@@ -33,18 +33,21 @@ function mapGenerator(ms)
         spot(iI) = regexprep(spot(iI), "%002E", ".");
         [~, ~, alphaLayers(:, :, :, iI)] = imread(path+files(iI+1).name);
         if iI > 1 && (~isfield(ms, "makeAlts") || ms.makeAlts)
-            spotIndex = spots.LayerName == spot(iI);
-            if any(spotIndex)
-                imwrite(alphaLayers(:, :, :, iI), matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(spotIndex)+"_spot"+spots.SpotID(spotIndex)+"_mask.png");
+            spotIndex = find(spots.LayerName == spot(iI));
 
+            if isempty(spotIndex)
+                error("No matching spot name to " + spot(iI));
+            else
                 spotAlpha = imgaussfilt(double(alphaLayers(:, :, :, iI))/255, 1);
                 spotIntensity = intensity2 .* spotAlpha;
                 spotAlpha2 = spotAlpha;
                 spotAlpha2(spotAlpha == 0) = 1;
                 spotImage = (bgImageClean.*(1-spotIntensity) + cmapSpot.*spotAlpha.*spotIntensity).*spotAlpha2;
-                imwrite(spotImage, matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(spotIndex)+"_spot"+spots.SpotID(spotIndex)+"_map.png");
-            else
-                error("No matching spot name to " + spot(iI));
+
+                for iSpot = spotIndex'
+                    imwrite(alphaLayers(:, :, :, iI), matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(iSpot)+"_spot"+spots.SpotID(iSpot)+"_mask.png");
+                    imwrite(spotImage, matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(iSpot)+"_spot"+spots.SpotID(iSpot)+"_map.png");
+                end
             end
         end
         if iI > 1 || ms.enable0
