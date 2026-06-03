@@ -1,13 +1,19 @@
 Software: Paint.net
-Mapping Brush: Paintbrush, Hardness 100%, Spacing 0%, Brush size 10 for areas or 15 for points, Aliased rendering, White
-	Brush should be drawn on the coastline but not cover non-traversable walls
 
-Font: Lucida Sans, antialiased rendering
-Signature: Size 15
-Text: Size 20, Bold
-Labels: "Black Circled Number" http://xahlee.info/comp/unicode_circled_numbers.html
-Single digit labels: Size 20, Bold
-Double digit labels: Size 32, Normal
-
-Lines/Arrows: Size 20
-Dividing Lines: Dashes
+<Name>.jpg : In-game map.
+<Name>.pdn : First phase working file. Top layer called "Do not sense any fish"; Background layer receives in-game map; In between add layer with name to appear on map and match spot list
+	Mapping Brush: Paintbrush, Hardness 100%, Spacing 0%, Brush size 10 for areas or 15 if very small in total, Aliased rendering, White
+		Brush should be drawn on the coastline but not cover non-traversable walls
+<Name>.zip : Save all layers of <Name>.pdn as individual images and extract to folder.
+Run "Generate this map" and iterate settings
+<Name>.png : Output from script.
+<Name> Map.pdn : Second phase working file. Background receives <Name>.png; Separate bubble annotations, line/text annotations, and map modifications to individual layers.
+	Font: Lucida Sans, antialiased rendering
+	Signature: Size 15
+	Text: Size 20, Bold
+	Labels: "Black Circled Number" http://xahlee.info/comp/unicode_circled_numbers.html
+	Single digit labels: Size 20, Bold
+	Double digit labels: Size 32, Normal
+	Lines/Arrows: Size 20
+	Dividing Lines: Dashes
+<Name> Map.png : Flattened <Name> Map.png. Final output.

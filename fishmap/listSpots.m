@@ -48,7 +48,7 @@ end
     
 spots = flipud(spots);
 
-%% Make corrections
+%% Make manual corrections
 spots(spots.MapID == 209, :) = []; % No fishing indoors
 spots(spots.MapID == 180, :) = []; % No fishing indoors
 spots(spots.MapID == 105, :) = []; % No fishing indoors
@@ -72,7 +72,7 @@ spots.LayerName(spots.SpotID == 214 & spots.MapID == 555) = "The Derelicts (The 
 spots(spots.MapID == 550, :) = []; % No fishing indoors
 spots(spots.MapID == 551, :) = []; % No fishing indoors
 spots.LayerName(spots.SpotID == 236) = "The Norvrandt Slope (underground)";
-spots(spots.MapID == 604, :) = []; % Boat not in scope
+% spots(spots.MapID == 604, :) = []; % Boat not in scope
 spots.LayerName(spots.SpotID == 265) = "Wakeful Torana";
 spots(spots.MapID == 750, :) = []; % The maps are identical, I will keep current version
 spots.LayerName(spots.SpotID == 274) = "The Frozen Fissure (underground)";
@@ -81,6 +81,10 @@ spots(spots.MapName == "Sinus Ardorum" & spots.MapID ~= 1031, :) = []; % Only ke
 spots(spots.MapName == "Phaenna" & spots.MapID ~= 1086, :) = []; % Only keep final version
 spots(spots.MapName == "Oizys" & spots.MapID ~= 1160, :) = []; % Only keep final version
 spots(spots.MapName == "Auxesia" & spots.MapID ~= 1266, :) = []; % Only keep final version
+spots.LayerName(spots.SpotID == 10140) = "Upper SL Float";
+spots.LayerName(spots.SpotID == 10142) = "Central SL Channel";
+spots.LayerName(spots.SpotID == 10143) = "Western SL Tributary";
+spots.LayerName(spots.SpotID == 10147) = "Lower SL Float";
 
 %%
 save spots spots
