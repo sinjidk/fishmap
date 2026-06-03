@@ -45,8 +45,31 @@ function mapGenerator(ms)
                 spotImage = (bgImageClean.*(1-spotIntensity) + cmapSpot.*spotAlpha.*spotIntensity).*spotAlpha2;
 
                 for iSpot = spotIndex'
-                    imwrite(alphaLayers(:, :, :, iI), matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(iSpot)+"_spot"+spots.SpotID(iSpot)+"_mask.png");
-                    imwrite(spotImage, matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(iSpot)+"_spot"+spots.SpotID(iSpot)+"_map.png");
+                    maskFileName = matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(iSpot)+"_spot"+spots.SpotID(iSpot)+"_mask.png";
+                    mapFileName = matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(iSpot)+"_spot"+spots.SpotID(iSpot)+"_map.png";
+                    
+                    saveMask = true;
+                    saveMap = true;
+
+                    if exist(maskFileName, "file")
+                        prevMask = imread(maskFileName);
+                        if all(prevMask == alphaLayers(:, :, :, iI), 'all')
+                            saveMask = false;
+                        end
+                    end
+                    if exist(mapFileName, "file")
+                        prevMap = imread(mapFileName);
+                        if all(prevMap == uint8(spotImage*255), 'all')
+                            saveMap = false;
+                        end
+                    end
+
+                    if saveMask
+                        imwrite(alphaLayers(:, :, :, iI), maskFileName);
+                    end
+                    if saveMap
+                        imwrite(spotImage, mapFileName);
+                    end
                 end
             end
         end
