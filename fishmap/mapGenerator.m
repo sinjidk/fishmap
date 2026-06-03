@@ -49,7 +49,7 @@ function mapGenerator(ms)
                     mapFileName = matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(iSpot)+"_spot"+spots.SpotID(iSpot)+"_map.png";
                     
                     saveMask = true;
-                    saveMap = true;
+                    saveSpotMap = true;
 
                     if exist(maskFileName, "file")
                         prevMask = imread(maskFileName);
@@ -58,16 +58,16 @@ function mapGenerator(ms)
                         end
                     end
                     if exist(mapFileName, "file")
-                        prevMap = imread(mapFileName);
-                        if all(prevMap == uint8(spotImage*255), 'all')
-                            saveMap = false;
+                        prevSpotMap = imread(mapFileName);
+                        if all(prevSpotMap == uint8(spotImage*255), 'all')
+                            saveSpotMap = false;
                         end
                     end
 
                     if saveMask
                         imwrite(alphaLayers(:, :, :, iI), maskFileName);
                     end
-                    if saveMap
+                    if saveSpotMap
                         imwrite(spotImage, mapFileName);
                     end
                 end
@@ -116,5 +116,17 @@ function mapGenerator(ms)
         end
     end
     
-    imwrite(imresize(finalImage, 0.5), zonename+".png")
+    finalImage = imresize(finalImage, 0.5);
+    saveMap = true;
+
+    if exist(zonename+".png", "file")
+        prevMap = imread(zonename+".png");
+        if all(prevMap == uint8(finalImage*255), 'all')
+            saveMap = false;
+        end
+    end
+
+    if saveMap
+        imwrite(finalImage, zonename+".png")
+    end
 end
