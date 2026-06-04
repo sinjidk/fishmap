@@ -3,21 +3,17 @@ close all; clear; clc;
 spotData = readtable("FishingSpot.csv");
 placeData = readtable("PlaceName.csv");
 mapData = readtable("Map.csv");
+overrideData = readtable("spotOverrides.csv");
 
-%% Remove inactive spots
-spotData(spotData.PlaceName == 0, :) = [];
-spotData(spotData.Item_0_ == 0, :) = [];
-spotData(any(spotData.x_ == 147:154, 2), :) = []; % Old Diadem
-spotData(any(spotData.x_ == 10001:10016, 2), :) = []; % Old Diadem
+%% Implement overrides
+for iO = 1:height(overrideData)
+    override = overrideData(iO, :);
+    if ~override.IsCurrent || override.IsEmpty
+        spotData(spotData.x_ == override.SpotID, :) = [];
+    end
 
-%% Set undefined territories
-spotData.TerritoryType(spotData.PlaceName == 2507) = 759; % Doman Enclave
-spotData.TerritoryType(any(spotData.PlaceName == [2258 2259 2261 2262 2263 2264 3489 3532 3533], 2)) = 901; % Diadem
-spotData.TerritoryType(any(spotData.PlaceName == [4191 4192 4193 4194 4195], 2)) = 1073; % Elysion
-spotData.TerritoryType(any(spotData.PlaceName == [5206 5207 5208 5209 5210 5211 5212 5213 5214], 2)) = 1237; % Sinus Ardorum
-spotData.TerritoryType(any(spotData.PlaceName == [5286 5287 5288 5289 5290 5291 5292 5293 5294 5295 5296], 2)) = 1291; % Phaenna
-spotData.TerritoryType(any(spotData.PlaceName == [5425 5426 5427 5428 5429 5430 5431], 2)) = 1310; % Oizys
-spotData.TerritoryType(any(spotData.PlaceName == [5537 5538 5539 5540 5541 5542 5543 5544], 2)) = 1319; % Auxesia
+    spotData.TerritoryType(spotData.x_ == override.SpotID) = override.TerritoryOverride;
+end
 
 %% Build info
 spots = table('Size', [0, 6], 'VariableNames', ["SpotID", "MapID", "SpotName", "MapName", "LayerName", "JumpName"], 'VariableTypes', ["uint16", "uint16", "string", "string", "string", "string"]);

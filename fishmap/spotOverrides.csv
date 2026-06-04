@@ -1,0 +1,249 @@
+SpotID,TerritoryOverride,IsEmpty,IsCurrent,Description
+0,0,1,1,Undiscovered Fishing Hole
+1,0,0,0,?Dev Test Case?
+147,901,0,0,Old Diadem
+148,901,0,0,Old Diadem
+149,901,0,0,Old Diadem
+150,901,0,0,Old Diadem
+151,901,0,0,Old Diadem
+152,901,0,0,Old Diadem
+153,901,0,0,Old Diadem
+154,901,0,0,Old Diadem
+338,0,1,0,Null row
+339,0,1,0,Null row
+340,0,1,0,Null row
+341,0,1,0,Null row
+342,0,1,0,Null row
+343,0,1,0,Null row
+344,0,1,0,Null row
+10000,759,0,1,The Doman Enclave
+10001,901,0,0,Old Diadem
+10002,901,0,0,Old Diadem
+10003,901,0,0,Old Diadem
+10004,901,0,0,Old Diadem
+10005,901,0,0,Old Diadem
+10006,901,0,0,Old Diadem
+10007,901,0,0,Old Diadem
+10008,901,0,0,Old Diadem
+10009,901,0,0,Old Diadem
+10010,901,0,0,Old Diadem
+10011,901,0,0,Old Diadem
+10012,901,0,0,Old Diadem
+10013,901,0,0,Old Diadem
+10014,901,0,0,Old Diadem
+10015,901,0,0,Old Diadem
+10016,901,0,0,Old Diadem
+10017,901,0,1,Current Diadem
+10018,901,0,1,Current Diadem
+10019,901,0,1,Current Diadem
+10020,901,0,1,Current Diadem
+10021,901,0,1,Current Diadem
+10022,901,0,1,Current Diadem
+10023,901,0,1,Current Diadem
+10024,901,0,1,Current Diadem
+10025,901,0,1,Current Diadem
+10026,1073,0,1,Elysion
+10027,1073,0,1,Elysion
+10028,1073,0,1,Elysion
+10029,1073,0,1,Elysion
+10030,1073,0,1,Elysion
+10031,1237,1,1,Sinus Ardorum
+10032,1237,1,1,Sinus Ardorum
+10033,1237,1,1,Sinus Ardorum
+10034,1237,1,1,Sinus Ardorum
+10035,1237,1,1,Sinus Ardorum
+10036,1237,1,1,Sinus Ardorum
+10037,1237,1,1,Sinus Ardorum
+10038,1237,1,1,Sinus Ardorum
+10039,1237,1,1,Sinus Ardorum
+10040,0,1,0,Null row
+10041,0,1,0,Null row
+10042,0,1,0,Null row
+10043,1237,0,1,Sinus Ardorum
+10044,1237,0,1,Sinus Ardorum
+10045,1237,0,1,Sinus Ardorum
+10046,1237,0,1,Sinus Ardorum
+10047,1237,0,1,Sinus Ardorum
+10048,1237,0,1,Sinus Ardorum
+10049,1237,0,1,Sinus Ardorum
+10050,1237,0,1,Sinus Ardorum
+10051,1237,0,1,Sinus Ardorum
+10052,1237,0,1,Sinus Ardorum
+10053,1237,0,1,Sinus Ardorum
+10054,1237,0,1,Sinus Ardorum
+10055,1237,0,1,Sinus Ardorum
+10056,1237,0,1,Sinus Ardorum
+10057,1237,0,1,Sinus Ardorum
+10058,1237,0,1,Sinus Ardorum
+10059,1237,0,1,Sinus Ardorum
+10060,1237,0,1,Sinus Ardorum
+10061,1237,0,1,Sinus Ardorum
+10062,1237,0,1,Sinus Ardorum
+10063,1237,0,1,Sinus Ardorum
+10064,1237,0,1,Sinus Ardorum
+10065,1237,0,1,Sinus Ardorum
+10066,1237,0,1,Sinus Ardorum
+10067,1237,0,1,Sinus Ardorum
+10068,1237,0,1,Sinus Ardorum
+10069,1237,0,1,Sinus Ardorum
+10070,1237,0,1,Sinus Ardorum
+10071,1237,0,1,Sinus Ardorum
+10072,1237,0,1,Sinus Ardorum
+10073,1237,0,1,Sinus Ardorum
+10074,1237,0,1,Sinus Ardorum
+10075,1237,0,1,Sinus Ardorum
+10076,1237,0,1,Sinus Ardorum
+10077,1237,0,1,Sinus Ardorum
+10078,1237,0,1,Sinus Ardorum
+10079,1237,0,1,Sinus Ardorum
+10080,1237,0,1,Sinus Ardorum
+10081,1237,0,1,Sinus Ardorum
+10082,1237,0,1,Sinus Ardorum
+10083,1237,0,1,Sinus Ardorum
+10084,1237,0,1,Sinus Ardorum
+10085,1237,0,1,Sinus Ardorum
+10086,1237,0,1,Sinus Ardorum
+10087,1237,0,1,Sinus Ardorum
+10088,1237,0,1,Sinus Ardorum
+10089,1237,0,1,Sinus Ardorum
+10090,1237,0,1,Sinus Ardorum
+10091,1237,0,1,Sinus Ardorum
+10092,1237,0,1,Sinus Ardorum
+10093,1237,0,1,Sinus Ardorum
+10094,0,1,0,Null row
+10095,0,1,0,Null row
+10096,1237,0,1,Sinus Ardorum
+10097,1291,1,1,Phaenna
+10098,1291,1,1,Phaenna
+10099,1291,1,1,Phaenna
+10100,1291,1,1,Phaenna
+10101,1291,1,1,Phaenna
+10102,1291,1,1,Phaenna
+10103,1291,1,1,Phaenna
+10104,1291,1,1,Phaenna
+10105,1291,1,1,Phaenna
+10106,1291,1,1,Phaenna
+10107,1291,1,1,Phaenna
+10108,1291,0,1,Phaenna
+10109,1291,0,1,Phaenna
+10110,1291,0,1,Phaenna
+10111,1291,0,1,Phaenna
+10112,1291,0,1,Phaenna
+10113,1291,0,1,Phaenna
+10114,1291,0,1,Phaenna
+10115,1291,0,1,Phaenna
+10116,1291,0,1,Phaenna
+10117,1291,0,1,Phaenna
+10118,1291,0,1,Phaenna
+10119,1291,0,1,Phaenna
+10120,1291,0,1,Phaenna
+10121,1291,0,1,Phaenna
+10122,1291,0,1,Phaenna
+10123,1291,0,1,Phaenna
+10124,1291,0,1,Phaenna
+10125,1291,0,1,Phaenna
+10126,1291,0,1,Phaenna
+10127,1291,0,1,Phaenna
+10128,1291,0,1,Phaenna
+10129,1291,0,1,Phaenna
+10130,1291,0,1,Phaenna
+10131,1291,0,1,Phaenna
+10132,1291,0,1,Phaenna
+10133,1291,0,1,Phaenna
+10134,1291,0,1,Phaenna
+10135,1291,0,1,Phaenna
+10136,0,1,0,Null row
+10137,1291,0,1,Phaenna
+10138,1291,0,1,Phaenna
+10139,1291,0,1,Phaenna
+10140,1291,0,1,Phaenna
+10141,1291,0,1,Phaenna
+10142,1291,0,1,Phaenna
+10143,1291,0,1,Phaenna
+10144,1291,0,1,Phaenna
+10145,0,1,0,Null row
+10146,0,1,0,Null row
+10147,1291,0,1,Phaenna
+10148,1291,0,1,Phaenna
+10149,1291,0,1,Phaenna
+10150,1291,0,1,Phaenna
+10151,1291,0,1,Phaenna
+10152,1291,0,1,Phaenna
+10153,1291,0,1,Phaenna
+10154,1291,0,1,Phaenna
+10155,1291,0,1,Phaenna
+10156,1310,1,1,Oizys
+10157,1310,1,1,Oizys
+10158,1310,1,1,Oizys
+10159,1310,1,1,Oizys
+10160,1310,1,1,Oizys
+10161,1310,1,1,Oizys
+10162,1310,1,1,Oizys
+10163,1310,0,1,Oizys
+10164,1310,0,1,Oizys
+10165,1310,0,1,Oizys
+10166,1310,0,1,Oizys
+10167,1310,0,1,Oizys
+10168,1310,0,1,Oizys
+10169,1310,0,1,Oizys
+10170,1310,0,1,Oizys
+10171,1310,0,1,Oizys
+10172,1310,0,1,Oizys
+10173,1310,0,1,Oizys
+10174,1310,0,1,Oizys
+10175,1310,0,1,Oizys
+10176,1310,0,1,Oizys
+10177,1310,0,1,Oizys
+10178,1310,0,1,Oizys
+10179,1310,0,1,Oizys
+10180,1310,0,1,Oizys
+10181,1310,0,1,Oizys
+10182,1310,0,1,Oizys
+10183,1310,0,1,Oizys
+10184,1310,0,1,Oizys
+10185,1310,0,1,Oizys
+10186,1310,0,1,Oizys
+10187,1310,0,1,Oizys
+10188,1310,0,1,Oizys
+10189,1310,0,1,Oizys
+10190,1310,0,1,Oizys
+10191,1310,0,1,Oizys
+10192,1310,0,1,Oizys
+10193,1319,1,1,Auxesia
+10194,1319,1,1,Auxesia
+10195,1319,1,1,Auxesia
+10196,1319,1,1,Auxesia
+10197,1319,1,1,Auxesia
+10198,1319,1,1,Auxesia
+10199,1319,1,1,Auxesia
+10200,1319,1,1,Auxesia
+10201,1319,0,1,Auxesia
+10202,1319,0,1,Auxesia
+10203,1319,0,1,Auxesia
+10204,1319,0,1,Auxesia
+10205,1319,0,1,Auxesia
+10206,1319,0,1,Auxesia
+10207,1319,0,1,Auxesia
+10208,1319,0,1,Auxesia
+10209,1319,0,1,Auxesia
+10210,1319,0,1,Auxesia
+10211,1319,0,1,Auxesia
+10212,1319,0,1,Auxesia
+10213,1319,0,1,Auxesia
+10214,1319,0,1,Auxesia
+10215,1319,0,1,Auxesia
+10216,1319,0,1,Auxesia
+10217,1319,0,1,Auxesia
+10218,1319,0,1,Auxesia
+10219,1319,0,1,Auxesia
+10220,1319,0,1,Auxesia
+10221,1319,0,1,Auxesia
+10222,1319,0,1,Auxesia
+10223,1319,0,1,Auxesia
+10224,1319,0,1,Auxesia
+10225,1319,0,1,Auxesia
+10226,1319,0,1,Auxesia
+10227,1319,0,1,Auxesia
+10228,1319,0,1,Auxesia
+10229,1319,0,1,Auxesia
+10230,1319,0,1,Auxesia
