@@ -45,7 +45,7 @@ function mapGenerator(ms)
                 spotImage = (bgImageClean.*(1-spotIntensity) + cmapSpot.*spotAlpha.*spotIntensity).*spotAlpha2;
 
                 for iSpot = spotIndex'
-                    maskFileName = matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(iSpot)+"_spot"+spots.SpotID(iSpot)+"_mask.png";
+                    maskFileName = matlab.project.rootProject().RootFolder+"\spots\masks\map"+spots.MapID(iSpot)+"_spot"+spots.SpotID(iSpot)+"_mask.png";
                     mapFileName = matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(iSpot)+"_spot"+spots.SpotID(iSpot)+"_map.png";
                     
                     saveMask = true;
