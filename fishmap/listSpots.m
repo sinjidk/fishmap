@@ -20,7 +20,7 @@ spotData.TerritoryType(any(spotData.PlaceName == [5425 5426 5427 5428 5429 5430 
 spotData.TerritoryType(any(spotData.PlaceName == [5537 5538 5539 5540 5541 5542 5543 5544], 2)) = 1319; % Auxesia
 
 %% Build info
-spots = table('Size', [0, 5], 'VariableNames', ["SpotID", "MapID", "SpotName", "MapName", "LayerName"], 'VariableTypes', ["uint16", "uint16", "string", "string", "string"]);
+spots = table('Size', [0, 6], 'VariableNames', ["SpotID", "MapID", "SpotName", "MapName", "LayerName", "JumpName"], 'VariableTypes', ["uint16", "uint16", "string", "string", "string", "string"]);
 
 iS = 0;
 % the loop is weird and upside down because of obsolete restrictions, no longer needs to be this way but I'm too lazy to change it
@@ -32,10 +32,12 @@ while iS < height(spotData)
     for iM = height(spotMaps):-1:1
         map = spotMaps(iM, :);
 
+        jumpName = replace(lower(placeData.Name{map.PlaceName == placeData.x_}), {' ', '''', '*'}, '');
+
         if strcmp(spot.Rare, 'True')
-            spots(end+1, :) = {spot.x_, map.x_, spotName, placeData.Name{map.PlaceName == placeData.x_}, sprintf("%s (Lv. %d)", spotName, spot.GatheringLevel)};
+            spots(end+1, :) = {spot.x_, map.x_, spotName, placeData.Name{map.PlaceName == placeData.x_}, sprintf("%s (Lv. %d)", spotName, spot.GatheringLevel), jumpName};
         else
-            spots(end+1, :) = {spot.x_, map.x_, spotName, placeData.Name{map.PlaceName == placeData.x_}, spotName};
+            spots(end+1, :) = {spot.x_, map.x_, spotName, placeData.Name{map.PlaceName == placeData.x_}, spotName, jumpName};
         end
     end
     
@@ -65,6 +67,7 @@ spots.LayerName(spots.SpotID == 123) = "Anyx Old (in mountain)";
 spots(spots.MapID == 365, :) = []; % Not using subdivision
 spots(spots.MapID == 554, :) = []; % No fishing indoors
 spots.LayerName(spots.SpotID == 214 & spots.MapID == 555) = "The Derelicts (The Canopy)";
+spots.JumpName(spots.MapID == 555) = "thecanopy";
 spots(spots.MapID == 550, :) = []; % No fishing indoors
 spots(spots.MapID == 551, :) = []; % No fishing indoors
 spots.LayerName(spots.SpotID == 236) = "The Norvrandt Slope (underground)";
@@ -84,3 +87,4 @@ spots.LayerName(any(spots.SpotID == [10124 10135 10144 10147], 2)) = "Lower SL F
 
 %%
 save spots spots
+writetable(spots, "spots.csv")
