@@ -44,9 +44,22 @@ function mapGenerator(ms)
                 spotAlpha2(spotAlpha == 0) = 1;
                 spotImage = (bgImageClean.*(1-spotIntensity) + cmapSpot.*spotAlpha.*spotIntensity).*spotAlpha2;
 
+                [y, x] = find(spotAlpha > 0);
+                if ~isempty(x)
+                    imSize = max(max(range(x), range(y))*2, 280);
+                    xMin = min(max(1, (min(x)+max(x))/2-imSize/2), 2048-imSize);
+                    yMin = min(max(1, (min(y)+max(y))/2-imSize/2), 2048-imSize);
+                    
+                    spotImage = imcrop(spotImage, [xMin yMin imSize imSize]);
+                end
+
+                if size(spotImage, 1) ~= size(spotImage, 2)
+                    "not square"
+                end
+
                 for iSpot = spotIndex'
                     maskFileName = matlab.project.rootProject().RootFolder+"\spots\masks\map"+spots.MapID(iSpot)+"_spot"+spots.SpotID(iSpot)+"_mask.png";
-                    mapFileName = matlab.project.rootProject().RootFolder+"\spots\map"+spots.MapID(iSpot)+"_spot"+spots.SpotID(iSpot)+"_map.png";
+                    mapFileName = matlab.project.rootProject().RootFolder+"\spots\maps\map"+spots.MapID(iSpot)+"_spot"+spots.SpotID(iSpot)+"_map.png";
                     
                     saveMask = true;
                     saveSpotMap = true;
@@ -59,7 +72,7 @@ function mapGenerator(ms)
                     end
                     if exist(mapFileName, "file")
                         prevSpotMap = imread(mapFileName);
-                        if all(prevSpotMap == uint8(spotImage*255), 'all')
+                        if all(size(prevSpotMap) == size(spotImage)) && all(prevSpotMap == uint8(spotImage*255), 'all')
                             saveSpotMap = false;
                         end
                     end

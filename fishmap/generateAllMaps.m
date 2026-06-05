@@ -5,5 +5,7 @@ folders = folders([folders.isdir]);
 folders = folders(3:end);
 
 for iF = 1:length(folders)
-    run(folders(iF).name + "/generateThisMap.m")
+    if exist(folders(iF).name + "/generateThisMap.m", "file")
+        run(folders(iF).name + "/generateThisMap.m")
+    end
 end
