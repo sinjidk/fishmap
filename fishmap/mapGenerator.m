@@ -11,6 +11,8 @@ function mapGenerator(ms)
     cmapSpot = permute([0 0.3835 0.5824] - (1-intensity2)*[202 182 112]/255, [1 3 2])/intensity2;
     lineSpacing = 75;
     lineHeight = 50;
+    minSize = 512;
+    cropSizeFactor = @(Dx, Dy) 1+0.5*exp(-abs(log(Dx/Dy)));
     
     % figure; imagesc(permute(cmap, [1 3 2]))
     
@@ -46,15 +48,32 @@ function mapGenerator(ms)
 
                 [y, x] = find(spotAlpha > 0);
                 if ~isempty(x)
-                    imSize = max(max(range(x), range(y))*2, 280);
-                    xMin = min(max(1, (min(x)+max(x))/2-imSize/2), 2048-imSize);
-                    yMin = min(max(1, (min(y)+max(y))/2-imSize/2), 2048-imSize);
-                    
-                    spotImage = imcrop(spotImage, [xMin yMin imSize imSize]);
-                end
+                    xSpotMid = (min(x)+max(x))/2;
+                    ySpotMid = (min(y)+max(y))/2;
+                    imSize = max(range(x), range(y))*cropSizeFactor(range(x), range(y));
+                    xSpotMin = max(0, xSpotMid-imSize/2);
+                    xSpotMax = min(2048, xSpotMid+imSize/2);
+                    ySpotMin = max(0, ySpotMid-imSize/2);
+                    ySpotMax = min(2048, ySpotMid+imSize/2);
 
-                if size(spotImage, 1) ~= size(spotImage, 2)
-                    "not square"
+                    xSafeMid = max(minSize/2, min(2048-minSize/2, xSpotMid));
+                    ySafeMid = max(minSize/2, min(2048-minSize/2, ySpotMid));
+                    xSafeMin = xSafeMid-minSize/2;
+                    xSafeMax = xSafeMid+minSize/2;
+                    ySafeMin = ySafeMid-minSize/2;
+                    ySafeMax = ySafeMid+minSize/2;
+
+                    xList = round([xSpotMin xSpotMax xSafeMin xSafeMax]);
+                    yList = round([ySpotMin ySpotMax ySafeMin ySafeMax]);
+                    imSize = max(minSize, max(range(xList), range(yList)));
+                    xMid = max(0+ceil(imSize/2), min(2048-ceil(imSize/2), (min(xList)+max(xList))/2));
+                    yMid = max(0+ceil(imSize/2), min(2048-ceil(imSize/2), (min(yList)+max(yList))/2));
+                    
+                    spotImage = imcrop(spotImage, [xMid-imSize/2+0.5 yMid-imSize/2+0.5 imSize-1 imSize-1]);
+
+                    if size(spotImage, 1) ~= size(spotImage, 2) || length(spotImage) ~= imSize
+                        "your math is wrong"
+                    end
                 end
 
                 for iSpot = spotIndex'
