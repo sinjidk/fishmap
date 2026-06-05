@@ -11,7 +11,7 @@ function mapGenerator(ms)
     cmapSpot = permute([0 0.3835 0.5824] - (1-intensity2)*[202 182 112]/255, [1 3 2])/intensity2;
     lineSpacing = 75;
     lineHeight = 50;
-    minSize = @(Dx, Dy) min(max(sqrt(Dx*Dy)*18, 512), 700);
+    minSize = @(A) min(max(sqrt(A)*20, 512), 700);
     cropSizeFactor = @(Dx, Dy) 1+0.5*exp(-abs(log(Dx/Dy)));
     
     % figure; imagesc(permute(cmap, [1 3 2]))
@@ -60,7 +60,7 @@ function mapGenerator(ms)
                     ySpotMin = max(0, ySpotMid-imSize/2);
                     ySpotMax = min(2048, ySpotMid+imSize/2);
 
-                    halfMin = minSize(range(x), range(y))/2;
+                    halfMin = minSize(length(x))/2;
                     xSafeMid = max(halfMin, min(2048-halfMin, xSpotMid));
                     ySafeMid = max(halfMin, min(2048-halfMin, ySpotMid));
                     xSafeMin = xSafeMid-halfMin;
@@ -70,7 +70,7 @@ function mapGenerator(ms)
 
                     xList = round([xSpotMin xSpotMax xSafeMin xSafeMax]);
                     yList = round([ySpotMin ySpotMax ySafeMin ySafeMax]);
-                    imSize = max(minSize(range(x), range(y)), max(range(xList), range(yList)));
+                    imSize = max(minSize(length(x)), max(range(xList), range(yList)));
                     xMid = max(0+ceil(imSize/2), min(2048-ceil(imSize/2), (min(xList)+max(xList))/2));
                     yMid = max(0+ceil(imSize/2), min(2048-ceil(imSize/2), (min(yList)+max(yList))/2));
                     
