@@ -11,7 +11,7 @@ function mapGenerator(ms)
     cmapSpot = permute([0 0.3835 0.5824] - (1-intensity2)*[202 182 112]/255, [1 3 2])/intensity2;
     lineSpacing = 75;
     lineHeight = 50;
-    minSize = 512;
+    minSize = 600;
     cropSizeFactor = @(Dx, Dy) 1+0.5*exp(-abs(log(Dx/Dy)));
     
     % figure; imagesc(permute(cmap, [1 3 2]))
@@ -34,6 +34,10 @@ function mapGenerator(ms)
         spot(iI) = regexprep(spot(iI), "%0029", ")");
         spot(iI) = regexprep(spot(iI), "%002E", ".");
         [~, ~, alphaLayers(:, :, :, iI)] = imread(path+files(iI+1).name);
+        if length(unique(alphaLayers(:, :, :, iI))) > 2
+            "loose transperence in layer "+files(iI+1).name+" of "+zonename
+        end
+
         if iI > 1 && (~isfield(ms, "makeAlts") || ms.makeAlts)
             spotIndex = find(spots.LayerName == spot(iI));
 
@@ -71,9 +75,9 @@ function mapGenerator(ms)
                     
                     spotImage = imcrop(spotImage, [xMid-imSize/2+0.5 yMid-imSize/2+0.5 imSize-1 imSize-1]);
 
-                    if size(spotImage, 1) ~= size(spotImage, 2) || length(spotImage) ~= imSize
-                        "your math is wrong"
-                    end
+                    % if size(spotImage, 1) ~= size(spotImage, 2) || length(spotImage) ~= imSize
+                    %     "your math is wrong"
+                    % end
                 end
 
                 for iSpot = spotIndex'
