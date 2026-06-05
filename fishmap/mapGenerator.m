@@ -11,7 +11,7 @@ function mapGenerator(ms)
     cmapSpot = permute([0 0.3835 0.5824] - (1-intensity2)*[202 182 112]/255, [1 3 2])/intensity2;
     lineSpacing = 75;
     lineHeight = 50;
-    minSize = @(A) min(max(sqrt(A)*20, 512), 683);
+    minSize = @(A) min(max(sqrt(A)*19, 512), 683);
     cropSizeFactor = @(Dx, Dy) 1+0.5*exp(-abs(log(Dx/Dy)));
     
     % figure; imagesc(permute(cmap, [1 3 2]))
@@ -70,15 +70,15 @@ function mapGenerator(ms)
 
                     xList = round([xSpotMin xSpotMax xSafeMin xSafeMax]);
                     yList = round([ySpotMin ySpotMax ySafeMin ySafeMax]);
-                    imSize = max(minSize(length(x)), max(range(xList), range(yList)));
+                    imSize = max(floor(minSize(length(x))), max(range(xList), range(yList)));
                     xMid = max(0+ceil(imSize/2), min(2048-ceil(imSize/2), (min(xList)+max(xList))/2));
                     yMid = max(0+ceil(imSize/2), min(2048-ceil(imSize/2), (min(yList)+max(yList))/2));
                     
                     spotImage = imcrop(spotImage, [xMid-imSize/2+0.5 yMid-imSize/2+0.5 imSize-1 imSize-1]);
 
-                    % if size(spotImage, 1) ~= size(spotImage, 2) || length(spotImage) ~= imSize
-                    %     "your math is wrong"
-                    % end
+                    if size(spotImage, 1) ~= size(spotImage, 2) || length(spotImage) ~= imSize
+                        "your math is wrong"
+                    end
                 end
 
                 for iSpot = spotIndex'
