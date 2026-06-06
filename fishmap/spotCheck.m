@@ -19,9 +19,10 @@ for iS = 1:height(spots)
     end
 end
 
-%%
+%% montage
 [~, ia, ~] = unique(spots(:, ["LayerName", "MapName"]), "rows");
-[~, is] = sort(spots.SpotID(ia));
-files = "D:\Documents\MATLAB\fishmap\spots\maps\"+compose("map%d_spot%d_map.png", spots.MapID(ia(is)), spots.SpotID(ia(is)));
+[~, is] = sortrows(spots(ia, ["MapID", "SpotID"]));
+files = matlab.project.rootProject().RootFolder+"\spots\maps\"+compose("map%d_spot%d_map.png", spots.MapID(ia(is)), spots.SpotID(ia(is)));
 files(~isfile(files)) = [];
-montage(files);
+img = montage(files);
+imwrite(img.CData, matlab.project.rootProject().RootFolder+"\spots\montage.png")
