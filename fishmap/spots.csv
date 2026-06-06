@@ -102,8 +102,11 @@ SpotID,MapID,SpotName,MapName,LayerName,JumpName
 102,18,Reaver Hide,Western La Noscea,Reaver Hide,westernlanoscea
 103,20,Moondrip,Western Thanalan,Moondrip,westernthanalan
 104,72,Mist,Mist,Mist,mist
+104,192,Mist,Mist Subdivision,Mist (Subdivision),mistsubdivision
 105,82,The Lavender Beds,The Lavender Beds,The Lavender Beds,thelavenderbeds
+105,193,The Lavender Beds,The Lavender Beds Subdivision,The Lavender Beds (Subdivision),thelavenderbedssubdivision
 106,83,The Goblet,The Goblet,The Goblet,thegoblet
+106,194,The Goblet,The Goblet Subdivision,The Goblet (Subdivision),thegobletsubdivision
 107,17,Rhotano Sea (Privateer Forecastle),Eastern La Noscea,Privateer Forecastle,easternlanoscea
 108,17,Rhotano Sea (Privateer Sterncastle),Eastern La Noscea,Privateer Sterncastle (Lv. 50),easternlanoscea
 109,211,Riversmeet,Coerthas Western Highlands,Riversmeet (under ridges),coerthaswesternhighlands
@@ -187,7 +190,9 @@ SpotID,MapID,SpotName,MapName,LayerName,JumpName
 195,368,The Arms of Meed,The Peaks,The Arms of Meed (Lv. 70),thepeaks
 196,369,Loch Seld,The Lochs,Loch Seld,thelochs
 197,364,Shirogane,Shirogane,Shirogane,shirogane
+197,365,Shirogane,Shirogane Subdivision,Shirogane (Subdivision),shiroganesubdivision
 198,364,The Silver Canal,Shirogane,The Silver Canal (Lv. 65),shirogane
+198,365,The Silver Canal,Shirogane Subdivision,The Silver Canal (Lv. 65) (Subdivision),shiroganesubdivision
 199,497,The Trivium,The Crystarium,The Trivium,thecrystarium
 200,497,The Quadrivium,The Crystarium,The Quadrivium,thecrystarium
 201,497,Crystarium Personal Suites,The Crystarium,Crystarium Personal Suites,thecrystarium
@@ -203,8 +208,8 @@ SpotID,MapID,SpotName,MapName,LayerName,JumpName
 211,492,The Western Kholusian Coast,Kholusia,The Western Kholusian Coast,kholusia
 212,492,Seagazer Shoals,Kholusia,Seagazer Shoals (Lv. 75),kholusia
 213,492,The Eastern Kholusian Coast,Kholusia,The Eastern Kholusian Coast,kholusia
-214,498,The Derelicts,Eulmore,The Derelicts,eulmore
-214,555,The Derelicts,Eulmore,The Derelicts (The Canopy),thecanopy
+214,498,The Derelicts,Eulmore (The Buttress),The Derelicts,eulmore
+214,555,The Derelicts,Eulmore (The Canopy),The Derelicts (The Canopy),thecanopy
 215,493,The River of Sand,Amh Araeng,The River of Sand,amharaeng
 216,493,The Hills of Amber,Amh Araeng,The Hills of Amber,amharaeng
 217,493,The Nabaath Severance,Amh Araeng,The Nabaath Severance,amharaeng
