@@ -67,7 +67,7 @@ spots.JumpName(spots.MapID == 555) = "thecanopy";
 spots(spots.MapID == 550, :) = []; % No fishing indoors
 spots(spots.MapID == 551, :) = []; % No fishing indoors
 spots.LayerName(spots.SpotID == 236) = "The Norvrandt Slope (underground)";
-spots.LayerName(spots.MapID == 604) = "The Endeavor"; % Boat not in scope
+spots.LayerName(spots.MapID == 604) = "The Endeavor";
 spots.LayerName(spots.SpotID == 265) = "Wakeful Torana";
 spots(spots.MapID == 750, :) = []; % The maps are identical, I will keep current version
 spots.LayerName(spots.SpotID == 274) = "The Frozen Fissure (underground)";

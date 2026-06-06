@@ -18,3 +18,10 @@ for iS = 1:height(spots)
         sprintf("No spot map for %s : %s", spots.MapName(iS), spots.SpotName(iS))
     end
 end
+
+%%
+[~, ia, ~] = unique(spots(:, ["LayerName", "MapName"]), "rows");
+[~, is] = sort(spots.SpotID(ia));
+files = "D:\Documents\MATLAB\fishmap\spots\maps\"+compose("map%d_spot%d_map.png", spots.MapID(ia(is)), spots.SpotID(ia(is)));
+files(~isfile(files)) = [];
+montage(files);
