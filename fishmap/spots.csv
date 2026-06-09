@@ -1,507 +1,507 @@
-SpotID,MapID,SpotName,MapName,LayerName,JumpName
-2,4,The Vein,Central Shroud,The Vein,centralshroud
-3,4,The Mirror,Central Shroud,The Mirror,centralshroud
-4,4,Everschade,Central Shroud,Everschade,centralshroud
-5,4,Hopeseed Pond,Central Shroud,Hopeseed Pond,centralshroud
-6,5,Sweetbloom Pier,East Shroud,Sweetbloom Pier,eastshroud
-7,5,Verdant Drop,East Shroud,Verdant Drop,eastshroud
-8,5,Springripple Brook,East Shroud,Springripple Brook,eastshroud
-9,5,Sylphlands,East Shroud,Sylphlands,eastshroud
-10,5,Sanctum of the Twelve,East Shroud,Sanctum of the Twelve,eastshroud
-11,6,Upper Hathoeva River,South Shroud,Upper Hathoeva River,southshroud
-12,6,Middle Hathoeva River,South Shroud,Middle Hathoeva River (Lv. 30),southshroud
-13,6,Lower Hathoeva River,South Shroud,Lower Hathoeva River,southshroud
-14,6,East Hathoeva River,South Shroud,East Hathoeva River,southshroud
-15,6,Goblinblood,South Shroud,Goblinblood,southshroud
-16,6,Rootslake,South Shroud,Rootslake,southshroud
-17,6,Urth's Gift,South Shroud,Urth's Gift,southshroud
-18,7,Murmur Rills,North Shroud,Murmur Rills,northshroud
-19,7,Fallgourd Float,North Shroud,Fallgourd Float,northshroud
-20,7,Proud Creek,North Shroud,Proud Creek,northshroud
-21,7,Lake Tahtotl,North Shroud,Lake Tahtotl (Lv. 50),northshroud
-22,25,North Silvertear,Mor Dhona,North Silvertear,mordhona
-23,25,Rathefrost,Mor Dhona,Rathefrost (Lv. 50),mordhona
-24,25,The Tangle,Mor Dhona,The Tangle,mordhona
-25,25,The Deep Tangle,Mor Dhona,The Deep Tangle,mordhona
-26,53,Coerthas River,Coerthas Central Highlands,Coerthas River,coerthascentralhighlands
-27,53,Witchdrop,Coerthas Central Highlands,Witchdrop,coerthascentralhighlands
-28,53,The Nail,Coerthas Central Highlands,The Nail,coerthascentralhighlands
-29,53,The Weeping Saint,Coerthas Central Highlands,The Weeping Saint (Lv. 45),coerthascentralhighlands
-30,53,Dragonhead Latrines,Coerthas Central Highlands,Dragonhead Latrines,coerthascentralhighlands
-31,53,Daniffen Pass,Coerthas Central Highlands,Daniffen Pass,coerthascentralhighlands
-32,53,Exploratory Ice Hole,Coerthas Central Highlands,Exploratory Ice Hole,coerthascentralhighlands
-33,53,Snowcloak,Coerthas Central Highlands,Snowcloak,coerthascentralhighlands
-34,53,Sea of Clouds,Coerthas Central Highlands,Sea of Clouds,coerthascentralhighlands
-35,12,Limsa Lominsa Lower Decks,Limsa Lominsa Lower Decks,Limsa Lominsa Lower Decks,limsalominsalowerdecks
-36,11,Limsa Lominsa Upper Decks,Limsa Lominsa Upper Decks,Limsa Lominsa Upper Decks,limsalominsaupperdecks
-37,15,Zephyr Drift,Middle La Noscea,Zephyr Drift,middlelanoscea
-38,15,Summerford,Middle La Noscea,Summerford,middlelanoscea
-39,15,Rogue River,Middle La Noscea,Rogue River,middlelanoscea
-40,15,West Agelyss River,Middle La Noscea,West Agelyss River,middlelanoscea
-41,15,Nym River,Middle La Noscea,Nym River,middlelanoscea
-42,15,Woad Whisper Canyon,Middle La Noscea,Woad Whisper Canyon (Lv. 15),middlelanoscea
-43,16,The Mourning Widow,Lower La Noscea,The Mourning Widow,lowerlanoscea
-44,16,Moraby Bay,Lower La Noscea,Moraby Bay,lowerlanoscea
-45,16,Cedarwood,Lower La Noscea,Cedarwood,lowerlanoscea
-46,16,Moraby Drydocks,Lower La Noscea,Moraby Drydocks,lowerlanoscea
-47,16,Oschon's Torch,Lower La Noscea,Oschon's Torch,lowerlanoscea
-48,16,The Salt Strand,Lower La Noscea,The Salt Strand (Lv. 20),lowerlanoscea
-49,16,Candlekeep Quay,Lower La Noscea,Candlekeep Quay,lowerlanoscea
-50,16,Empty Heart,Lower La Noscea,Empty Heart,lowerlanoscea
-51,17,South Bloodshore,Eastern La Noscea,South Bloodshore,easternlanoscea
-52,17,Costa del Sol,Eastern La Noscea,Costa del Sol,easternlanoscea
-53,17,North Bloodshore,Eastern La Noscea,North Bloodshore,easternlanoscea
-54,17,Hidden Falls,Eastern La Noscea,Hidden Falls (Lv. 35),easternlanoscea
-55,17,East Agelyss River,Eastern La Noscea,East Agelyss River,easternlanoscea
-56,17,Raincatcher Gully,Eastern La Noscea,Raincatcher Gully,easternlanoscea
-57,17,The Juggernaut,Eastern La Noscea,The Juggernaut,easternlanoscea
-58,17,Red Mantis Falls,Eastern La Noscea,Red Mantis Falls (Lv. 45),easternlanoscea
-59,18,Swiftperch,Western La Noscea,Swiftperch,westernlanoscea
-60,18,Skull Valley,Western La Noscea,Skull Valley,westernlanoscea
-61,18,Halfstone,Western La Noscea,Halfstone,westernlanoscea
-62,18,Isles of Umbra Northshore,Western La Noscea,Isles of Umbra Northshore,westernlanoscea
-63,18,Isles of Umbra Southshore,Western La Noscea,Isles of Umbra Southshore (Lv. 50),westernlanoscea
-64,18,The Brewer's Beacon,Western La Noscea,The Brewer's Beacon (Lv. 15),westernlanoscea
-65,18,The Ship Graveyard,Western La Noscea,The Ship Graveyard,westernlanoscea
-66,19,Oakwood,Upper La Noscea,Oakwood,upperlanoscea
-67,19,Fool Falls,Upper La Noscea,Fool Falls,upperlanoscea
-68,19,Northeast Bronze Lake,Upper La Noscea,Northeast Bronze Lake,upperlanoscea
-69,20,The Silver Bazaar,Western Thanalan,The Silver Bazaar,westernthanalan
-70,20,Vesper Bay,Western Thanalan,Vesper Bay,westernthanalan
-71,20,Crescent Cove,Western Thanalan,Crescent Cove,westernthanalan
-72,20,Nophica's Wells,Western Thanalan,Nophica's Wells,westernthanalan
-73,20,The Footfalls,Western Thanalan,The Footfalls,westernthanalan
-74,20,Cape Westwind,Western Thanalan,Cape Westwind,westernthanalan
-75,21,Upper Soot Creek,Central Thanalan,Upper Soot Creek,centralthanalan
-76,21,Lower Soot Creek,Central Thanalan,Lower Soot Creek,centralthanalan
-77,21,The Unholy Heir,Central Thanalan,The Unholy Heir,centralthanalan
-78,22,North Drybone,Eastern Thanalan,North Drybone,easternthanalan
-79,22,South Drybone,Eastern Thanalan,South Drybone,easternthanalan
-80,22,Yugr'am River,Eastern Thanalan,Yugr'am River,easternthanalan
-81,3,Whispering Gorge,Old Gridania,Whispering Gorge,oldgridania
-82,22,The Burning Wall,Eastern Thanalan,The Burning Wall,easternthanalan
-83,23,Burnt Lizard Creek,Southern Thanalan,Burnt Lizard Creek,southernthanalan
-84,23,Zahar'ak,Southern Thanalan,Zahar'ak,southernthanalan
-85,23,Forgotten Springs,Southern Thanalan,Forgotten Springs,southernthanalan
-86,23,Sagolii Desert,Southern Thanalan,Sagolii Desert,southernthanalan
-87,23,Sagolii Dunes,Southern Thanalan,Sagolii Dunes (Lv. 35),southernthanalan
-88,24,Ceruleum Field,Northern Thanalan,Ceruleum Field,northernthanalan
-89,24,Bluefog,Northern Thanalan,Bluefog,northernthanalan
-90,2,Jadeite Flood,New Gridania,Jadeite Flood,newgridania
-91,2,Lower Black Tea Brook,New Gridania,Lower Black Tea Brook,newgridania
-92,4,Haukke Manor,Central Shroud,Haukke Manor,centralshroud
-93,25,Singing Shards,Mor Dhona,Singing Shards (Lv. 45),mordhona
-94,25,The North Shards,Mor Dhona,The North Shards,mordhona
-95,20,Parata's Peace,Western Thanalan,Parata's Peace (Lv. 50),westernthanalan
-96,21,The Clutch,Central Thanalan,The Clutch,centralthanalan
-97,16,Blind Iron Mines,Lower La Noscea,Blind Iron Mines,lowerlanoscea
-98,19,Bronze Lake Shallows,Upper La Noscea,Bronze Lake Shallows,upperlanoscea
-99,30,The Long Climb,Outer La Noscea,The Long Climb (Lv. 40),outerlanoscea
-100,3,Upper Black Tea Brook,Old Gridania,Upper Black Tea Brook,oldgridania
-101,18,Sapsa Spawning Grounds,Western La Noscea,Sapsa Spawning Grounds,westernlanoscea
-102,18,Reaver Hide,Western La Noscea,Reaver Hide,westernlanoscea
-103,20,Moondrip,Western Thanalan,Moondrip,westernthanalan
-104,72,Mist,Mist,Mist,mist
-104,192,Mist,Mist Subdivision,Mist (Subdivision),mistsubdivision
-105,82,The Lavender Beds,The Lavender Beds,The Lavender Beds,thelavenderbeds
-105,193,The Lavender Beds,The Lavender Beds Subdivision,The Lavender Beds (Subdivision),thelavenderbedssubdivision
-106,83,The Goblet,The Goblet,The Goblet,thegoblet
-106,194,The Goblet,The Goblet Subdivision,The Goblet (Subdivision),thegobletsubdivision
-107,17,Rhotano Sea (Privateer Forecastle),Eastern La Noscea,Privateer Forecastle,easternlanoscea
-108,17,Rhotano Sea (Privateer Sterncastle),Eastern La Noscea,Privateer Sterncastle (Lv. 50),easternlanoscea
-109,211,Riversmeet,Coerthas Western Highlands,Riversmeet (under ridges),coerthaswesternhighlands
-110,211,Greytail Falls,Coerthas Western Highlands,Greytail Falls,coerthaswesternhighlands
-111,211,Unfrozen Pond,Coerthas Western Highlands,Unfrozen Pond,coerthaswesternhighlands
-112,211,Clearpool,Coerthas Western Highlands,Clearpool (Lv. 60),coerthaswesternhighlands
-113,211,Dragonspit,Coerthas Western Highlands,Dragonspit (Lv. 60),coerthaswesternhighlands
-114,211,South Banepool,Coerthas Western Highlands,South Banepool,coerthaswesternhighlands
-115,211,Ashpool,Coerthas Western Highlands,Ashpool (under ridge),coerthaswesternhighlands
-116,211,West Banepool,Coerthas Western Highlands,West Banepool,coerthaswesternhighlands
-117,212,The Hundred Throes,The Dravanian Forelands,The Hundred Throes,thedravanianforelands
-118,212,Whilom River,The Dravanian Forelands,Whilom River,thedravanianforelands
-119,212,The Smoldering Wastes,The Dravanian Forelands,The Smoldering Wastes,thedravanianforelands
-120,212,The Iron Feast,The Dravanian Forelands,The Iron Feast (Lv. 55),thedravanianforelands
-121,212,Mourn,The Dravanian Forelands,Mourn (in mountain),thedravanianforelands
-122,212,West Mourn,The Dravanian Forelands,West Mourn,thedravanianforelands
-123,212,Anyx Old,The Dravanian Forelands,Anyx Old (in mountain),thedravanianforelands
-124,212,Halo,The Dravanian Forelands,Halo (Lv. 60),thedravanianforelands
-125,213,Thaliak River,The Dravanian Hinterlands,Thaliak River,thedravanianhinterlands
-126,213,Quickspill Delta,The Dravanian Hinterlands,Quickspill Delta,thedravanianhinterlands
-127,213,Upper Thaliak River,The Dravanian Hinterlands,Upper Thaliak River,thedravanianhinterlands
-128,213,Middle Thaliak River,The Dravanian Hinterlands,Middle Thaliak River (Lv. 60),thedravanianhinterlands
-129,214,Eil Tohm,The Churning Mists,Eil Tohm,thechurningmists
-130,214,Greensward,The Churning Mists,Greensward,thechurningmists
-131,214,Weston Waters,The Churning Mists,Weston Waters,thechurningmists
-132,214,Landlord Colony,The Churning Mists,Landlord Colony,thechurningmists
-133,214,Sohm Al Summit,The Churning Mists,Sohm Al Summit,thechurningmists
-134,214,Tharl Oom Khash,The Churning Mists,Tharl Oom Khash (Lv. 55),thechurningmists
-135,215,Voor Sian Siran,The Sea of Clouds,Voor Sian Siran,theseaofclouds
-136,215,The Eddies,The Sea of Clouds,The Eddies (Lv. 60),theseaofclouds
-137,215,Cloudtop,The Sea of Clouds,Cloudtop,theseaofclouds
-138,215,The Blue Window,The Sea of Clouds,The Blue Window,theseaofclouds
-139,215,Mok Oogl Island,The Sea of Clouds,Mok Oogl Island (Lv. 56),theseaofclouds
-140,216,Alpha Quadrant,Azys Lla,Alpha Quadrant,azyslla
-141,216,Aetherochemical Spill,Azys Lla,Aetherochemical Spill,azyslla
-142,216,Hyperstellar Downconverter,Azys Lla,Hyperstellar Downconverter (Lv. 60),azyslla
-143,216,Delta Quadrant,Azys Lla,Delta Quadrant,azyslla
-144,216,The Pappus Tree,Azys Lla,The Pappus Tree (Lv. 60),azyslla
-145,216,The Habisphere,Azys Lla,The Habisphere (Lv. 60),azyslla
-146,216,The Flagship,Azys Lla,The Flagship (Lv. 60),azyslla
-155,30,Northwest Bronze Lake,Outer La Noscea,Northwest Bronze Lake,outerlanoscea
-156,17,North Isle of Endless Summer,Eastern La Noscea,North Isle of Endless Summer,easternlanoscea
-157,370,Kugane Piers,Kugane,Kugane Piers,kugane
-158,371,The Ruby Price,The Ruby Sea,The Ruby Price,therubysea
-159,371,Hells' Lid,The Ruby Sea,Hells' Lid,therubysea
-160,371,The Isle of Bekko,The Ruby Sea,The Isle of Bekko (Lv. 65),therubysea
-161,371,Shoal Rock,The Ruby Sea,Shoal Rock,therubysea
-162,371,Onokoro,The Ruby Sea,Onokoro,therubysea
-163,371,Isari,The Ruby Sea,Isari,therubysea
-164,371,The Isle of Zekki,The Ruby Sea,The Isle of Zekki,therubysea
-165,354,The Heron's Nest,Yanxia,The Heron's Nest,yanxia
-166,354,The Heron's Way,Yanxia,The Heron's Way,yanxia
-167,354,Namai,Yanxia,Namai,yanxia
-168,354,Prism Lake,Yanxia,Prism Lake,yanxia
-169,354,Prism Canyon,Yanxia,Prism Canyon,yanxia
-170,354,Doma Castle,Yanxia,Doma Castle,yanxia
-171,354,Mercantile Docks,Yanxia,Mercantile Docks,yanxia
-172,354,The One River (East),Yanxia,The One River (East),yanxia
-173,354,The One River (West),Yanxia,The One River (West) (Lv. 70),yanxia
-174,354,Plum Spring,Yanxia,Plum Spring (Lv. 70),yanxia
-175,372,Nem Khaal,The Azim Steppe,Nem Khaal,theazimsteppe
-176,372,Hak Khaal,The Azim Steppe,Hak Khaal,theazimsteppe
-177,372,Upper Yat Khaal,The Azim Steppe,Upper Yat Khaal,theazimsteppe
-178,372,Azim Khaat,The Azim Steppe,Azim Khaat,theazimsteppe
-179,372,Tao Khaal,The Azim Steppe,Tao Khaal,theazimsteppe
-180,372,Lower Yat Khaal,The Azim Steppe,Lower Yat Khaal,theazimsteppe
-181,372,Dotharl Khaa,The Azim Steppe,Dotharl Khaa,theazimsteppe
-182,366,Upper Mirage Creek,Rhalgr's Reach,Upper Mirage Creek,rhalgrsreach
-183,366,Rhalgr's Reach,Rhalgr's Reach,Rhalgr's Reach,rhalgrsreach
-184,366,The Outer Fist,Rhalgr's Reach,The Outer Fist,rhalgrsreach
-185,367,Timmon Beck,The Fringes,Timmon Beck,thefringes
-186,367,Dimwold,The Fringes,Dimwold,thefringes
-187,367,The Comet's Tail,The Fringes,The Comet's Tail,thefringes
-188,367,The Velodyna River,The Fringes,The Velodyna River,thefringes
-189,367,Mirage Creek,The Fringes,Mirage Creek,thefringes
-190,368,Grymm & Enid,The Peaks,Grymm & Enid,thepeaks
-191,368,The Slow Wash,The Peaks,The Slow Wash,thepeaks
-192,368,Heather Falls,The Peaks,Heather Falls (Lv. 65),thepeaks
-193,368,The Ephor,The Peaks,The Ephor (Lv. 70),thepeaks
-194,368,The Bull's Bath,The Peaks,The Bull's Bath,thepeaks
-195,368,The Arms of Meed,The Peaks,The Arms of Meed (Lv. 70),thepeaks
-196,369,Loch Seld,The Lochs,Loch Seld,thelochs
-197,364,Shirogane,Shirogane,Shirogane,shirogane
-197,365,Shirogane,Shirogane Subdivision,Shirogane (Subdivision),shiroganesubdivision
-198,364,The Silver Canal,Shirogane,The Silver Canal (Lv. 65),shirogane
-198,365,The Silver Canal,Shirogane Subdivision,The Silver Canal (Lv. 65) (Subdivision),shiroganesubdivision
-199,497,The Trivium,The Crystarium,The Trivium,thecrystarium
-200,497,The Quadrivium,The Crystarium,The Quadrivium,thecrystarium
-201,497,Crystarium Personal Suites,The Crystarium,Crystarium Personal Suites,thecrystarium
-202,491,The Rift of Sighs,Lakeland,The Rift of Sighs,lakeland
-203,491,The Rusted Reservoir,Lakeland,The Rusted Reservoir,lakeland
-204,491,The Source,Lakeland,The Source,lakeland
-205,491,Sullen,Lakeland,Sullen,lakeland
-206,491,The Isle of Ken,Lakeland,The Isle of Ken (Lv. 75),lakeland
-207,492,Upper Watts River,Kholusia,Upper Watts River,kholusia
-208,492,White Oil Falls,Kholusia,White Oil Falls,kholusia
-209,492,Lower Watts River,Kholusia,Lower Watts River,kholusia
-210,492,Sharptongue Drip,Kholusia,Sharptongue Drip,kholusia
-211,492,The Western Kholusian Coast,Kholusia,The Western Kholusian Coast,kholusia
-212,492,Seagazer Shoals,Kholusia,Seagazer Shoals (Lv. 75),kholusia
-213,492,The Eastern Kholusian Coast,Kholusia,The Eastern Kholusian Coast,kholusia
-214,498,The Derelicts,Eulmore (The Buttress),The Derelicts,eulmore
-214,555,The Derelicts,Eulmore (The Canopy),The Derelicts (The Canopy),thecanopy
-215,493,The River of Sand,Amh Araeng,The River of Sand,amharaeng
-216,493,The Hills of Amber,Amh Araeng,The Hills of Amber,amharaeng
-217,493,The Nabaath Severance,Amh Araeng,The Nabaath Severance,amharaeng
-218,494,Handmirror Lake,Il Mheg,Handmirror Lake,ilmheg
-219,494,Longmirror Lake,Il Mheg,Longmirror Lake,ilmheg
-220,494,The Haughty One,Il Mheg,The Haughty One,ilmheg
-221,494,The Jealous One,Il Mheg,The Jealous One,ilmheg
-222,494,Father Collard's Failings,Il Mheg,Father Collard's Failings (Lv. 75),ilmheg
-223,494,The Spoiled One,Il Mheg,The Spoiled One,ilmheg
-224,494,Saint Fathric's Temple,Il Mheg,Saint Fathric's Temple,ilmheg
-225,495,Lake Tusi Mek'ta,The Rak'tika Greatwood,Lake Tusi Mek'ta,theraktikagreatwood
-226,495,The Red Chalice,The Rak'tika Greatwood,The Red Chalice,theraktikagreatwood
-227,495,The Lozatl,The Rak'tika Greatwood,The Lozatl,theraktikagreatwood
-228,495,South Mjrl's Regret,The Rak'tika Greatwood,South Mjrl's Regret,theraktikagreatwood
-229,495,Woven Oath,The Rak'tika Greatwood,Woven Oath (Lv. 80),theraktikagreatwood
-230,496,The Flounders' Floor,The Tempest,The Flounders' Floor (Lv. 80),thetempest
-231,496,Where the Dry Return,The Tempest,Where the Dry Return,thetempest
-232,496,Northwest Caliban Gorge,The Tempest,Northwest Caliban Gorge,thetempest
-233,496,West Caliban Gap,The Tempest,West Caliban Gap,thetempest
-234,496,East Caliban Gap,The Tempest,East Caliban Gap,thetempest
-235,496,Purpure,The Tempest,Purpure,thetempest
-236,496,The Norvrandt Slope,The Tempest,The Norvrandt Slope (underground),thetempest
-237,604,Outer Galadion Bay,The *Endeavor*,The Endeavor,theendeavor
-238,604,Galadion Spectral Current,The *Endeavor*,The Endeavor,theendeavor
-239,604,The Southern Strait of Merlthor,The *Endeavor*,The Endeavor,theendeavor
-240,604,Southern Merlthor Spectral Current,The *Endeavor*,The Endeavor,theendeavor
-241,604,Open Rhotano Sea,The *Endeavor*,The Endeavor,theendeavor
-242,604,Rhotano Spectral Current,The *Endeavor*,The Endeavor,theendeavor
-243,604,The Northern Strait of Merlthor,The *Endeavor*,The Endeavor,theendeavor
-244,604,Northern Merlthor Spectral Current,The *Endeavor*,The Endeavor,theendeavor
-245,495,Mjrl's Tears,The Rak'tika Greatwood,Mjrl's Tears,theraktikagreatwood
-246,604,Cieldalaes Margin,The *Endeavor*,The Endeavor,theendeavor
-247,604,Cieldalaes Spectral Current,The *Endeavor*,The Endeavor,theendeavor
-248,604,Open Bloodbrine Sea,The *Endeavor*,The Endeavor,theendeavor
-249,604,Bloodbrine Spectral Current,The *Endeavor*,The Endeavor,theendeavor
-250,604,Outer Rothlyt Sound,The *Endeavor*,The Endeavor,theendeavor
-251,604,Rothlyt Spectral Current,The *Endeavor*,The Endeavor,theendeavor
-252,693,Scholar's Harbor,Old Sharlayan,Scholar's Harbor,oldsharlayan
-253,693,Oinops,Old Sharlayan,Oinops,oldsharlayan
-254,693,Reflecting Pool,Old Sharlayan,Reflecting Pool,oldsharlayan
-255,695,Unmoved Source Alpha,Labyrinthos,Unmoved Source Alpha,labyrinthos
-256,695,The Mover Alpha,Labyrinthos,The Mover Alpha,labyrinthos
-257,695,Unmoved Source Beta,Labyrinthos,Unmoved Source Beta,labyrinthos
-258,695,The Mover Beta,Labyrinthos,The Mover Beta,labyrinthos
-259,695,Deepmoat,Labyrinthos,Deepmoat,labyrinthos
-260,694,Meghaduta,Radz-at-Han,Meghaduta,radz-at-han
-261,696,Yedlihmad,Thavnair,Yedlihmad,thavnair
-262,696,The Thavnairian Coast,Thavnair,The Thavnairian Coast,thavnair
-263,696,The Great Runoff,Thavnair,The Great Runoff,thavnair
-264,696,Giantsgall Grounds,Thavnair,Giantsgall Grounds,thavnair
-265,696,The Wakeful Torana,Thavnair,Wakeful Torana,thavnair
-266,696,Ksiroda,Thavnair,Ksiroda,thavnair
-267,696,Pavana's Remorse,Thavnair,Pavana's Remorse,thavnair
-268,696,The Font of Maya,Thavnair,The Font of Maya,thavnair
-269,696,The Perfumed Tides,Thavnair,The Perfumed Tides (Lv. 85),thavnair
-270,697,The Eblan Thaw,Garlemald,The Eblan Thaw (Lv. 83),garlemald
-271,697,The Stainless Course,Garlemald,The Stainless Course,garlemald
-272,698,Greatest Endsvale,Mare Lamentorum,Greatest Endsvale,marelamentorum
-273,698,The Chlorophospond,Mare Lamentorum,The Chlorophospond (Lv. 85),marelamentorum
-274,698,The Frozen Fissure,Mare Lamentorum,The Frozen Fissure (underground),marelamentorum
-275,700,Rumination's Ramble,Elpis,Rumination's Ramble,elpis
-276,700,The Lower Hungering Gardens,Elpis,The Lower Hungering Gardens,elpis
-277,700,Lethe,Elpis,Lethe,elpis
-278,699,Apohelos 18-γ,Ultima Thule,Apohelos 18-γ,ultimathule
-279,699,Apohelos 18-β,Ultima Thule,Apohelos 18-β,ultimathule
-280,699,Apohelos 18-α,Ultima Thule,Apohelos 18-α,ultimathule
-281,699,The Wellspring of Regret,Ultima Thule,The Wellspring of Regret,ultimathule
-282,699,Abode of the Ea,Ultima Thule,Abode of the Ea,ultimathule
-283,699,Limne 18,Ultima Thule,Limne 18,ultimathule
-284,699,Limne 3-α,Ultima Thule,Limne 3-α,ultimathule
-285,699,Limne 3-β,Ultima Thule,Limne 3-β (Lv. 90),ultimathule
-286,604,Open Sirensong Sea,The *Endeavor*,The Endeavor,theendeavor
-287,604,Sirensong Spectral Current,The *Endeavor*,The Endeavor,theendeavor
-288,604,Kugane Coast,The *Endeavor*,The Endeavor,theendeavor
-289,604,Kugane Spectral Current,The *Endeavor*,The Endeavor,theendeavor
-290,604,Open Ruby Sea,The *Endeavor*,The Endeavor,theendeavor
-291,604,Ruby Spectral Current,The *Endeavor*,The Endeavor,theendeavor
-292,604,Lower One River,The *Endeavor*,The Endeavor,theendeavor
-293,604,One River Spectral Current,The *Endeavor*,The Endeavor,theendeavor
-294,855,Downripple,Tuliyollal,Downripple,tuliyollal
-295,855,The For'ard Cabins,Tuliyollal,The For'ard Cabins,tuliyollal
-296,855,High Tide Harbor,Tuliyollal,High Tide Harbor,tuliyollal
-297,857,Sunken Stars,Urqopacha,Sunken Stars,urqopacha
-298,857,Chirwagur Lake,Urqopacha,Chirwagur Lake,urqopacha
-299,857,Karvarhur the First,Urqopacha,Karvarhur the First (Lv. 93),urqopacha
-300,858,Bopo'uihih,Kozama'uka,Bopo'uihih,kozamauka
-301,858,Waters Hanu,Kozama'uka,Waters Hanu,kozamauka
-302,858,Miyakabek'zu,Kozama'uka,Miyakabek'zu,kozamauka
-303,858,The Dewspun Bank,Kozama'uka,The Dewspun Bank,kozamauka
-304,858,Peaks Poga,Kozama'uka,Peaks Poga,kozamauka
-305,858,Ku'uxage,Kozama'uka,Ku'uxage,kozamauka
-306,858,Miyakabek'zoma,Kozama'uka,Miyakabek'zoma,kozamauka
-307,858,Marsh Ligaka,Kozama'uka,Marsh Ligaka,kozamauka
-308,859,Xd'aa Talat Tsoly,Yak T'el,Xd'aa Talat Tsoly,yaktel
-309,859,Iq Br'aax Reservoir,Yak T'el,Iq Br'aax Reservoir,yaktel
-310,859,Yak Awak Tsoly,Yak T'el,Yak Awak Tsoly,yaktel
-311,859,Iq Rrax Tsoly,Yak T'el,Iq Rrax Tsoly,yaktel
-312,859,Xobr'it Tsoly,Yak T'el,Xobr'it Tsoly (Lv. 94),yaktel
-313,859,Ankledeep,Yak T'el,Ankledeep,yaktel
-314,859,Cenote Moxutural,Yak T'el,Cenote Moxutural,yaktel
-315,859,Cenote Jayunja,Yak T'el,Cenote Jayunja,yaktel
-316,859,Sapsweet Cenote,Yak T'el,Sapsweet Cenote,yaktel
-317,859,Bitterbark Cenote,Yak T'el,Bitterbark Cenote,yaktel
-318,859,Xty'iinbek Tsoly,Yak T'el,Xty'iinbek Tsoly (Lv. 97),yaktel
-319,860,Niikwerepi,Shaaloani,Niikwerepi,shaaloani
-320,860,Lake Toari,Shaaloani,Lake Toari,shaaloani
-321,860,Westbound Zorgor,Shaaloani,Westbound Zorgor,shaaloani
-322,860,Eastbound Zorgor,Shaaloani,Eastbound Zorgor,shaaloani
-323,861,Outskirts Shallows,Heritage Found,Outskirts Shallows,heritagefound
-324,861,The Driftdowns,Heritage Found,The Driftdowns,heritagefound
-325,861,Crackling Canyons,Heritage Found,Crackling Canyons,heritagefound
-326,861,Alexandrian Ruins,Heritage Found,Alexandrian Ruins,heritagefound
-327,856,Residential Sector,Solution Nine,Residential Sector,solutionnine
-328,862,The Knowable,Living Memory,The Knowable,livingmemory
-329,862,Mu Springs Eternal,Living Memory,Mu Springs Eternal,livingmemory
-330,862,Leynode Aero,Living Memory,Leynode Aero,livingmemory
-331,862,Canal Town South,Living Memory,Canal Town South,livingmemory
-332,862,Canal Town North,Living Memory,Canal Town North,livingmemory
-333,862,Proto Alexandria,Living Memory,Proto Alexandria (Lv. 100),livingmemory
-334,604,Unnamed Margin,The *Endeavor*,The Endeavor,theendeavor
-335,604,Unnamed Spectral Current,The *Endeavor*,The Endeavor,theendeavor
-336,604,Thavnair Margin,The *Endeavor*,The Endeavor,theendeavor
-337,604,Thavnair Spectral Current,The *Endeavor*,The Endeavor,theendeavor
-10000,463,The Doman Enclave,The Doman Enclave,The Doman Enclave,thedomanenclave
-10017,584,Diadem Grotto,The Diadem,Diadem Grotto,thediadem
-10018,584,Southern Diadem Lake,The Diadem,Southern Diadem Lake,thediadem
-10019,584,Northern Diadem Lake,The Diadem,Northern Diadem Lake,thediadem
-10020,584,Blustery Cloudtop,The Diadem,Blustery Cloudtop,thediadem
-10021,584,Calm Cloudtop,The Diadem,Calm Cloudtop,thediadem
-10022,584,Swirling Cloudtop,The Diadem,Swirling Cloudtop,thediadem
-10023,584,Windswept Cloudtop,The Diadem,Windswept Cloudtop,thediadem
-10024,584,Windbreaking Cloudtop,The Diadem,Windbreaking Cloudtop,thediadem
-10025,584,Buffeted Cloudtop,The Diadem,Buffeted Cloudtop,thediadem
-10026,801,Elysian Fields,Elysion,Elysian Fields,elysion
-10027,801,Elysian Seas α,Elysion,Elysian Seas α,elysion
-10028,801,Elysian Seas β,Elysion,Elysian Seas β,elysion
-10029,801,Elysian Playgrounds α,Elysion,Elysian Playgrounds α,elysion
-10030,801,Elysian Playgrounds β,Elysion,Elysian Playgrounds β,elysion
-10043,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum
-10044,1031,Northward Hop-print,Sinus Ardorum,Northward Hop-print,sinusardorum
-10045,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum
-10046,1031,Southeast Well,Sinus Ardorum,Southeast Well,sinusardorum
-10047,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum
-10048,1031,Northward Hop-print,Sinus Ardorum,Northward Hop-print,sinusardorum
-10049,1031,Southeast Well,Sinus Ardorum,Southeast Well,sinusardorum
-10050,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum
-10051,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum
-10052,1031,Southeast Well,Sinus Ardorum,Southeast Well,sinusardorum
-10053,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum
-10054,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum
-10055,1031,Northward Hop-print,Sinus Ardorum,Northward Hop-print,sinusardorum
-10056,1031,Hollow Harbor,Sinus Ardorum,Hollow Harbor,sinusardorum
-10057,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum
-10058,1031,Hollow Harbor,Sinus Ardorum,Hollow Harbor,sinusardorum
-10059,1031,Northward Hop-print,Sinus Ardorum,Northward Hop-print,sinusardorum
-10060,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum
-10061,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum
-10062,1031,Southeast Well,Sinus Ardorum,Southeast Well,sinusardorum
-10063,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum
-10064,1031,Northward Hop-print,Sinus Ardorum,Northward Hop-print,sinusardorum
-10065,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum
-10066,1031,Hollow Harbor,Sinus Ardorum,Hollow Harbor,sinusardorum
-10067,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum
-10068,1031,Hollow Harbor,Sinus Ardorum,Hollow Harbor,sinusardorum
-10069,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum
-10070,1031,Southeast Well,Sinus Ardorum,Southeast Well,sinusardorum
-10071,1031,Aetherial Falls,Sinus Ardorum,Aetherial Falls,sinusardorum
-10072,1031,Glimmerpond Alpha,Sinus Ardorum,Glimmerpond Alpha,sinusardorum
-10073,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum
-10074,1031,Hollow Harbor,Sinus Ardorum,Hollow Harbor,sinusardorum
-10075,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum
-10076,1031,Southeast Well,Sinus Ardorum,Southeast Well,sinusardorum
-10077,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum
-10078,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum
-10079,1031,Hollow Harbor,Sinus Ardorum,Hollow Harbor,sinusardorum
-10080,1031,Northward Hop-print,Sinus Ardorum,Northward Hop-print,sinusardorum
-10081,1031,Glimmerpond Alpha,Sinus Ardorum,Glimmerpond Alpha,sinusardorum
-10082,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum
-10083,1031,Glimmerpond Beta,Sinus Ardorum,Glimmerpond Beta,sinusardorum
-10084,1031,Aetherial Falls,Sinus Ardorum,Aetherial Falls,sinusardorum
-10085,1031,Aetherial Falls,Sinus Ardorum,Aetherial Falls,sinusardorum
-10086,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum
-10087,1031,Glimmerpond Beta,Sinus Ardorum,Glimmerpond Beta,sinusardorum
-10088,1031,Southeast Well,Sinus Ardorum,Southeast Well,sinusardorum
-10089,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum
-10090,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum
-10091,1031,Hollow Harbor,Sinus Ardorum,Hollow Harbor,sinusardorum
-10092,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum
-10093,1031,Northward Hop-print,Sinus Ardorum,Northward Hop-print,sinusardorum
-10096,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum
-10108,1086,The Lehr,Phaenna,The Lehr,phaenna
-10109,1086,West Beaconveil,Phaenna,West Beaconveil,phaenna
-10110,1086,Opalescent Crossing,Phaenna,Opalescent Crossing,phaenna
-10111,1086,The Lehr,Phaenna,The Lehr,phaenna
-10112,1086,Opalescent Crossing,Phaenna,Opalescent Crossing,phaenna
-10113,1086,West Beaconveil,Phaenna,West Beaconveil,phaenna
-10114,1086,The Lehr,Phaenna,The Lehr,phaenna
-10115,1086,West Beaconveil,Phaenna,West Beaconveil,phaenna
-10116,1086,The Lehr,Phaenna,The Lehr,phaenna
-10117,1086,West Beaconveil,Phaenna,West Beaconveil,phaenna
-10118,1086,The Lehr,Phaenna,The Lehr,phaenna
-10119,1086,Opalescent Crossing,Phaenna,Opalescent Crossing,phaenna
-10120,1086,Opalescent Crossing,Phaenna,Opalescent Crossing,phaenna
-10121,1086,Upper Soda-lime Float,Phaenna,Upper SL Float,phaenna
-10122,1086,Central Soda-lime Channel,Phaenna,Central SL Channel,phaenna
-10123,1086,Western Soda-lime Tributary,Phaenna,Western SL Tributary,phaenna
-10124,1086,Lower Soda-lime Float,Phaenna,Lower SL Float,phaenna
-10125,1086,The Prismatic Pull,Phaenna,The Prismatic Pull,phaenna
-10126,1086,West Beaconveil,Phaenna,West Beaconveil,phaenna
-10127,1086,Opalescent Crossing,Phaenna,Opalescent Crossing,phaenna
-10128,1086,The Prismatic Pull,Phaenna,The Prismatic Pull,phaenna
-10129,1086,The Lehr,Phaenna,The Lehr,phaenna
-10130,1086,West Beaconveil,Phaenna,West Beaconveil,phaenna
-10131,1086,Opalescent Crossing,Phaenna,Opalescent Crossing,phaenna
-10132,1086,The Prismatic Pull,Phaenna,The Prismatic Pull,phaenna
-10133,1086,Central Soda-lime Channel,Phaenna,Central SL Channel,phaenna
-10134,1086,Western Soda-lime Tributary,Phaenna,Western SL Tributary,phaenna
-10135,1086,Lower Soda-lime Float,Phaenna,Lower SL Float,phaenna
-10137,1086,Capsule Pools,Phaenna,Capsule Pools,phaenna
-10138,1086,The Prismatic Pull,Phaenna,The Prismatic Pull,phaenna
-10139,1086,Upper Soda-lime Float,Phaenna,Upper SL Float,phaenna
-10140,1086,Upper Soda-lime Float,Phaenna,Upper SL Float,phaenna
-10141,1086,Central Soda-lime Channel,Phaenna,Central SL Channel,phaenna
-10142,1086,Central Soda-lime Channel,Phaenna,Central SL Channel,phaenna
-10143,1086,Western Soda-lime Tributary,Phaenna,Western SL Tributary,phaenna
-10144,1086,Lower Soda-lime Float,Phaenna,Lower SL Float,phaenna
-10147,1086,Lower Soda-lime Float,Phaenna,Lower SL Float,phaenna
-10148,1086,Bubble Bursters,Phaenna,Bubble Bursters,phaenna
-10149,1086,Fusingway Flow,Phaenna,Fusingway Flow,phaenna
-10150,1086,The Prismatic Pull,Phaenna,The Prismatic Pull,phaenna
-10151,1086,Capsule Pools,Phaenna,Capsule Pools,phaenna
-10152,1086,Fusingway Flow,Phaenna,Fusingway Flow,phaenna
-10153,1086,The Lehr,Phaenna,The Lehr,phaenna
-10154,1086,Opalescent Crossing,Phaenna,Opalescent Crossing,phaenna
-10155,1086,Bubble Bursters,Phaenna,Bubble Bursters,phaenna
-10163,1160,Foregone Oasis,Oizys,Foregone Oasis,oizys
-10164,1160,Megalithopolis,Oizys,Megalithopolis,oizys
-10165,1160,Foregone Oasis,Oizys,Foregone Oasis,oizys
-10166,1160,Megalithopolis,Oizys,Megalithopolis,oizys
-10167,1160,Foregone Oasis,Oizys,Foregone Oasis,oizys
-10168,1160,Megalithopolis,Oizys,Megalithopolis,oizys
-10169,1160,Foregone Oasis,Oizys,Foregone Oasis,oizys
-10170,1160,Megalithopolis,Oizys,Megalithopolis,oizys
-10171,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys
-10172,1160,Collapsed Tunnel,Oizys,Collapsed Tunnel,oizys
-10173,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys
-10174,1160,Collapsed Tunnel,Oizys,Collapsed Tunnel,oizys
-10175,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys
-10176,1160,Collapsed Tunnel,Oizys,Collapsed Tunnel,oizys
-10177,1160,Collapsed Tunnel,Oizys,Collapsed Tunnel,oizys
-10178,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys
-10179,1160,The Moros Well,Oizys,The Moros Well,oizys
-10180,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys
-10181,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys
-10182,1160,Collapsed Tunnel,Oizys,Collapsed Tunnel,oizys
-10183,1160,The Moros Well,Oizys,The Moros Well,oizys
-10184,1160,The Subterrain,Oizys,The Subterrain,oizys
-10185,1160,Under Overboard,Oizys,Under Overboard,oizys
-10186,1160,The Moros Well,Oizys,The Moros Well,oizys
-10187,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys
-10188,1160,Under Overboard,Oizys,Under Overboard,oizys
-10189,1160,The Moros Well,Oizys,The Moros Well,oizys
-10190,1160,The Subterrain,Oizys,The Subterrain,oizys
-10191,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys
-10192,1160,Megalithopolis,Oizys,Megalithopolis,oizys
-10201,1266,Timberpond,Auxesia,Timberpond,auxesia
-10202,1266,New Growth Tapwaters,Auxesia,New Growth Tapwaters,auxesia
-10203,1266,Timberpond,Auxesia,Timberpond,auxesia
-10204,1266,New Growth Tapwaters,Auxesia,New Growth Tapwaters,auxesia
-10205,1266,Timberpond,Auxesia,Timberpond,auxesia
-10206,1266,New Growth Tapwaters,Auxesia,New Growth Tapwaters,auxesia
-10207,1266,Timberpond,Auxesia,Timberpond,auxesia
-10208,1266,New Growth Tapwaters,Auxesia,New Growth Tapwaters,auxesia
-10209,1266,Emerald Springs,Auxesia,Emerald Springs,auxesia
-10210,1266,Full Bloom Fountain,Auxesia,Full Bloom Fountain,auxesia
-10211,1266,Emerald Springs,Auxesia,Emerald Springs,auxesia
-10212,1266,Full Bloom Fountain,Auxesia,Full Bloom Fountain,auxesia
-10213,1266,Emerald Springs,Auxesia,Emerald Springs,auxesia
-10214,1266,Emerald Springs,Auxesia,Emerald Springs,auxesia
-10215,1266,Full Bloom Fountain,Auxesia,Full Bloom Fountain,auxesia
-10216,1266,Western Nervure,Auxesia,Western Nervure,auxesia
-10217,1266,Emerald Springs,Auxesia,Emerald Springs,auxesia
-10218,1266,Full Bloom Fountain,Auxesia,Full Bloom Fountain,auxesia
-10219,1266,Western Nervure,Auxesia,Western Nervure,auxesia
-10220,1266,Full Bloom Fountain,Auxesia,Full Bloom Fountain,auxesia
-10221,1266,Western Nervure,Auxesia,Western Nervure,auxesia
-10222,1266,Sylvan Soaking Pool,Auxesia,Sylvan Soaking Pool,auxesia
-10223,1266,Full Bloom Fountain,Auxesia,Full Bloom Fountain,auxesia
-10224,1266,Western Nervure,Auxesia,Western Nervure,auxesia
-10225,1266,Stratostone Shores,Auxesia,Stratostone Shores,auxesia
-10226,1266,Sprouting Cisterns,Auxesia,Sprouting Cisterns,auxesia
-10227,1266,Sprouting Cisterns,Auxesia,Sprouting Cisterns,auxesia
-10228,1266,Sprouting Cisterns,Auxesia,Sprouting Cisterns,auxesia
-10229,1266,Western Nervure,Auxesia,Western Nervure,auxesia
-10230,1266,Full Bloom Fountain,Auxesia,Full Bloom Fountain,auxesia
+SpotID,MapID,SpotName,MapName,LayerName,JumpName,SpotX,SpotY,MapMarkerRange
+2,4,The Vein,Central Shroud,The Vein,centralshroud,1094,1058,5
+3,4,The Mirror,Central Shroud,The Mirror,centralshroud,1276,1398,5
+4,4,Everschade,Central Shroud,Everschade,centralshroud,730,1156,5
+5,4,Hopeseed Pond,Central Shroud,Hopeseed Pond,centralshroud,690,1011,5
+6,5,Sweetbloom Pier,East Shroud,Sweetbloom Pier,eastshroud,401,1094,6
+7,5,Verdant Drop,East Shroud,Verdant Drop,eastshroud,973,1025,6
+8,5,Springripple Brook,East Shroud,Springripple Brook,eastshroud,1150,1214,6
+9,5,Sylphlands,East Shroud,Sylphlands,eastshroud,1250,986,6
+10,5,Sanctum of the Twelve,East Shroud,Sanctum of the Twelve,eastshroud,833,798,6
+11,6,Upper Hathoeva River,South Shroud,Upper Hathoeva River,southshroud,850,900,7
+12,6,Middle Hathoeva River,South Shroud,Middle Hathoeva River (Lv. 30),southshroud,947,1076,7
+13,6,Lower Hathoeva River,South Shroud,Lower Hathoeva River,southshroud,867,1190,7
+14,6,East Hathoeva River,South Shroud,East Hathoeva River,southshroud,1142,1067,7
+15,6,Goblinblood,South Shroud,Goblinblood,southshroud,1324,1023,7
+16,6,Rootslake,South Shroud,Rootslake,southshroud,880,1401,7
+17,6,Urth's Gift,South Shroud,Urth's Gift,southshroud,1576,1147,7
+18,7,Murmur Rills,North Shroud,Murmur Rills,northshroud,1268,1204,8
+19,7,Fallgourd Float,North Shroud,Fallgourd Float,northshroud,1000,1182,8
+20,7,Proud Creek,North Shroud,Proud Creek,northshroud,990,990,8
+21,7,Lake Tahtotl,North Shroud,Lake Tahtotl (Lv. 50),northshroud,840,940,8
+22,25,North Silvertear,Mor Dhona,North Silvertear,mordhona,1203,602,108
+23,25,Rathefrost,Mor Dhona,Rathefrost (Lv. 50),mordhona,886,833,108
+24,25,The Tangle,Mor Dhona,The Tangle,mordhona,670,615,108
+25,25,The Deep Tangle,Mor Dhona,The Deep Tangle,mordhona,595,528,108
+26,53,Coerthas River,Coerthas Central Highlands,Coerthas River,coerthascentralhighlands,972,1478,102
+27,53,Witchdrop,Coerthas Central Highlands,Witchdrop,coerthascentralhighlands,1633,888,102
+28,53,The Nail,Coerthas Central Highlands,The Nail,coerthascentralhighlands,731,1019,102
+29,53,The Weeping Saint,Coerthas Central Highlands,The Weeping Saint (Lv. 45),coerthascentralhighlands,1525,325,102
+30,53,Dragonhead Latrines,Coerthas Central Highlands,Dragonhead Latrines,coerthascentralhighlands,1344,796,102
+31,53,Daniffen Pass,Coerthas Central Highlands,Daniffen Pass,coerthascentralhighlands,612,1089,102
+32,53,Exploratory Ice Hole,Coerthas Central Highlands,Exploratory Ice Hole,coerthascentralhighlands,272,1080,102
+33,53,Snowcloak,Coerthas Central Highlands,Snowcloak,coerthascentralhighlands,108,1014,102
+34,53,Sea of Clouds,Coerthas Central Highlands,Sea of Clouds,coerthascentralhighlands,660,620,102
+35,12,Limsa Lominsa Lower Decks,Limsa Lominsa Lower Decks,Limsa Lominsa Lower Decks,limsalominsalowerdecks,668,1120,72
+36,11,Limsa Lominsa Upper Decks,Limsa Lominsa Upper Decks,Limsa Lominsa Upper Decks,limsalominsaupperdecks,930,1032,71
+37,15,Zephyr Drift,Middle La Noscea,Zephyr Drift,middlelanoscea,884,1049,74
+38,15,Summerford,Middle La Noscea,Summerford,middlelanoscea,682,734,74
+39,15,Rogue River,Middle La Noscea,Rogue River,middlelanoscea,1054,1058,74
+40,15,West Agelyss River,Middle La Noscea,West Agelyss River,middlelanoscea,960,850,74
+41,15,Nym River,Middle La Noscea,Nym River,middlelanoscea,861,693,74
+42,15,Woad Whisper Canyon,Middle La Noscea,Woad Whisper Canyon (Lv. 15),middlelanoscea,989,558,74
+43,16,The Mourning Widow,Lower La Noscea,The Mourning Widow,lowerlanoscea,1188,1100,75
+44,16,Moraby Bay,Lower La Noscea,Moraby Bay,lowerlanoscea,1294,1248,75
+45,16,Cedarwood,Lower La Noscea,Cedarwood,lowerlanoscea,1712,850,75
+46,16,Moraby Drydocks,Lower La Noscea,Moraby Drydocks,lowerlanoscea,1270,1672,75
+47,16,Oschon's Torch,Lower La Noscea,Oschon's Torch,lowerlanoscea,1174,1934,75
+48,16,The Salt Strand,Lower La Noscea,The Salt Strand (Lv. 20),lowerlanoscea,818,1752,75
+49,16,Candlekeep Quay,Lower La Noscea,Candlekeep Quay,lowerlanoscea,980,1900,75
+50,16,Empty Heart,Lower La Noscea,Empty Heart,lowerlanoscea,1049,1699,75
+51,17,South Bloodshore,Eastern La Noscea,South Bloodshore,easternlanoscea,1595,1672,76
+52,17,Costa del Sol,Eastern La Noscea,Costa del Sol,easternlanoscea,1593,1414,76
+53,17,North Bloodshore,Eastern La Noscea,North Bloodshore,easternlanoscea,1600,1160,76
+54,17,Hidden Falls,Eastern La Noscea,Hidden Falls (Lv. 35),easternlanoscea,1490,1100,76
+55,17,East Agelyss River,Eastern La Noscea,East Agelyss River,easternlanoscea,959,1247,76
+56,17,Raincatcher Gully,Eastern La Noscea,Raincatcher Gully,easternlanoscea,973,1462,76
+57,17,The Juggernaut,Eastern La Noscea,The Juggernaut,easternlanoscea,791,1550,76
+58,17,Red Mantis Falls,Eastern La Noscea,Red Mantis Falls (Lv. 45),easternlanoscea,717,1322,76
+59,18,Swiftperch,Western La Noscea,Swiftperch,westernlanoscea,1641,1542,77
+60,18,Skull Valley,Western La Noscea,Skull Valley,westernlanoscea,1283,1298,77
+61,18,Halfstone,Western La Noscea,Halfstone,westernlanoscea,827,998,77
+62,18,Isles of Umbra Northshore,Western La Noscea,Isles of Umbra Northshore,westernlanoscea,673,1444,77
+63,18,Isles of Umbra Southshore,Western La Noscea,Isles of Umbra Southshore (Lv. 50),westernlanoscea,590,1760,77
+64,18,The Brewer's Beacon,Western La Noscea,The Brewer's Beacon (Lv. 15),westernlanoscea,1456,1480,77
+65,18,The Ship Graveyard,Western La Noscea,The Ship Graveyard,westernlanoscea,728,1752,77
+66,19,Oakwood,Upper La Noscea,Oakwood,upperlanoscea,629,1164,78
+67,19,Fool Falls,Upper La Noscea,Fool Falls,upperlanoscea,402,1004,78
+68,19,Northeast Bronze Lake,Upper La Noscea,Northeast Bronze Lake,upperlanoscea,1356,1091,78
+69,20,The Silver Bazaar,Western Thanalan,The Silver Bazaar,westernthanalan,678,1426,40
+70,20,Vesper Bay,Western Thanalan,Vesper Bay,westernthanalan,526,578,40
+71,20,Crescent Cove,Western Thanalan,Crescent Cove,westernthanalan,728,910,40
+72,20,Nophica's Wells,Western Thanalan,Nophica's Wells,westernthanalan,1174,1028,40
+73,20,The Footfalls,Western Thanalan,The Footfalls,westernthanalan,808,734,40
+74,20,Cape Westwind,Western Thanalan,Cape Westwind,westernthanalan,446,318,40
+75,21,Upper Soot Creek,Central Thanalan,Upper Soot Creek,centralthanalan,1120,860,39
+76,21,Lower Soot Creek,Central Thanalan,Lower Soot Creek,centralthanalan,806,1138,39
+77,21,The Unholy Heir,Central Thanalan,The Unholy Heir,centralthanalan,1340,914,39
+78,22,North Drybone,Eastern Thanalan,North Drybone,easternthanalan,632,984,41
+79,22,South Drybone,Eastern Thanalan,South Drybone,easternthanalan,810,1190,41
+80,22,Yugr'am River,Eastern Thanalan,Yugr'am River,easternthanalan,1232,1082,41
+81,3,Whispering Gorge,Old Gridania,Whispering Gorge,oldgridania,1553,530,4
+82,22,The Burning Wall,Eastern Thanalan,The Burning Wall,easternthanalan,1406,1184,41
+83,23,Burnt Lizard Creek,Southern Thanalan,Burnt Lizard Creek,southernthanalan,1036,704,42
+84,23,Zahar'ak,Southern Thanalan,Zahar'ak,southernthanalan,1218,1000,42
+85,23,Forgotten Springs,Southern Thanalan,Forgotten Springs,southernthanalan,732,1496,42
+86,23,Sagolii Desert,Southern Thanalan,Sagolii Desert,southernthanalan,568,1750,42
+87,23,Sagolii Dunes,Southern Thanalan,Sagolii Dunes (Lv. 35),southernthanalan,1314,1796,42
+88,24,Ceruleum Field,Northern Thanalan,Ceruleum Field,northernthanalan,986,1128,43
+89,24,Bluefog,Northern Thanalan,Bluefog,northernthanalan,1156,1249,43
+90,2,Jadeite Flood,New Gridania,Jadeite Flood,newgridania,1160,1361,3
+91,2,Lower Black Tea Brook,New Gridania,Lower Black Tea Brook,newgridania,972,1065,3
+92,4,Haukke Manor,Central Shroud,Haukke Manor,centralshroud,493,1107,5
+93,25,Singing Shards,Mor Dhona,Singing Shards (Lv. 45),mordhona,1406,466,108
+94,25,The North Shards,Mor Dhona,The North Shards,mordhona,1498,260,108
+95,20,Parata's Peace,Western Thanalan,Parata's Peace (Lv. 50),westernthanalan,702,269,40
+96,21,The Clutch,Central Thanalan,The Clutch,centralthanalan,1426,1020,39
+97,16,Blind Iron Mines,Lower La Noscea,Blind Iron Mines,lowerlanoscea,1321,734,75
+98,19,Bronze Lake Shallows,Upper La Noscea,Bronze Lake Shallows,upperlanoscea,1627,1196,78
+99,30,The Long Climb,Outer La Noscea,The Long Climb (Lv. 40),outerlanoscea,744,516,79
+100,3,Upper Black Tea Brook,Old Gridania,Upper Black Tea Brook,oldgridania,790,700,4
+101,18,Sapsa Spawning Grounds,Western La Noscea,Sapsa Spawning Grounds,westernlanoscea,806,738,77
+102,18,Reaver Hide,Western La Noscea,Reaver Hide,westernlanoscea,638,608,77
+103,20,Moondrip,Western Thanalan,Moondrip,westernthanalan,850,303,40
+104,72,Mist,Mist,Mist,mist,1000,1000,86
+104,192,Mist,Mist Subdivision,Mist (Subdivision),mistsubdivision,1000,1000,144
+105,82,The Lavender Beds,The Lavender Beds,The Lavender Beds,thelavenderbeds,1000,1000,66
+105,193,The Lavender Beds,The Lavender Beds Subdivision,The Lavender Beds (Subdivision),thelavenderbedssubdivision,1000,1000,145
+106,83,The Goblet,The Goblet,The Goblet,thegoblet,1000,1000,67
+106,194,The Goblet,The Goblet Subdivision,The Goblet (Subdivision),thegobletsubdivision,1000,1000,146
+107,17,Rhotano Sea (Privateer Forecastle),Eastern La Noscea,Privateer Forecastle,easternlanoscea,1830,1090,76
+108,17,Rhotano Sea (Privateer Sterncastle),Eastern La Noscea,Privateer Sterncastle (Lv. 50),easternlanoscea,1810,1150,76
+109,211,Riversmeet,Coerthas Western Highlands,Riversmeet (under ridges),coerthaswesternhighlands,1512,1260,161
+110,211,Greytail Falls,Coerthas Western Highlands,Greytail Falls,coerthaswesternhighlands,1640,1252,161
+111,211,Unfrozen Pond,Coerthas Western Highlands,Unfrozen Pond,coerthaswesternhighlands,1302,802,161
+112,211,Clearpool,Coerthas Western Highlands,Clearpool (Lv. 60),coerthaswesternhighlands,1698,236,161
+113,211,Dragonspit,Coerthas Western Highlands,Dragonspit (Lv. 60),coerthaswesternhighlands,366,414,161
+114,211,South Banepool,Coerthas Western Highlands,South Banepool,coerthaswesternhighlands,986,490,161
+115,211,Ashpool,Coerthas Western Highlands,Ashpool (under ridge),coerthaswesternhighlands,620,698,161
+116,211,West Banepool,Coerthas Western Highlands,West Banepool,coerthaswesternhighlands,582,372,161
+117,212,The Hundred Throes,The Dravanian Forelands,The Hundred Throes,thedravanianforelands,1442,432,162
+118,212,Whilom River,The Dravanian Forelands,Whilom River,thedravanianforelands,1406,656,162
+119,212,The Smoldering Wastes,The Dravanian Forelands,The Smoldering Wastes,thedravanianforelands,1152,1178,162
+120,212,The Iron Feast,The Dravanian Forelands,The Iron Feast (Lv. 55),thedravanianforelands,1453,240,162
+121,212,Mourn,The Dravanian Forelands,Mourn (in mountain),thedravanianforelands,576,588,162
+122,212,West Mourn,The Dravanian Forelands,West Mourn,thedravanianforelands,410,310,162
+123,212,Anyx Old,The Dravanian Forelands,Anyx Old (in mountain),thedravanianforelands,876,466,162
+124,212,Halo,The Dravanian Forelands,Halo (Lv. 60),thedravanianforelands,316,210,162
+125,213,Thaliak River,The Dravanian Hinterlands,Thaliak River,thedravanianhinterlands,1052,1070,163
+126,213,Quickspill Delta,The Dravanian Hinterlands,Quickspill Delta,thedravanianhinterlands,490,1260,163
+127,213,Upper Thaliak River,The Dravanian Hinterlands,Upper Thaliak River,thedravanianhinterlands,1042,1678,163
+128,213,Middle Thaliak River,The Dravanian Hinterlands,Middle Thaliak River (Lv. 60),thedravanianhinterlands,931,1140,163
+129,214,Eil Tohm,The Churning Mists,Eil Tohm,thechurningmists,1700,1400,164
+130,214,Greensward,The Churning Mists,Greensward,thechurningmists,368,1584,164
+131,214,Weston Waters,The Churning Mists,Weston Waters,thechurningmists,388,336,164
+132,214,Landlord Colony,The Churning Mists,Landlord Colony,thechurningmists,1362,1156,164
+133,214,Sohm Al Summit,The Churning Mists,Sohm Al Summit,thechurningmists,828,1868,164
+134,214,Tharl Oom Khash,The Churning Mists,Tharl Oom Khash (Lv. 55),thechurningmists,914,256,164
+135,215,Voor Sian Siran,The Sea of Clouds,Voor Sian Siran,theseaofclouds,1324,1610,165
+136,215,The Eddies,The Sea of Clouds,The Eddies (Lv. 60),theseaofclouds,1450,1832,165
+137,215,Cloudtop,The Sea of Clouds,Cloudtop,theseaofclouds,668,1784,165
+138,215,The Blue Window,The Sea of Clouds,The Blue Window,theseaofclouds,316,500,165
+139,215,Mok Oogl Island,The Sea of Clouds,Mok Oogl Island (Lv. 56),theseaofclouds,680,220,165
+140,216,Alpha Quadrant,Azys Lla,Alpha Quadrant,azyslla,752,524,166
+141,216,Aetherochemical Spill,Azys Lla,Aetherochemical Spill,azyslla,1430,270,166
+142,216,Hyperstellar Downconverter,Azys Lla,Hyperstellar Downconverter (Lv. 60),azyslla,280,744,166
+143,216,Delta Quadrant,Azys Lla,Delta Quadrant,azyslla,526,1462,166
+144,216,The Pappus Tree,Azys Lla,The Pappus Tree (Lv. 60),azyslla,274,1630,166
+145,216,The Habisphere,Azys Lla,The Habisphere (Lv. 60),azyslla,1860,840,166
+146,216,The Flagship,Azys Lla,The Flagship (Lv. 60),azyslla,1000,1000,166
+155,30,Northwest Bronze Lake,Outer La Noscea,Northwest Bronze Lake,outerlanoscea,920,860,79
+156,17,North Isle of Endless Summer,Eastern La Noscea,North Isle of Endless Summer,easternlanoscea,1750,1280,76
+157,370,Kugane Piers,Kugane,Kugane Piers,kugane,950,1000,280
+158,371,The Ruby Price,The Ruby Sea,The Ruby Price,therubysea,1870,1870,281
+159,371,Hells' Lid,The Ruby Sea,Hells' Lid,therubysea,1240,1630,281
+160,371,The Isle of Bekko,The Ruby Sea,The Isle of Bekko (Lv. 65),therubysea,1680,960,281
+161,371,Shoal Rock,The Ruby Sea,Shoal Rock,therubysea,1580,360,281
+162,371,Onokoro,The Ruby Sea,Onokoro,therubysea,1050,500,281
+163,371,Isari,The Ruby Sea,Isari,therubysea,400,546,281
+164,371,The Isle of Zekki,The Ruby Sea,The Isle of Zekki,therubysea,365,1280,281
+165,354,The Heron's Nest,Yanxia,The Heron's Nest,yanxia,1690,650,282
+166,354,The Heron's Way,Yanxia,The Heron's Way,yanxia,1740,800,282
+167,354,Namai,Yanxia,Namai,yanxia,1425,730,282
+168,354,Prism Lake,Yanxia,Prism Lake,yanxia,1380,275,282
+169,354,Prism Canyon,Yanxia,Prism Canyon,yanxia,1535,310,282
+170,354,Doma Castle,Yanxia,Doma Castle,yanxia,670,320,282
+171,354,Mercantile Docks,Yanxia,Mercantile Docks,yanxia,520,650,282
+172,354,The One River (East),Yanxia,The One River (East),yanxia,950,1160,282
+173,354,The One River (West),Yanxia,The One River (West) (Lv. 70),yanxia,500,1595,282
+174,354,Plum Spring,Yanxia,Plum Spring (Lv. 70),yanxia,1750,1140,282
+175,372,Nem Khaal,The Azim Steppe,Nem Khaal,theazimsteppe,1570,1470,283
+176,372,Hak Khaal,The Azim Steppe,Hak Khaal,theazimsteppe,1400,970,283
+177,372,Upper Yat Khaal,The Azim Steppe,Upper Yat Khaal,theazimsteppe,846,890,283
+178,372,Azim Khaat,The Azim Steppe,Azim Khaat,theazimsteppe,1030,1070,283
+179,372,Tao Khaal,The Azim Steppe,Tao Khaal,theazimsteppe,780,670,283
+180,372,Lower Yat Khaal,The Azim Steppe,Lower Yat Khaal,theazimsteppe,1080,1370,283
+181,372,Dotharl Khaa,The Azim Steppe,Dotharl Khaa,theazimsteppe,575,1610,283
+182,366,Upper Mirage Creek,Rhalgr's Reach,Upper Mirage Creek,rhalgrsreach,1000,1300,276
+183,366,Rhalgr's Reach,Rhalgr's Reach,Rhalgr's Reach,rhalgrsreach,1025,935,276
+184,366,The Outer Fist,Rhalgr's Reach,The Outer Fist,rhalgrsreach,1115,490,276
+185,367,Timmon Beck,The Fringes,Timmon Beck,thefringes,525,860,277
+186,367,Dimwold,The Fringes,Dimwold,thefringes,430,1400,277
+187,367,The Comet's Tail,The Fringes,The Comet's Tail,thefringes,645,1500,277
+188,367,The Velodyna River,The Fringes,The Velodyna River,thefringes,845,425,277
+189,367,Mirage Creek,The Fringes,Mirage Creek,thefringes,1325,770,277
+190,368,Grymm & Enid,The Peaks,Grymm & Enid,thepeaks,260,700,278
+191,368,The Slow Wash,The Peaks,The Slow Wash,thepeaks,1130,410,278
+192,368,Heather Falls,The Peaks,Heather Falls (Lv. 65),thepeaks,1580,280,278
+193,368,The Ephor,The Peaks,The Ephor (Lv. 70),thepeaks,1550,800,278
+194,368,The Bull's Bath,The Peaks,The Bull's Bath,thepeaks,978,1582,278
+195,368,The Arms of Meed,The Peaks,The Arms of Meed (Lv. 70),thepeaks,410,1820,278
+196,369,Loch Seld,The Lochs,Loch Seld,thelochs,1025,1025,279
+197,364,Shirogane,Shirogane,Shirogane,shirogane,750,1350,268
+197,365,Shirogane,Shirogane Subdivision,Shirogane (Subdivision),shiroganesubdivision,750,1350,269
+198,364,The Silver Canal,Shirogane,The Silver Canal (Lv. 65),shirogane,970,1030,268
+198,365,The Silver Canal,Shirogane Subdivision,The Silver Canal (Lv. 65) (Subdivision),shiroganesubdivision,970,1030,269
+199,497,The Trivium,The Crystarium,The Trivium,thecrystarium,770,645,370
+200,497,The Quadrivium,The Crystarium,The Quadrivium,thecrystarium,940,1460,370
+201,497,Crystarium Personal Suites,The Crystarium,Crystarium Personal Suites,thecrystarium,1175,1530,370
+202,491,The Rift of Sighs,Lakeland,The Rift of Sighs,lakeland,1500,545,363
+203,491,The Rusted Reservoir,Lakeland,The Rusted Reservoir,lakeland,545,1025,363
+204,491,The Source,Lakeland,The Source,lakeland,585,1430,363
+205,491,Sullen,Lakeland,Sullen,lakeland,920,1740,363
+206,491,The Isle of Ken,Lakeland,The Isle of Ken (Lv. 75),lakeland,410,1830,363
+207,492,Upper Watts River,Kholusia,Upper Watts River,kholusia,1300,670,364
+208,492,White Oil Falls,Kholusia,White Oil Falls,kholusia,1420,1020,364
+209,492,Lower Watts River,Kholusia,Lower Watts River,kholusia,1460,1300,364
+210,492,Sharptongue Drip,Kholusia,Sharptongue Drip,kholusia,980,1160,364
+211,492,The Western Kholusian Coast,Kholusia,The Western Kholusian Coast,kholusia,370,1710,364
+212,492,Seagazer Shoals,Kholusia,Seagazer Shoals (Lv. 75),kholusia,790,1740,364
+213,492,The Eastern Kholusian Coast,Kholusia,The Eastern Kholusian Coast,kholusia,1710,1740,364
+214,498,The Derelicts,Eulmore (The Buttress),The Derelicts,eulmore,1025,1025,371
+214,555,The Derelicts,Eulmore (The Canopy),The Derelicts (The Canopy),thecanopy,1025,1025,373
+215,493,The River of Sand,Amh Araeng,The River of Sand,amharaeng,1540,585,365
+216,493,The Hills of Amber,Amh Araeng,The Hills of Amber,amharaeng,725,690,365
+217,493,The Nabaath Severance,Amh Araeng,The Nabaath Severance,amharaeng,1500,1530,365
+218,494,Handmirror Lake,Il Mheg,Handmirror Lake,ilmheg,165,1065,366
+219,494,Longmirror Lake,Il Mheg,Longmirror Lake,ilmheg,1000,1090,366
+220,494,The Haughty One,Il Mheg,The Haughty One,ilmheg,1050,405,366
+221,494,The Jealous One,Il Mheg,The Jealous One,ilmheg,1240,400,366
+222,494,Father Collard's Failings,Il Mheg,Father Collard's Failings (Lv. 75),ilmheg,1545,1065,366
+223,494,The Spoiled One,Il Mheg,The Spoiled One,ilmheg,1395,625,366
+224,494,Saint Fathric's Temple,Il Mheg,Saint Fathric's Temple,ilmheg,1695,1265,366
+225,495,Lake Tusi Mek'ta,The Rak'tika Greatwood,Lake Tusi Mek'ta,theraktikagreatwood,320,1385,367
+226,495,The Red Chalice,The Rak'tika Greatwood,The Red Chalice,theraktikagreatwood,435,990,367
+227,495,The Lozatl,The Rak'tika Greatwood,The Lozatl,theraktikagreatwood,750,1025,367
+228,495,South Mjrl's Regret,The Rak'tika Greatwood,South Mjrl's Regret,theraktikagreatwood,1150,1530,367
+229,495,Woven Oath,The Rak'tika Greatwood,Woven Oath (Lv. 80),theraktikagreatwood,340,760,367
+230,496,The Flounders' Floor,The Tempest,The Flounders' Floor (Lv. 80),thetempest,510,280,368
+231,496,Where the Dry Return,The Tempest,Where the Dry Return,thetempest,1835,300,368
+232,496,Northwest Caliban Gorge,The Tempest,Northwest Caliban Gorge,thetempest,545,495,368
+233,496,West Caliban Gap,The Tempest,West Caliban Gap,thetempest,260,625,368
+234,496,East Caliban Gap,The Tempest,East Caliban Gap,thetempest,375,730,368
+235,496,Purpure,The Tempest,Purpure,thetempest,1630,1480,368
+236,496,The Norvrandt Slope,The Tempest,The Norvrandt Slope (underground),thetempest,1400,695,368
+237,604,Outer Galadion Bay,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+238,604,Galadion Spectral Current,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+239,604,The Southern Strait of Merlthor,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+240,604,Southern Merlthor Spectral Current,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+241,604,Open Rhotano Sea,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+242,604,Rhotano Spectral Current,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+243,604,The Northern Strait of Merlthor,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+244,604,Northern Merlthor Spectral Current,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+245,495,Mjrl's Tears,The Rak'tika Greatwood,Mjrl's Tears,theraktikagreatwood,1250,1785,367
+246,604,Cieldalaes Margin,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+247,604,Cieldalaes Spectral Current,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+248,604,Open Bloodbrine Sea,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+249,604,Bloodbrine Spectral Current,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+250,604,Outer Rothlyt Sound,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+251,604,Rothlyt Spectral Current,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+252,693,Scholar's Harbor,Old Sharlayan,Scholar's Harbor,oldsharlayan,1074,1518,475
+253,693,Oinops,Old Sharlayan,Oinops,oldsharlayan,1024,732,475
+254,693,Reflecting Pool,Old Sharlayan,Reflecting Pool,oldsharlayan,670,980,475
+255,695,Unmoved Source Alpha,Labyrinthos,Unmoved Source Alpha,labyrinthos,831,221,477
+256,695,The Mover Alpha,Labyrinthos,The Mover Alpha,labyrinthos,878,496,477
+257,695,Unmoved Source Beta,Labyrinthos,Unmoved Source Beta,labyrinthos,1561,409,477
+258,695,The Mover Beta,Labyrinthos,The Mover Beta,labyrinthos,1366,726,477
+259,695,Deepmoat,Labyrinthos,Deepmoat,labyrinthos,972,756,477
+260,694,Meghaduta,Radz-at-Han,Meghaduta,radz-at-han,459,989,476
+261,696,Yedlihmad,Thavnair,Yedlihmad,thavnair,1228,1764,478
+262,696,The Thavnairian Coast,Thavnair,The Thavnairian Coast,thavnair,428,1618,478
+263,696,The Great Runoff,Thavnair,The Great Runoff,thavnair,438,1090,478
+264,696,Giantsgall Grounds,Thavnair,Giantsgall Grounds,thavnair,998,360,478
+265,696,The Wakeful Torana,Thavnair,Wakeful Torana,thavnair,1500,419,478
+266,696,Ksiroda,Thavnair,Ksiroda,thavnair,1478,1018,478
+267,696,Pavana's Remorse,Thavnair,Pavana's Remorse,thavnair,1149,675,478
+268,696,The Font of Maya,Thavnair,The Font of Maya,thavnair,1161,1187,478
+269,696,The Perfumed Tides,Thavnair,The Perfumed Tides (Lv. 85),thavnair,322,328,478
+270,697,The Eblan Thaw,Garlemald,The Eblan Thaw (Lv. 83),garlemald,504,1484,479
+271,697,The Stainless Course,Garlemald,The Stainless Course,garlemald,1100,408,479
+272,698,Greatest Endsvale,Mare Lamentorum,Greatest Endsvale,marelamentorum,1578,494,480
+273,698,The Chlorophospond,Mare Lamentorum,The Chlorophospond (Lv. 85),marelamentorum,1498,1560,480
+274,698,The Frozen Fissure,Mare Lamentorum,The Frozen Fissure (underground),marelamentorum,1090,1538,480
+275,700,Rumination's Ramble,Elpis,Rumination's Ramble,elpis,508,876,482
+276,700,The Lower Hungering Gardens,Elpis,The Lower Hungering Gardens,elpis,1202,440,482
+277,700,Lethe,Elpis,Lethe,elpis,1634,762,482
+278,699,Apohelos 18-γ,Ultima Thule,Apohelos 18-γ,ultimathule,994,1756,481
+279,699,Apohelos 18-β,Ultima Thule,Apohelos 18-β,ultimathule,426,1476,481
+280,699,Apohelos 18-α,Ultima Thule,Apohelos 18-α,ultimathule,298,1062,481
+281,699,The Wellspring of Regret,Ultima Thule,The Wellspring of Regret,ultimathule,698,528,481
+282,699,Abode of the Ea,Ultima Thule,Abode of the Ea,ultimathule,1079,389,481
+283,699,Limne 18,Ultima Thule,Limne 18,ultimathule,212,1706,481
+284,699,Limne 3-α,Ultima Thule,Limne 3-α,ultimathule,1824,406,481
+285,699,Limne 3-β,Ultima Thule,Limne 3-β (Lv. 90),ultimathule,1202,808,481
+286,604,Open Sirensong Sea,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+287,604,Sirensong Spectral Current,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+288,604,Kugane Coast,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+289,604,Kugane Spectral Current,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+290,604,Open Ruby Sea,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+291,604,Ruby Spectral Current,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+292,604,Lower One River,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+293,604,One River Spectral Current,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+294,855,Downripple,Tuliyollal,Downripple,tuliyollal,734,860,620
+295,855,The For'ard Cabins,Tuliyollal,The For'ard Cabins,tuliyollal,833,1679,620
+296,855,High Tide Harbor,Tuliyollal,High Tide Harbor,tuliyollal,1432,1275,620
+297,857,Sunken Stars,Urqopacha,Sunken Stars,urqopacha,967,1328,622
+298,857,Chirwagur Lake,Urqopacha,Chirwagur Lake,urqopacha,950,1796,622
+299,857,Karvarhur the First,Urqopacha,Karvarhur the First (Lv. 93),urqopacha,265,966,622
+300,858,Bopo'uihih,Kozama'uka,Bopo'uihih,kozamauka,482,570,623
+301,858,Waters Hanu,Kozama'uka,Waters Hanu,kozamauka,1096,596,623
+302,858,Miyakabek'zu,Kozama'uka,Miyakabek'zu,kozamauka,1411,550,623
+303,858,The Dewspun Bank,Kozama'uka,The Dewspun Bank,kozamauka,1842,1612,623
+304,858,Peaks Poga,Kozama'uka,Peaks Poga,kozamauka,1948,704,623
+305,858,Ku'uxage,Kozama'uka,Ku'uxage,kozamauka,1085,1004,623
+306,858,Miyakabek'zoma,Kozama'uka,Miyakabek'zoma,kozamauka,672,1381,623
+307,858,Marsh Ligaka,Kozama'uka,Marsh Ligaka,kozamauka,1237,1528,623
+308,859,Xd'aa Talat Tsoly,Yak T'el,Xd'aa Talat Tsoly,yaktel,359,543,624
+309,859,Iq Br'aax Reservoir,Yak T'el,Iq Br'aax Reservoir,yaktel,632,584,624
+310,859,Yak Awak Tsoly,Yak T'el,Yak Awak Tsoly,yaktel,906,389,624
+311,859,Iq Rrax Tsoly,Yak T'el,Iq Rrax Tsoly,yaktel,1538,289,624
+312,859,Xobr'it Tsoly,Yak T'el,Xobr'it Tsoly (Lv. 94),yaktel,1611,779,624
+313,859,Ankledeep,Yak T'el,Ankledeep,yaktel,352,1308,624
+314,859,Cenote Moxutural,Yak T'el,Cenote Moxutural,yaktel,1035,964,624
+315,859,Cenote Jayunja,Yak T'el,Cenote Jayunja,yaktel,936,1546,624
+316,859,Sapsweet Cenote,Yak T'el,Sapsweet Cenote,yaktel,1697,1581,624
+317,859,Bitterbark Cenote,Yak T'el,Bitterbark Cenote,yaktel,1222,1898,624
+318,859,Xty'iinbek Tsoly,Yak T'el,Xty'iinbek Tsoly (Lv. 97),yaktel,1793,1243,624
+319,860,Niikwerepi,Shaaloani,Niikwerepi,shaaloani,1438,318,625
+320,860,Lake Toari,Shaaloani,Lake Toari,shaaloani,1524,637,625
+321,860,Westbound Zorgor,Shaaloani,Westbound Zorgor,shaaloani,753,1860,625
+322,860,Eastbound Zorgor,Shaaloani,Eastbound Zorgor,shaaloani,1603,1860,625
+323,861,Outskirts Shallows,Heritage Found,Outskirts Shallows,heritagefound,938,394,626
+324,861,The Driftdowns,Heritage Found,The Driftdowns,heritagefound,605,818,626
+325,861,Crackling Canyons,Heritage Found,Crackling Canyons,heritagefound,1025,1561,626
+326,861,Alexandrian Ruins,Heritage Found,Alexandrian Ruins,heritagefound,288,1647,626
+327,856,Residential Sector,Solution Nine,Residential Sector,solutionnine,499,1505,621
+328,862,The Knowable,Living Memory,The Knowable,livingmemory,311,665,627
+329,862,Mu Springs Eternal,Living Memory,Mu Springs Eternal,livingmemory,578,525,627
+330,862,Leynode Aero,Living Memory,Leynode Aero,livingmemory,759,608,627
+331,862,Canal Town South,Living Memory,Canal Town South,livingmemory,665,1687,627
+332,862,Canal Town North,Living Memory,Canal Town North,livingmemory,425,1356,627
+333,862,Proto Alexandria,Living Memory,Proto Alexandria (Lv. 100),livingmemory,1871,1531,627
+334,604,Unnamed Margin,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+335,604,Unnamed Spectral Current,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+336,604,Thavnair Margin,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+337,604,Thavnair Spectral Current,The *Endeavor*,The Endeavor,theendeavor,1025,1025,413
+10000,463,The Doman Enclave,The Doman Enclave,The Doman Enclave,thedomanenclave,0,0,313
+10017,584,Diadem Grotto,The Diadem,Diadem Grotto,thediadem,0,0,409
+10018,584,Southern Diadem Lake,The Diadem,Southern Diadem Lake,thediadem,0,0,409
+10019,584,Northern Diadem Lake,The Diadem,Northern Diadem Lake,thediadem,0,0,409
+10020,584,Blustery Cloudtop,The Diadem,Blustery Cloudtop,thediadem,0,0,409
+10021,584,Calm Cloudtop,The Diadem,Calm Cloudtop,thediadem,0,0,409
+10022,584,Swirling Cloudtop,The Diadem,Swirling Cloudtop,thediadem,0,0,409
+10023,584,Windswept Cloudtop,The Diadem,Windswept Cloudtop,thediadem,0,0,409
+10024,584,Windbreaking Cloudtop,The Diadem,Windbreaking Cloudtop,thediadem,0,0,409
+10025,584,Buffeted Cloudtop,The Diadem,Buffeted Cloudtop,thediadem,0,0,409
+10026,801,Elysian Fields,Elysion,Elysian Fields,elysion,1069,1141,532
+10027,801,Elysian Seas α,Elysion,Elysian Seas α,elysion,1141,821,532
+10028,801,Elysian Seas β,Elysion,Elysian Seas β,elysion,1172,627,532
+10029,801,Elysian Playgrounds α,Elysion,Elysian Playgrounds α,elysion,861,1136,532
+10030,801,Elysian Playgrounds β,Elysion,Elysian Playgrounds β,elysion,736,1370,532
+10043,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum,0,0,710
+10044,1031,Northward Hop-print,Sinus Ardorum,Northward Hop-print,sinusardorum,0,0,710
+10045,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum,0,0,710
+10046,1031,Southeast Well,Sinus Ardorum,Southeast Well,sinusardorum,0,0,710
+10047,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum,0,0,710
+10048,1031,Northward Hop-print,Sinus Ardorum,Northward Hop-print,sinusardorum,0,0,710
+10049,1031,Southeast Well,Sinus Ardorum,Southeast Well,sinusardorum,0,0,710
+10050,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum,0,0,710
+10051,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum,0,0,710
+10052,1031,Southeast Well,Sinus Ardorum,Southeast Well,sinusardorum,0,0,710
+10053,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum,0,0,710
+10054,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum,0,0,710
+10055,1031,Northward Hop-print,Sinus Ardorum,Northward Hop-print,sinusardorum,0,0,710
+10056,1031,Hollow Harbor,Sinus Ardorum,Hollow Harbor,sinusardorum,0,0,710
+10057,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum,0,0,710
+10058,1031,Hollow Harbor,Sinus Ardorum,Hollow Harbor,sinusardorum,0,0,710
+10059,1031,Northward Hop-print,Sinus Ardorum,Northward Hop-print,sinusardorum,0,0,710
+10060,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum,0,0,710
+10061,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum,0,0,710
+10062,1031,Southeast Well,Sinus Ardorum,Southeast Well,sinusardorum,0,0,710
+10063,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum,0,0,710
+10064,1031,Northward Hop-print,Sinus Ardorum,Northward Hop-print,sinusardorum,0,0,710
+10065,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum,0,0,710
+10066,1031,Hollow Harbor,Sinus Ardorum,Hollow Harbor,sinusardorum,0,0,710
+10067,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum,0,0,710
+10068,1031,Hollow Harbor,Sinus Ardorum,Hollow Harbor,sinusardorum,0,0,710
+10069,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum,0,0,710
+10070,1031,Southeast Well,Sinus Ardorum,Southeast Well,sinusardorum,0,0,710
+10071,1031,Aetherial Falls,Sinus Ardorum,Aetherial Falls,sinusardorum,0,0,710
+10072,1031,Glimmerpond Alpha,Sinus Ardorum,Glimmerpond Alpha,sinusardorum,0,0,710
+10073,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum,0,0,710
+10074,1031,Hollow Harbor,Sinus Ardorum,Hollow Harbor,sinusardorum,0,0,710
+10075,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum,0,0,710
+10076,1031,Southeast Well,Sinus Ardorum,Southeast Well,sinusardorum,0,0,710
+10077,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum,0,0,710
+10078,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum,0,0,710
+10079,1031,Hollow Harbor,Sinus Ardorum,Hollow Harbor,sinusardorum,0,0,710
+10080,1031,Northward Hop-print,Sinus Ardorum,Northward Hop-print,sinusardorum,0,0,710
+10081,1031,Glimmerpond Alpha,Sinus Ardorum,Glimmerpond Alpha,sinusardorum,0,0,710
+10082,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum,0,0,710
+10083,1031,Glimmerpond Beta,Sinus Ardorum,Glimmerpond Beta,sinusardorum,0,0,710
+10084,1031,Aetherial Falls,Sinus Ardorum,Aetherial Falls,sinusardorum,0,0,710
+10085,1031,Aetherial Falls,Sinus Ardorum,Aetherial Falls,sinusardorum,0,0,710
+10086,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum,0,0,710
+10087,1031,Glimmerpond Beta,Sinus Ardorum,Glimmerpond Beta,sinusardorum,0,0,710
+10088,1031,Southeast Well,Sinus Ardorum,Southeast Well,sinusardorum,0,0,710
+10089,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum,0,0,710
+10090,1031,Palus Arsenici,Sinus Ardorum,Palus Arsenici,sinusardorum,0,0,710
+10091,1031,Hollow Harbor,Sinus Ardorum,Hollow Harbor,sinusardorum,0,0,710
+10092,1031,Westward Hop-print,Sinus Ardorum,Westward Hop-print,sinusardorum,0,0,710
+10093,1031,Northward Hop-print,Sinus Ardorum,Northward Hop-print,sinusardorum,0,0,710
+10096,1031,Weeping Pool,Sinus Ardorum,Weeping Pool,sinusardorum,0,0,710
+10108,1086,The Lehr,Phaenna,The Lehr,phaenna,0,0,693
+10109,1086,West Beaconveil,Phaenna,West Beaconveil,phaenna,0,0,693
+10110,1086,Opalescent Crossing,Phaenna,Opalescent Crossing,phaenna,0,0,693
+10111,1086,The Lehr,Phaenna,The Lehr,phaenna,0,0,693
+10112,1086,Opalescent Crossing,Phaenna,Opalescent Crossing,phaenna,0,0,693
+10113,1086,West Beaconveil,Phaenna,West Beaconveil,phaenna,0,0,693
+10114,1086,The Lehr,Phaenna,The Lehr,phaenna,0,0,693
+10115,1086,West Beaconveil,Phaenna,West Beaconveil,phaenna,0,0,693
+10116,1086,The Lehr,Phaenna,The Lehr,phaenna,0,0,693
+10117,1086,West Beaconveil,Phaenna,West Beaconveil,phaenna,0,0,693
+10118,1086,The Lehr,Phaenna,The Lehr,phaenna,0,0,693
+10119,1086,Opalescent Crossing,Phaenna,Opalescent Crossing,phaenna,0,0,693
+10120,1086,Opalescent Crossing,Phaenna,Opalescent Crossing,phaenna,0,0,693
+10121,1086,Upper Soda-lime Float,Phaenna,Upper SL Float,phaenna,0,0,693
+10122,1086,Central Soda-lime Channel,Phaenna,Central SL Channel,phaenna,0,0,693
+10123,1086,Western Soda-lime Tributary,Phaenna,Western SL Tributary,phaenna,0,0,693
+10124,1086,Lower Soda-lime Float,Phaenna,Lower SL Float,phaenna,0,0,693
+10125,1086,The Prismatic Pull,Phaenna,The Prismatic Pull,phaenna,0,0,693
+10126,1086,West Beaconveil,Phaenna,West Beaconveil,phaenna,0,0,693
+10127,1086,Opalescent Crossing,Phaenna,Opalescent Crossing,phaenna,0,0,693
+10128,1086,The Prismatic Pull,Phaenna,The Prismatic Pull,phaenna,0,0,693
+10129,1086,The Lehr,Phaenna,The Lehr,phaenna,0,0,693
+10130,1086,West Beaconveil,Phaenna,West Beaconveil,phaenna,0,0,693
+10131,1086,Opalescent Crossing,Phaenna,Opalescent Crossing,phaenna,0,0,693
+10132,1086,The Prismatic Pull,Phaenna,The Prismatic Pull,phaenna,0,0,693
+10133,1086,Central Soda-lime Channel,Phaenna,Central SL Channel,phaenna,0,0,693
+10134,1086,Western Soda-lime Tributary,Phaenna,Western SL Tributary,phaenna,0,0,693
+10135,1086,Lower Soda-lime Float,Phaenna,Lower SL Float,phaenna,0,0,693
+10137,1086,Capsule Pools,Phaenna,Capsule Pools,phaenna,0,0,693
+10138,1086,The Prismatic Pull,Phaenna,The Prismatic Pull,phaenna,0,0,693
+10139,1086,Upper Soda-lime Float,Phaenna,Upper SL Float,phaenna,0,0,693
+10140,1086,Upper Soda-lime Float,Phaenna,Upper SL Float,phaenna,0,0,693
+10141,1086,Central Soda-lime Channel,Phaenna,Central SL Channel,phaenna,0,0,693
+10142,1086,Central Soda-lime Channel,Phaenna,Central SL Channel,phaenna,0,0,693
+10143,1086,Western Soda-lime Tributary,Phaenna,Western SL Tributary,phaenna,0,0,693
+10144,1086,Lower Soda-lime Float,Phaenna,Lower SL Float,phaenna,0,0,693
+10147,1086,Lower Soda-lime Float,Phaenna,Lower SL Float,phaenna,0,0,693
+10148,1086,Bubble Bursters,Phaenna,Bubble Bursters,phaenna,0,0,693
+10149,1086,Fusingway Flow,Phaenna,Fusingway Flow,phaenna,0,0,693
+10150,1086,The Prismatic Pull,Phaenna,The Prismatic Pull,phaenna,0,0,693
+10151,1086,Capsule Pools,Phaenna,Capsule Pools,phaenna,0,0,693
+10152,1086,Fusingway Flow,Phaenna,Fusingway Flow,phaenna,0,0,693
+10153,1086,The Lehr,Phaenna,The Lehr,phaenna,0,0,693
+10154,1086,Opalescent Crossing,Phaenna,Opalescent Crossing,phaenna,0,0,693
+10155,1086,Bubble Bursters,Phaenna,Bubble Bursters,phaenna,0,0,693
+10163,1160,Foregone Oasis,Oizys,Foregone Oasis,oizys,0,0,704
+10164,1160,Megalithopolis,Oizys,Megalithopolis,oizys,0,0,704
+10165,1160,Foregone Oasis,Oizys,Foregone Oasis,oizys,0,0,704
+10166,1160,Megalithopolis,Oizys,Megalithopolis,oizys,0,0,704
+10167,1160,Foregone Oasis,Oizys,Foregone Oasis,oizys,0,0,704
+10168,1160,Megalithopolis,Oizys,Megalithopolis,oizys,0,0,704
+10169,1160,Foregone Oasis,Oizys,Foregone Oasis,oizys,0,0,704
+10170,1160,Megalithopolis,Oizys,Megalithopolis,oizys,0,0,704
+10171,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys,0,0,704
+10172,1160,Collapsed Tunnel,Oizys,Collapsed Tunnel,oizys,0,0,704
+10173,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys,0,0,704
+10174,1160,Collapsed Tunnel,Oizys,Collapsed Tunnel,oizys,0,0,704
+10175,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys,0,0,704
+10176,1160,Collapsed Tunnel,Oizys,Collapsed Tunnel,oizys,0,0,704
+10177,1160,Collapsed Tunnel,Oizys,Collapsed Tunnel,oizys,0,0,704
+10178,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys,0,0,704
+10179,1160,The Moros Well,Oizys,The Moros Well,oizys,0,0,704
+10180,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys,0,0,704
+10181,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys,0,0,704
+10182,1160,Collapsed Tunnel,Oizys,Collapsed Tunnel,oizys,0,0,704
+10183,1160,The Moros Well,Oizys,The Moros Well,oizys,0,0,704
+10184,1160,The Subterrain,Oizys,The Subterrain,oizys,0,0,704
+10185,1160,Under Overboard,Oizys,Under Overboard,oizys,0,0,704
+10186,1160,The Moros Well,Oizys,The Moros Well,oizys,0,0,704
+10187,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys,0,0,704
+10188,1160,Under Overboard,Oizys,Under Overboard,oizys,0,0,704
+10189,1160,The Moros Well,Oizys,The Moros Well,oizys,0,0,704
+10190,1160,The Subterrain,Oizys,The Subterrain,oizys,0,0,704
+10191,1160,Magnetic Horizon,Oizys,Magnetic Horizon,oizys,0,0,704
+10192,1160,Megalithopolis,Oizys,Megalithopolis,oizys,0,0,704
+10201,1266,Timberpond,Auxesia,Timberpond,auxesia,0,0,759
+10202,1266,New Growth Tapwaters,Auxesia,New Growth Tapwaters,auxesia,0,0,759
+10203,1266,Timberpond,Auxesia,Timberpond,auxesia,0,0,759
+10204,1266,New Growth Tapwaters,Auxesia,New Growth Tapwaters,auxesia,0,0,759
+10205,1266,Timberpond,Auxesia,Timberpond,auxesia,0,0,759
+10206,1266,New Growth Tapwaters,Auxesia,New Growth Tapwaters,auxesia,0,0,759
+10207,1266,Timberpond,Auxesia,Timberpond,auxesia,0,0,759
+10208,1266,New Growth Tapwaters,Auxesia,New Growth Tapwaters,auxesia,0,0,759
+10209,1266,Emerald Springs,Auxesia,Emerald Springs,auxesia,0,0,759
+10210,1266,Full Bloom Fountain,Auxesia,Full Bloom Fountain,auxesia,0,0,759
+10211,1266,Emerald Springs,Auxesia,Emerald Springs,auxesia,0,0,759
+10212,1266,Full Bloom Fountain,Auxesia,Full Bloom Fountain,auxesia,0,0,759
+10213,1266,Emerald Springs,Auxesia,Emerald Springs,auxesia,0,0,759
+10214,1266,Emerald Springs,Auxesia,Emerald Springs,auxesia,0,0,759
+10215,1266,Full Bloom Fountain,Auxesia,Full Bloom Fountain,auxesia,0,0,759
+10216,1266,Western Nervure,Auxesia,Western Nervure,auxesia,0,0,759
+10217,1266,Emerald Springs,Auxesia,Emerald Springs,auxesia,0,0,759
+10218,1266,Full Bloom Fountain,Auxesia,Full Bloom Fountain,auxesia,0,0,759
+10219,1266,Western Nervure,Auxesia,Western Nervure,auxesia,0,0,759
+10220,1266,Full Bloom Fountain,Auxesia,Full Bloom Fountain,auxesia,0,0,759
+10221,1266,Western Nervure,Auxesia,Western Nervure,auxesia,0,0,759
+10222,1266,Sylvan Soaking Pool,Auxesia,Sylvan Soaking Pool,auxesia,0,0,759
+10223,1266,Full Bloom Fountain,Auxesia,Full Bloom Fountain,auxesia,0,0,759
+10224,1266,Western Nervure,Auxesia,Western Nervure,auxesia,0,0,759
+10225,1266,Stratostone Shores,Auxesia,Stratostone Shores,auxesia,0,0,759
+10226,1266,Sprouting Cisterns,Auxesia,Sprouting Cisterns,auxesia,0,0,759
+10227,1266,Sprouting Cisterns,Auxesia,Sprouting Cisterns,auxesia,0,0,759
+10228,1266,Sprouting Cisterns,Auxesia,Sprouting Cisterns,auxesia,0,0,759
+10229,1266,Western Nervure,Auxesia,Western Nervure,auxesia,0,0,759
+10230,1266,Full Bloom Fountain,Auxesia,Full Bloom Fountain,auxesia,0,0,759

@@ -1,7 +1,6 @@
 function mapGenerator(ms)
     load("cmap.mat", "cmap")
     load("spots.mat", "spots")
-    mapData = readtable("Map.csv");
     markerData = readtable("MapMarker.csv");
 
     % Read folder name as zone name
@@ -31,28 +30,6 @@ function mapGenerator(ms)
     bgImage = double(zoneImage)/255;
     defaultImage = imread("default.jpg");
     
-    % Create marker overlay
-    markerRGB = zeros(size(zoneImage));
-    markerAlpha = zeros([size(zoneImage, [1 2]) 1]);
-
-    if zonename == "The Endeavor"
-        % idk what to do about special character, it is important to preserve
-        iM = spots.MapID(find(spots.MapName == "The *Endeavor*", 1, 'first'));
-    else
-        iM = spots.MapID(find(spots.MapName == zonename, 1, 'first'));
-    end
-    if isempty(iM)
-        error("No matching map name to " + zonename);
-    else
-        iMk = mapData.MapMarkerRange(mapData.x_ == iM);
-        zoneMarkers = markerData(floor(markerData.x_) == iMk & any(markerData.Icon == [60414 60430 60453 60456 63907], 2), :);
-        for iR = 1:height(zoneMarkers)
-            markerLocation = any((1:2048) == (zoneMarkers.X(iR)+(-15:16))', 1) & ...
-                any((1:2048)' == (zoneMarkers.Y(iR)+(-15:16)), 2);
-            [markerRGB(repmat(markerLocation, 1, 1, 3)), ~, markerAlpha(markerLocation)] = imread("i"+zoneMarkers.Icon(iR)+".png");
-        end
-    end
-
     %% Do for each subsequent layer
     rgbLayers = zeros([size(zoneImage) length(files)-1]);
     alphaLayers = zeros([size(zoneImage, [1 2]) 1 length(files)-1]);
@@ -65,6 +42,26 @@ function mapGenerator(ms)
         spot(iI) = regexprep(spot(iI), "%0028", "(");
         spot(iI) = regexprep(spot(iI), "%0029", ")");
         spot(iI) = regexprep(spot(iI), "%002E", ".");
+
+        if iI == 2
+            % Create marker overlay
+            markerRGB = zeros(size(zoneImage));
+            markerAlpha = zeros([size(zoneImage, [1 2]) 1]);
+            
+            iSpot = find(spots.LayerName == spot(iI), 1, 'first');
+
+            if isempty(iSpot)
+                error("No matching spot name to " + spot(iI));
+            else
+                iMk = spots.MapMarkerRange(iSpot);
+                zoneMarkers = markerData(floor(markerData.x_) == iMk & any(markerData.Icon == [60414 60430 60453 60456 63907], 2), :);
+                for iR = 1:height(zoneMarkers)
+                    markerLocation = any((1:2048) == (zoneMarkers.X(iR)+(-15:16))', 1) & ...
+                        any((1:2048)' == (zoneMarkers.Y(iR)+(-15:16)), 2);
+                    [markerRGB(repmat(markerLocation, 1, 1, 3)), ~, markerAlpha(markerLocation)] = imread("i"+zoneMarkers.Icon(iR)+".png");
+                end
+            end
+        end
 
         % Read layer into transparency
         [~, ~, alphaLayers(:, :, :, iI)] = imread(path+files(iI+1).name);

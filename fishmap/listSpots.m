@@ -16,7 +16,7 @@ for iO = 1:height(overrideData)
 end
 
 %% Build info
-spots = table('Size', [0, 6], 'VariableNames', ["SpotID", "MapID", "SpotName", "MapName", "LayerName", "JumpName"], 'VariableTypes', ["uint16", "uint16", "string", "string", "string", "string"]);
+spots = table('Size', [0, 9], 'VariableNames', ["SpotID", "MapID", "SpotName", "MapName", "LayerName", "JumpName", "SpotX", "SpotY", "MapMarkerRange"], 'VariableTypes', ["uint16", "uint16", "string", "string", "string", "string", "uint16", "uint16", "uint16"]);
 
 iS = 0;
 % the loop is weird and upside down because of obsolete restrictions, no longer needs to be this way but I'm too lazy to change it
@@ -31,9 +31,9 @@ while iS < height(spotData)
         jumpName = replace(lower(placeData.Name{map.PlaceName == placeData.x_}), {' ', '''', '*'}, '');
 
         if strcmp(spot.Rare, 'True')
-            spots(end+1, :) = {spot.x_, map.x_, spotName, placeData.Name{map.PlaceName == placeData.x_}, sprintf("%s (Lv. %d)", spotName, spot.GatheringLevel), jumpName};
+            spots(end+1, :) = {spot.x_, map.x_, spotName, placeData.Name{map.PlaceName == placeData.x_}, sprintf("%s (Lv. %d)", spotName, spot.GatheringLevel), jumpName, spot.X, spot.Z, map.MapMarkerRange};
         else
-            spots(end+1, :) = {spot.x_, map.x_, spotName, placeData.Name{map.PlaceName == placeData.x_}, spotName, jumpName};
+            spots(end+1, :) = {spot.x_, map.x_, spotName, placeData.Name{map.PlaceName == placeData.x_}, spotName, jumpName, spot.X, spot.Z, map.MapMarkerRange};
         end
     end
     
