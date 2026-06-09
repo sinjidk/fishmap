@@ -1,5 +1,7 @@
 close all; clear; clc;
 
+warning('off', 'MATLAB:table:ModifiedAndSavedVarnames')
+
 folders = dir;
 folders = folders([folders.isdir]);
 folders = folders(3:end);

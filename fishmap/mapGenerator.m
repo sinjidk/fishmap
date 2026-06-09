@@ -1,9 +1,13 @@
 function mapGenerator(ms)
     load("cmap.mat", "cmap")
     load("spots.mat", "spots")
+    mapData = readtable("Map.csv");
+    markerData = readtable("MapMarker.csv");
 
+    % Read folder name as zone name
     zonename = regexprep(pwd, regexprep(matlab.project.rootProject().RootFolder, '\', '\\\')+"\\fishmap\\", "");
     
+    %% tuneables
     intensity = 1;
     intensity2 = 0.5;
     cmap = cmap/255;
@@ -16,28 +20,59 @@ function mapGenerator(ms)
     
     % figure; imagesc(permute(cmap, [1 3 2]))
     
+    %% Initialize
+    % Get list of layer images
     path = zonename+"\";
     files = dir(path);
     files = files([3 end-1 (end-2):-1:4]);
     
-    bgImage = imread(path+files(1).name);
-    bgImageClean = double(bgImage)/255;
+    % Interpret first layer as background
+    zoneImage = imread(path+files(1).name);
+    bgImage = double(zoneImage)/255;
     defaultImage = imread("default.jpg");
-    rgbLayers = zeros([size(bgImage) length(files)-1]);
-    alphaLayers = zeros([size(bgImage, [1 2]) 1 length(files)-1]);
+    
+    % Create marker overlay
+    markerRGB = zeros(size(zoneImage));
+    markerAlpha = zeros([size(zoneImage, [1 2]) 1]);
+
+    if zonename == "The Endeavor"
+        % idk what to do about special character, it is important to preserve
+        iM = spots.MapID(find(spots.MapName == "The *Endeavor*", 1, 'first'));
+    else
+        iM = spots.MapID(find(spots.MapName == zonename, 1, 'first'));
+    end
+    if isempty(iM)
+        error("No matching map name to " + zonename);
+    else
+        iMk = mapData.MapMarkerRange(mapData.x_ == iM);
+        zoneMarkers = markerData(floor(markerData.x_) == iMk & any(markerData.Icon == [60414 60430 60453 60456 63907], 2), :);
+        for iR = 1:height(zoneMarkers)
+            markerLocation = any((1:2048) == (zoneMarkers.X(iR)+(-15:16))', 1) & ...
+                any((1:2048)' == (zoneMarkers.Y(iR)+(-15:16)), 2);
+            [markerRGB(repmat(markerLocation, 1, 1, 3)), ~, markerAlpha(markerLocation)] = imread("i"+zoneMarkers.Icon(iR)+".png");
+        end
+    end
+
+    %% Do for each subsequent layer
+    rgbLayers = zeros([size(zoneImage) length(files)-1]);
+    alphaLayers = zeros([size(zoneImage, [1 2]) 1 length(files)-1]);
     spot = strings(length(files)-1, 1);
     for iI = 1:(length(files)-1)
+        % Recover layer name
         spot(iI) = regexp(files(iI+1).name, "C1,(.*),visible", "tokens");
         spot(iI) = regexprep(spot(iI), "%0026", "&");
         spot(iI) = regexprep(spot(iI), "%0027", "'");
         spot(iI) = regexprep(spot(iI), "%0028", "(");
         spot(iI) = regexprep(spot(iI), "%0029", ")");
         spot(iI) = regexprep(spot(iI), "%002E", ".");
+
+        % Read layer into transparency
         [~, ~, alphaLayers(:, :, :, iI)] = imread(path+files(iI+1).name);
         if length(unique(alphaLayers(:, :, :, iI))) > 2
             "loose transperence in layer "+files(iI+1).name+" of "+zonename
         end
 
+        % Make spot maps
         if iI > 1 && (~isfield(ms, "makeAlts") || ms.makeAlts)
             spotIndex = find(spots.LayerName == spot(iI));
 
@@ -48,7 +83,7 @@ function mapGenerator(ms)
                 spotIntensity = intensity2 .* spotAlpha;
                 spotAlpha2 = spotAlpha;
                 spotAlpha2(spotAlpha == 0) = 1;
-                spotImage = (bgImageClean.*(1-spotIntensity) + cmapSpot.*spotAlpha.*spotIntensity).*spotAlpha2;
+                spotImage = (bgImage.*(1-spotIntensity) + cmapSpot.*spotAlpha.*spotIntensity).*spotAlpha2;
 
                 [y, x] = find(spotAlpha > 0);
                 if ~isempty(x)
@@ -74,6 +109,7 @@ function mapGenerator(ms)
                     xMid = max(0+ceil(imSize/2), min(2048-ceil(imSize/2), (min(xList)+max(xList))/2));
                     yMid = max(0+ceil(imSize/2), min(2048-ceil(imSize/2), (min(yList)+max(yList))/2));
                     
+                    spotImage = spotImage.*(1-markerAlpha/255) + markerRGB.*markerAlpha/255/255;
                     spotImage = imcrop(spotImage, [xMid-imSize/2+0.5 yMid-imSize/2+0.5 imSize-1 imSize-1]);
 
                     if size(spotImage, 1) ~= size(spotImage, 2) || length(spotImage) ~= imSize
@@ -118,9 +154,9 @@ function mapGenerator(ms)
         rgbLayers(:, :, 3, iI) = cmap(iI, 3)*(alphaLayers(:, :, :, iI) > 0);
         if ms.legendBox && (iI > 1 || ms.enable0)
             if iI < size(alphaLayers, 4)
-                bgImage(ms.legendY - 25 + (00:(lineSpacing+25-1)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :) = defaultImage(ms.legendY - 25 + (00:(lineSpacing-1+25)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :);
+                zoneImage(ms.legendY - 25 + (00:(lineSpacing+25-1)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :) = defaultImage(ms.legendY - 25 + (00:(lineSpacing-1+25)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :);
             else
-                bgImage(ms.legendY - 25 + (00:(lineHeight+50-1)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :) = defaultImage(ms.legendY - 25 + (00:(lineHeight-1+50)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :);
+                zoneImage(ms.legendY - 25 + (00:(lineHeight+50-1)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :) = defaultImage(ms.legendY - 25 + (00:(lineHeight-1+50)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :);
             end
         end
     end
@@ -129,7 +165,7 @@ function mapGenerator(ms)
     patterns(:, :, :, length(files):end) = [];
     
     intensity = intensity .* any(alphaLayers > 0, 4);
-    finalImage = double(bgImage);
+    finalImage = double(zoneImage);
     finalImage = (finalImage.*(1-intensity) + sum(patterns.*rgbLayers.*double(alphaLayers).*intensity, 4))/255;
     
     if ms.legendBox
