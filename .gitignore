@@ -31,3 +31,23 @@ codegen/
 
 # Cloud based storage dotfile
 .MATLABDriveTag
+
+/fishmap/Map.csv
+
+/fishmap/MapMarker.csv
+
+/fishmap/PlaceName.csv
+
+/fishmap/SpearfishingNotebook.csv
+
+/fishmap/FishingSpot.csv
+
+/fishmap/i60414.png
+
+/fishmap/i60430.png
+
+/fishmap/i60453.png
+
+/fishmap/i60456.png
+
+/fishmap/i63907.png
