@@ -16,7 +16,7 @@ for iO = 1:height(overrideData)
 end
 
 %% Build info
-spots = table('Size', [0, 9], 'VariableNames', ["SpotID", "MapID", "SpotName", "MapName", "LayerName", "JumpName", "SpotX", "SpotY", "MapMarkerRange"], 'VariableTypes', ["uint16", "uint16", "string", "string", "string", "string", "uint16", "uint16", "uint16"]);
+spots = table('Size', [0, 9], 'VariableNames', ["SpotID", "MapID", "SpotName", "MapName", "LayerName", "JumpName", "SpotX", "SpotY", "MapMarkerRange"], 'VariableTypes', ["uint16", "uint16", "string", "string", "string", "string", "double", "double", "uint16"]);
 
 iS = 0;
 % the loop is weird and upside down because of obsolete restrictions, no longer needs to be this way but I'm too lazy to change it

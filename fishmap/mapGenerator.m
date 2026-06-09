@@ -106,7 +106,24 @@ function mapGenerator(ms)
                     xMid = max(0+ceil(imSize/2), min(2048-ceil(imSize/2), (min(xList)+max(xList))/2));
                     yMid = max(0+ceil(imSize/2), min(2048-ceil(imSize/2), (min(yList)+max(yList))/2));
                     
+                    % % Add spot marker
+                    % if spots.SpotX(spotIndex(1)) > 0
+                    %     spotRGB = zeros(size(zoneImage));
+                    %     spotAlpha = zeros([size(zoneImage, [1 2]) 1]);
+                    %     spotLocation = any((1:2048) == (spots.SpotX(spotIndex(1))+(-31:32))', 1) & ...
+                    %         any((1:2048)' == (spots.SpotY(spotIndex(1))+(-31:32)), 2);
+                    %     if contains(spot(iI), "(Lv")
+                    %         [spotRGB(repmat(spotLocation, 1, 1, 3)), ~, spotAlpha(spotLocation)] = imread("i60466.png");
+                    %     else
+                    %         [spotRGB(repmat(spotLocation, 1, 1, 3)), ~, spotAlpha(spotLocation)] = imread("i60465.png");
+                    %     end
+                    %     spotImage = spotImage.*(1-spotAlpha/255) + spotRGB.*spotAlpha/255/255;
+                    % end
+
+                    % Add zone markers
                     spotImage = spotImage.*(1-markerAlpha/255) + markerRGB.*markerAlpha/255/255;
+
+
                     spotImage = imcrop(spotImage, [xMid-imSize/2+0.5 yMid-imSize/2+0.5 imSize-1 imSize-1]);
 
                     if size(spotImage, 1) ~= size(spotImage, 2) || length(spotImage) ~= imSize
