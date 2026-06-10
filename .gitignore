@@ -32,7 +32,7 @@ codegen/
 # Cloud based storage dotfile
 .MATLABDriveTag
 
-# Working files
+# Game files
 /fishmap/Map.csv
 /fishmap/MapMarker.csv
 /fishmap/PlaceName.csv
@@ -40,5 +40,8 @@ codegen/
 /fishmap/FishingSpot.csv
 /fishmap/i*.png
 
+# Working files
 /fishmap/*/*/
 /fishmap/*/*.zip
+/fishmap/*.png
+!/fishmap/* Map.png
