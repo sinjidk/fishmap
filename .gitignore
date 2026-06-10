@@ -34,15 +34,11 @@ codegen/
 
 # Working files
 /fishmap/Map.csv
-
 /fishmap/MapMarker.csv
-
 /fishmap/PlaceName.csv
-
 /fishmap/SpearfishingNotebook.csv
-
 /fishmap/FishingSpot.csv
-
 /fishmap/i*.png
 
 /fishmap/*/*/
+/fishmap/*/*.zip
