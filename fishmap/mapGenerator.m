@@ -14,7 +14,7 @@ function mapGenerator(ms)
     cmapSpot = permute([0 0.3835 0.5824] - (1-intensity2)*[202 182 112]/255, [1 3 2])/intensity2;
     lineSpacing = 75;
     lineHeight = 50;
-    minSize = @(A) min(max(sqrt(A)*17, 512), 683);
+    minSize = @(A) min(max(sqrt(A)*10, 512), 1024);
     cropSizeFactor = @(Dx, Dy) 1+0.5*exp(-abs(log(Dx/Dy)));
     
     % figure; imagesc(permute(cmap, [1 3 2]))
