@@ -14,7 +14,15 @@ function mapGenerator(ms)
     cmapSpot = permute([0 0.3835 0.5824] - (1-intensity2)*[202 182 112]/255, [1 3 2])/intensity2;
     lineSpacing = 75;
     lineHeight = 50;
-    minSize = @(A) min(max(sqrt(A)*10, 512), 1024);
+    
+    maxCrop = 1024;
+    minCrop = 512;
+    maxCropFactor = 10;
+    minCropFactor = 20;
+    tinyRadius = minCrop/minCropFactor/sqrt(pi)*4;
+    b = (log(minCropFactor) - log(maxCropFactor))/(minCrop/minCropFactor - maxCrop/maxCropFactor);
+    a = minCropFactor/exp(b*minCrop/minCropFactor);
+    minSize = @(A) min(max(sqrt(A)*a*exp(b*sqrt(A)), minCrop), maxCrop);
     cropSizeFactor = @(Dx, Dy) 1+0.5*exp(-abs(log(Dx/Dy)));
     
     % figure; imagesc(permute(cmap, [1 3 2]))
@@ -112,6 +120,10 @@ function mapGenerator(ms)
                     xMid = max(0+ceil(imSize/2), min(2048-ceil(imSize/2), (min(xList)+max(xList))/2));
                     yMid = max(0+ceil(imSize/2), min(2048-ceil(imSize/2), (min(yList)+max(yList))/2));
                     
+                    if imSize == minCrop
+                        spotImage = insertShape(spotImage, "circle", [xMid, yMid, tinyRadius], "LineWidth", 10, "ShapeColor", 'w');
+                    end
+
                     % % Add spot marker
                     % if spots.SpotX(spotIndex(1)) > 0
                     %     spotRGB = zeros(size(zoneImage));
@@ -128,7 +140,6 @@ function mapGenerator(ms)
 
                     % Add zone markers
                     spotImage = spotImage.*(1-markerAlpha) + markerRGB.*markerAlpha;
-
 
                     spotImage = imcrop(spotImage, [xMid-imSize/2+0.5 yMid-imSize/2+0.5 imSize-1 imSize-1]);
 
