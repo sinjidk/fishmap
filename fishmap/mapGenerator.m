@@ -19,7 +19,7 @@ function mapGenerator(ms)
     minCrop = 512;
     maxCropFactor = 10;
     minCropFactor = 20;
-    tinyRadius = minCrop/minCropFactor/sqrt(pi)*4;
+    tinyRadius = minCrop/minCropFactor/sqrt(pi)*7;
     b = (log(minCropFactor) - log(maxCropFactor))/(minCrop/minCropFactor - maxCrop/maxCropFactor);
     a = minCropFactor/exp(b*minCrop/minCropFactor);
     minSize = @(A) min(max(sqrt(A)*a*exp(b*sqrt(A)), minCrop), maxCrop);
@@ -121,7 +121,8 @@ function mapGenerator(ms)
                     yMid = max(0+ceil(imSize/2), min(2048-ceil(imSize/2), (min(yList)+max(yList))/2));
                     
                     if imSize == minCrop
-                        spotImage = insertShape(spotImage, "circle", [xMid, yMid, tinyRadius], "LineWidth", 10, "ShapeColor", 'w');
+                        spotImage = insertShape(spotImage, "circle", [xSpotMid, ySpotMid, tinyRadius], "LineWidth", 20, "ShapeColor", 'k');
+                        spotImage = insertShape(spotImage, "circle", [xSpotMid, ySpotMid, tinyRadius], "LineWidth", 10, "ShapeColor", 'w');
                     end
 
                     % % Add spot marker
