@@ -9,25 +9,29 @@ function mapGenerator(ms)
     %% tuneables
     intensity = 1;
     intensity2 = 0.5;
-    cmap = cmap/255;
-    cmap = min((cmap - 0.5*(1-intensity)*[202 182 112]/255)/(intensity), 1);
-    cmapSpot = permute([0 0.3835 0.5824] - (1-intensity2)*[202 182 112]/255, [1 3 2])/intensity2;
     lineSpacing = 75;
     lineHeight = 50;
     
     maxCrop = 1024;
     minCrop = 512;
-    maxCropFactor = 10;
-    minCropFactor = 20;
+    maxCropFactor = 12.5;
+    minCropFactor = 25;
     tinyRadius = minCrop/minCropFactor/sqrt(pi)*7;
-    b = (log(minCropFactor) - log(maxCropFactor))/(minCrop/minCropFactor - maxCrop/maxCropFactor);
-    a = minCropFactor/exp(b*minCrop/minCropFactor);
-    minSize = @(A) min(max(sqrt(A)*a*exp(b*sqrt(A)), minCrop), maxCrop);
+    % b = (log(minCropFactor) - log(maxCropFactor))/(minCrop/minCropFactor - maxCrop/maxCropFactor);
+    % a = minCropFactor/exp(b*minCrop/minCropFactor);
+    % minSize = @(A) min(max(sqrt(A)*a*exp(b*sqrt(A)), minCrop), maxCrop);
+    a = (maxCrop - minCrop)/(sqrt(maxCrop/maxCropFactor) - sqrt(minCrop/minCropFactor));
+    b = minCrop - a*sqrt(minCrop/minCropFactor);
+    minSize = @(A) min(max(a*sqrt(sqrt(A)) + b, minCrop), maxCrop);
     cropSizeFactor = @(Dx, Dy) 1+0.5*exp(-abs(log(Dx/Dy)));
     
     % figure; imagesc(permute(cmap, [1 3 2]))
     
     %% Initialize
+    cmap = cmap/255;
+    cmap = min((cmap - 0.5*(1-intensity)*[202 182 112]/255)/(intensity), 1);
+    cmapSpot = permute([0 0.3835 0.5824] - (1-intensity2)*[202 182 112]/255, [1 3 2])/intensity2;
+
     % Get list of layer images
     path = zonename+"\";
     files = dir(path);
@@ -90,17 +94,19 @@ function mapGenerator(ms)
             if isempty(spotIndex)
                 error("No matching spot name to " + spot(iI));
             else
+                [y, x] = find(alphaLayers(:, :, :, iI) > 0);
+                if ~isempty(x)
+                    imSize = max(range(x), range(y))*cropSizeFactor(range(x), range(y));
+                end
                 spotAlpha = imgaussfilt(double(alphaLayers(:, :, :, iI))/255, 1);
                 spotIntensity = intensity2 .* spotAlpha;
                 spotAlpha2 = spotAlpha;
                 spotAlpha2(spotAlpha == 0) = 1;
                 spotImage = (bgImage.*(1-spotIntensity) + cmapSpot.*spotAlpha.*spotIntensity).*spotAlpha2;
 
-                [y, x] = find(spotAlpha > 0);
                 if ~isempty(x)
                     xSpotMid = (min(x)+max(x))/2;
                     ySpotMid = (min(y)+max(y))/2;
-                    imSize = max(range(x), range(y))*cropSizeFactor(range(x), range(y));
                     xSpotMin = max(0, xSpotMid-imSize/2);
                     xSpotMax = min(2048, xSpotMid+imSize/2);
                     ySpotMin = max(0, ySpotMid-imSize/2);
