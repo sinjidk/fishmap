@@ -39,13 +39,13 @@ function mapGenerator(ms)
     
     % Interpret first layer as background
     zoneImage = imread(path+files(1).name);
-    bgImage = double(zoneImage)/255;
-    defaultImage = imread("default.jpg");
+    defaultImage = imread("default_00.png");
     
     %% Do for each subsequent layer
     rgbLayers = zeros([size(zoneImage) length(files)-1]);
     alphaLayers = zeros([size(zoneImage, [1 2]) 1 length(files)-1]);
     spot = strings(length(files)-1, 1);
+
     for iI = 1:(length(files)-1)
         % Recover layer name
         spot(iI) = regexp(files(iI+1).name, "C1,(.*),visible", "tokens");
@@ -54,16 +54,18 @@ function mapGenerator(ms)
         spot(iI) = regexprep(spot(iI), "%0028", "(");
         spot(iI) = regexprep(spot(iI), "%0029", ")");
         spot(iI) = regexprep(spot(iI), "%002E", ".");
+    end
 
-        if iI == 2
+    for iI = 1:(length(files)-1)
+        if iI == 1
             % Create marker overlay
             markerRGB = zeros(size(zoneImage));
             markerAlpha = zeros([size(zoneImage, [1 2]) 1]);
             
-            iSpot = find(spots.LayerName == spot(iI), 1, 'first');
+            iSpot = find(spots.LayerName == spot(2), 1, 'first');
 
             if isempty(iSpot)
-                error("No matching spot name to " + spot(iI));
+                error("No matching spot name to " + spot(2));
             else
                 iMk = spots.MapMarkerRange(iSpot);
                 zoneMarkers = markerData(floor(markerData.x_) == iMk & any(markerData.Icon == [60414 60430 60453 60456 63907], 2), :);
@@ -78,6 +80,11 @@ function mapGenerator(ms)
                     markerRGB = markerRGB.*(1-markerAlphaTemp/255) + markerRGBTemp.*markerAlphaTemp/255/255;
                     markerAlpha = markerAlpha + markerAlphaTemp/255 - markerAlpha.*markerAlphaTemp/255;
                 end
+
+                % Add zone markers
+                zoneImage = zoneImage.*uint8(1-markerAlpha) + uint8(255*markerRGB.*markerAlpha);
+                bgImage = double(zoneImage)/255;
+
             end
         end
 
@@ -144,9 +151,9 @@ function mapGenerator(ms)
                     %     end
                     %     spotImage = spotImage.*(1-spotAlpha/255) + spotRGB.*spotAlpha/255/255;
                     % end
-
-                    % Add zone markers
-                    spotImage = spotImage.*(1-markerAlpha) + markerRGB.*markerAlpha;
+                    % 
+                    % % Add zone markers
+                    % spotImage = spotImage.*(1-markerAlpha) + markerRGB.*markerAlpha;
 
                     spotImage = imcrop(spotImage, [xMid-imSize/2+0.5 yMid-imSize/2+0.5 imSize-1 imSize-1]);
 
@@ -227,12 +234,12 @@ function mapGenerator(ms)
         end
     end
     
-    finalImage = imresize(finalImage, 0.5);
+    % finalImage = imresize(finalImage, 0.5);
     saveMap = true;
 
     if exist(zonename+".png", "file")
         prevMap = imread(zonename+".png");
-        if all(prevMap == uint8(finalImage*255), 'all')
+        if all(size(prevMap) == size(finalImage)) && all(prevMap == uint8(finalImage*255), 'all')
             saveMap = false;
         end
     end
