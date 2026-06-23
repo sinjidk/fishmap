@@ -39,11 +39,13 @@ function mapGenerator(ms)
     
     % Interpret first layer as background
     zoneImage = imread(path+files(1).name);
+    bgImage = double(zoneImage)/255;
     defaultImage = imread("default_00.png");
     
     %% Do for each subsequent layer
     rgbLayers = zeros([size(zoneImage) length(files)-1]);
     alphaLayers = zeros([size(zoneImage, [1 2]) 1 length(files)-1]);
+    legendRGB = zeros(size(zoneImage));
     spot = strings(length(files)-1, 1);
 
     for iI = 1:(length(files)-1)
@@ -80,10 +82,6 @@ function mapGenerator(ms)
                     markerRGB = markerRGB.*(1-markerAlphaTemp/255) + markerRGBTemp.*markerAlphaTemp/255/255;
                     markerAlpha = markerAlpha + markerAlphaTemp/255 - markerAlpha.*markerAlphaTemp/255;
                 end
-
-                % Add zone markers
-                zoneImage = zoneImage.*uint8(1-markerAlpha) + uint8(255*markerRGB.*markerAlpha);
-                bgImage = double(zoneImage)/255;
 
             end
         end
@@ -151,9 +149,9 @@ function mapGenerator(ms)
                     %     end
                     %     spotImage = spotImage.*(1-spotAlpha/255) + spotRGB.*spotAlpha/255/255;
                     % end
-                    % 
-                    % % Add zone markers
-                    % spotImage = spotImage.*(1-markerAlpha) + markerRGB.*markerAlpha;
+                    
+                    % Add zone markers
+                    spotImage = spotImage.*(1-markerAlpha) + markerRGB.*markerAlpha;
 
                     spotImage = imcrop(spotImage, [xMid-imSize/2+0.5 yMid-imSize/2+0.5 imSize-1 imSize-1]);
 
@@ -191,27 +189,43 @@ function mapGenerator(ms)
                 end
             end
         end
+
+        % Legend background
+        if ms.legendBox && (iI > 1 || ms.enable0)
+            if iI < size(alphaLayers, 4)
+                legendRGB(ms.legendY - 25 + (00:(lineSpacing+25-1)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :) = defaultImage(ms.legendY - 25 + (00:(lineSpacing-1+25)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :);
+            else
+                legendRGB(ms.legendY - 25 + (00:(lineHeight+50-1)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :) = defaultImage(ms.legendY - 25 + (00:(lineHeight-1+50)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :);
+            end
+        end
+
+        % Legend cutout
         if iI > 1 || ms.enable0
             alphaLayers(ms.legendY + (00:(lineHeight-1)) + lineSpacing*(ms.skip(iI)+iI-1), ms.legendX + (00:(lineHeight-1)), :, iI) = 255;
+            legendRGB(ms.legendY + (00:(lineHeight-1)) + lineSpacing*(ms.skip(iI)+iI-1), ms.legendX + (00:(lineHeight-1)), :) = 0;
         end
+
+        % Give spot colours
         rgbLayers(:, :, 1, iI) = cmap(iI, 1)*(alphaLayers(:, :, :, iI) > 0);
         rgbLayers(:, :, 2, iI) = cmap(iI, 2)*(alphaLayers(:, :, :, iI) > 0);
         rgbLayers(:, :, 3, iI) = cmap(iI, 3)*(alphaLayers(:, :, :, iI) > 0);
-        if ms.legendBox && (iI > 1 || ms.enable0)
-            if iI < size(alphaLayers, 4)
-                zoneImage(ms.legendY - 25 + (00:(lineSpacing+25-1)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :) = defaultImage(ms.legendY - 25 + (00:(lineSpacing-1+25)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :);
-            else
-                zoneImage(ms.legendY - 25 + (00:(lineHeight+50-1)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :) = defaultImage(ms.legendY - 25 + (00:(lineHeight-1+50)) + lineSpacing*(iI-1), ms.legendX - 25 + (00:(ms.legendW-1)), :);
-            end
-        end
     end
+
+    legendAlpha = any(legendRGB > 0, 3);
     
     load("patterns.mat", "patterns")
     patterns(:, :, :, length(files):end) = [];
     
     intensity = intensity .* any(alphaLayers > 0, 4);
     finalImage = double(zoneImage);
+    % Add spot colourings
     finalImage = (finalImage.*(1-intensity) + sum(patterns.*rgbLayers.*double(alphaLayers).*intensity, 4))/255;
+
+    % Add zone markers
+    finalImage = finalImage.*(1-markerAlpha) + markerRGB.*markerAlpha;
+
+    % Add legend
+    finalImage = finalImage.*(1-legendAlpha) + legendRGB/255.*legendAlpha;
     
     if ms.legendBox
         finalImage = insertShape(finalImage, "line", [ms.legendX+[-26 -26 -24+ms.legendW -24+ms.legendW -26]', ms.legendY+[-26 + lineSpacing*(1-ms.enable0), 26 + lineSpacing*(length(files)-2) + lineHeight, ...
