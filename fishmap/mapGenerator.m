@@ -78,9 +78,11 @@ function mapGenerator(ms)
                     markerLocation = any((1:2048) == (zoneMarkers.X(iR)+(-31:32))', 1) & ...
                         any((1:2048)' == (zoneMarkers.Y(iR)+(-31:32)), 2);
                     [markerRGBTemp(repmat(markerLocation, 1, 1, 3)), ~, markerAlphaTemp(markerLocation)] = imread("i"+zoneMarkers.Icon(iR)+".png");
+                    markerAlphaTemp(markerAlphaTemp<=204) = 0;
+                    markerAlphaTemp = (markerAlphaTemp/255).^2;
 
-                    markerRGB = markerRGB.*(1-markerAlphaTemp/255) + markerRGBTemp.*markerAlphaTemp/255/255;
-                    markerAlpha = markerAlpha + markerAlphaTemp/255 - markerAlpha.*markerAlphaTemp/255;
+                    markerRGB = markerRGB.*(1-markerAlphaTemp) + markerRGBTemp.*markerAlphaTemp/255;
+                    markerAlpha = markerAlpha + markerAlphaTemp - markerAlpha.*markerAlphaTemp;
                 end
 
             end
