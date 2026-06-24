@@ -48,6 +48,10 @@ function mapGenerator(ms)
     legendRGB = zeros(size(zoneImage));
     spot = strings(length(files)-1, 1);
 
+    if ~isfield(ms, "skip")
+        ms.skip = zeros(size(spot));
+    end
+
     for iI = 1:(length(files)-1)
         % Recover layer name
         spot(iI) = regexp(files(iI+1).name, "C1,(.*),visible", "tokens");
@@ -223,18 +227,18 @@ function mapGenerator(ms)
     % Add spot colourings
     finalImage = (finalImage.*(1-intensity) + sum(patterns.*rgbLayers.*double(alphaLayers).*intensity, 4))/255;
 
-    if ~isfield(ms, "markerPriority") || ~ms.markerPriority
-        % Add zone markers
-        finalImage = finalImage.*(1-markerAlpha) + markerRGB.*markerAlpha;
-    
-        % Add legend
-        finalImage = finalImage.*(1-legendAlpha) + legendRGB/255.*legendAlpha;
-    else
+    if ~isfield(ms, "markerPriority") || ms.markerPriority
         % Add legend
         finalImage = finalImage.*(1-legendAlpha) + legendRGB/255.*legendAlpha;
 
         % Add zone markers
         finalImage = finalImage.*(1-markerAlpha) + markerRGB.*markerAlpha;
+    else
+        % Add zone markers
+        finalImage = finalImage.*(1-markerAlpha) + markerRGB.*markerAlpha;
+    
+        % Add legend
+        finalImage = finalImage.*(1-legendAlpha) + legendRGB/255.*legendAlpha;
     end
     
     if ms.legendBox
