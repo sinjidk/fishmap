@@ -9,11 +9,11 @@ Run "Generate this map" and iterate settings
 <Name>.png : Output from script.
 <Name> Map.pdn : Second phase working file. Background receives <Name>.png; Separate bubble annotations, line/text annotations, and map modifications to individual layers.
 	Font: Lucida Sans, antialiased rendering
-	Signature: Size 15
-	Text: Size 20, Bold
+	Signature: Size 30
+	Text: Size 40, Bold
 	Labels: "Black Circled Number" http://xahlee.info/comp/unicode_circled_numbers.html
-	Single digit labels: Size 20, Bold
-	Double digit labels: Size 32, Normal
-	Lines/Arrows: Size 20
+	Single digit labels: Size 40, Bold
+	Double digit labels: Size 64, Normal
+	Lines/Arrows: Size 10
 	Dividing Lines: Dashes
 <Name> Map.png : Flattened <Name> Map.png. Final output.
