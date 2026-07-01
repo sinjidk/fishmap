@@ -93,10 +93,12 @@ function mapGenerator(ms)
         end
 
         % Read layer into transparency
-        [~, ~, alphaLayers(:, :, :, iI)] = imread(path+files(iI+1).name);
+        [~, ~, alphaTemp] = imread(path+files(iI+1).name);
         if length(unique(alphaLayers(:, :, :, iI))) > 2
             "loose transperence in layer "+files(iI+1).name+" of "+zonename
         end
+
+        alphaLayers(:, :, :, iI) = double(alphaTemp)/255;
 
         % Make spot maps
         if iI > 1 && (~isfield(ms, "makeAlts") || ms.makeAlts)
@@ -109,7 +111,7 @@ function mapGenerator(ms)
                 if ~isempty(x)
                     imSize = max(range(x), range(y))*cropSizeFactor(range(x), range(y));
                 end
-                spotAlpha = imgaussfilt(double(alphaLayers(:, :, :, iI))/255, 1);
+                spotAlpha = imgaussfilt(alphaLayers(:, :, :, iI), 1);
                 spotIntensity = intensity2 .* spotAlpha;
                 spotAlpha2 = spotAlpha;
                 spotAlpha2(spotAlpha == 0) = 1;
@@ -175,7 +177,7 @@ function mapGenerator(ms)
 
                     if exist(maskFileName, "file")
                         prevMask = imread(maskFileName);
-                        if all(prevMask == alphaLayers(:, :, :, iI), 'all')
+                        if all(prevMask == uint8(alphaLayers(:, :, :, iI)*255), 'all')
                             saveMask = false;
                         end
                     end
@@ -205,16 +207,18 @@ function mapGenerator(ms)
             % end
         end
 
+        alphaLayers(:, :, :, iI) = 1-(1-imgaussfilt(alphaLayers(:, :, :, iI), 1.5).^4).^4;
+
         % Legend cutout
         if iI > 1 || ms.enable0
-            alphaLayers(ms.legendY + (00:(lineHeight-1)) + lineSpacing*(ms.skip(iI)+iI-1), ms.legendX + (00:(lineHeight-1)), :, iI) = 255;
+            alphaLayers(ms.legendY + (00:(lineHeight-1)) + lineSpacing*(ms.skip(iI)+iI-1), ms.legendX + (00:(lineHeight-1)), :, iI) = 1;
             legendRGB(ms.legendY + (00:(lineHeight-1)) + lineSpacing*(ms.skip(iI)+iI-1), ms.legendX + (00:(lineHeight-1)), :) = 0;
         end
 
         % Give spot colours
-        rgbLayers(:, :, 1, iI) = cmap(iI, 1)*(alphaLayers(:, :, :, iI) > 0);
-        rgbLayers(:, :, 2, iI) = cmap(iI, 2)*(alphaLayers(:, :, :, iI) > 0);
-        rgbLayers(:, :, 3, iI) = cmap(iI, 3)*(alphaLayers(:, :, :, iI) > 0);
+        rgbLayers(:, :, 1, iI) = cmap(iI, 1);
+        rgbLayers(:, :, 2, iI) = cmap(iI, 2);
+        rgbLayers(:, :, 3, iI) = cmap(iI, 3);
     end
 
     legendAlpha = any(legendRGB > 0, 3);
@@ -222,10 +226,10 @@ function mapGenerator(ms)
     load("patterns.mat", "patterns")
     patterns(:, :, :, length(files):end) = [];
     
-    intensity = intensity .* any(alphaLayers > 0, 4);
-    finalImage = double(zoneImage);
+    intensity = intensity .* sum(alphaLayers, 4);
+    finalImage = bgImage;
     % Add spot colourings
-    finalImage = (finalImage.*(1-intensity) + sum(patterns.*rgbLayers.*double(alphaLayers).*intensity, 4))/255;
+    finalImage = (finalImage.*(1-intensity) + sum(patterns.*rgbLayers.*alphaLayers.*intensity, 4));
 
     if ~isfield(ms, "markerPriority") || ms.markerPriority
         % Add legend
