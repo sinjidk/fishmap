@@ -1,3 +1,4 @@
+clear mapSettings
 % mapSettings.legendX = 50;
 mapSettings.legendX = 100;
 % mapSettings.legendY = 600;
