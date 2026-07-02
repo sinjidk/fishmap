@@ -1,5 +1,7 @@
-mapSettings.legendX = 200;
-mapSettings.legendY = 187;
+mapSettings.legendX = 75;
+% mapSettings.legendX = 200;
+mapSettings.legendY = 204;
+% mapSettings.legendY = 187;
 mapSettings.legendW = 950;
 mapSettings.legendBox = true;
 mapSettings.enable0 = false;
