@@ -1,11 +1,11 @@
-mapSettings.legendX = 1292;
-mapSettings.legendY = 10;
+mapSettings.legendX = 1305;
+mapSettings.legendY = 104;
 mapSettings.legendW = 725;
-mapSettings.legendBox = true;
+mapSettings.legendBox = false;
 mapSettings.enable0 = false;
 mapSettings.specialLayer = [];
-mapSettings.skip = zeros(1, 12);
-mapSettings.highlight = false;
+mapSettings.skip = [0 0 0 5 -1 -1 3 3 -3 13 13 13];
+mapSettings.highlight = true;
 mapSettings.makeAlts = true;
 
 mapGenerator(mapSettings)
