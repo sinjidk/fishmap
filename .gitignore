@@ -41,6 +41,7 @@ codegen/
 /fishmap/i*.png
 
 # Working files
+/fishmap/*/*/*
 /fishmap/*/*/
 /fishmap/*/*.zip
 /fishmap/*/*.png
