@@ -45,6 +45,7 @@ function mapGenerator(ms)
     %% Do for each subsequent layer
     rgbLayers = zeros([size(zoneImage) length(files)-1]);
     alphaLayers = zeros([size(zoneImage, [1 2]) 1 length(files)-1]);
+    scavLayers = zeros([size(zoneImage, [1 2]) 1 length(files)-1]);
     legendRGB = zeros(size(zoneImage));
     spot = strings(length(files)-1, 1);
 
@@ -99,6 +100,7 @@ function mapGenerator(ms)
         end
 
         alphaLayers(:, :, :, iI) = double(alphaTemp)/255;
+        scavLayers(:, :, :, iI) = double(alphaTemp)/255;
 
         % Make spot maps
         if iI > 1 && (~isfield(ms, "makeAlts") || ms.makeAlts)
@@ -208,6 +210,7 @@ function mapGenerator(ms)
         end
 
         alphaLayers(:, :, :, iI) = 1-(1-imgaussfilt(alphaLayers(:, :, :, iI), 1.5).^4).^4;
+        scavLayers(:, :, :, iI) = 1-(1-imgaussfilt(scavLayers(:, :, :, iI), 1.5).^4).^4;
 
         % Legend cutout
         if iI > 1 || ms.enable0
@@ -226,6 +229,7 @@ function mapGenerator(ms)
     load("patterns.mat", "patterns")
     patterns(:, :, :, length(files):end) = [];
     
+    scavIntensity = intensity .* sum(scavLayers, 4);
     intensity = intensity .* sum(alphaLayers, 4);
     finalImage = bgImage;
     % Add spot colourings
@@ -244,6 +248,9 @@ function mapGenerator(ms)
         % Add legend
         finalImage = finalImage.*(1-legendAlpha) + legendRGB/255.*legendAlpha;
     end
+
+    scavImage = sum(patterns.*rgbLayers.*scavLayers.*scavIntensity, 4).*(1-markerAlpha) + markerRGB.*markerAlpha;
+    imwrite(scavImage, zonename+" Scav.png")
     
     if ms.legendBox
         finalImage = insertShape(finalImage, "line", [ms.legendX+[-26 -26 -24+ms.legendW -24+ms.legendW -26]', ms.legendY+[-26 + lineSpacing*(1-ms.enable0), 26 + lineSpacing*(length(files)-2) + lineHeight, ...
