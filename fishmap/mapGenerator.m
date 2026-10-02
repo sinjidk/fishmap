@@ -209,7 +209,6 @@ function mapGenerator(ms)
         end
 
         alphaLayers(:, :, :, iI) = 1-(1-imgaussfilt(alphaLayers(:, :, :, iI), 1.5).^4).^4;
-        % scavLayers(:, :, :, iI) = 1-(1-imgaussfilt(scavLayers(:, :, :, iI), 1.5).^4).^4;
 
         % Legend cutout
         if iI > 1 || ms.enable0
@@ -233,7 +232,6 @@ function mapGenerator(ms)
     load("patterns.mat", "patterns")
     patterns(:, :, :, length(files):end) = [];
     
-    % scavIntensity = intensity .* sum(scavLayers, 4);
     intensity = intensity .* sum(alphaLayers, 4);
     finalImage = bgImage;
     % Add spot colourings
@@ -277,7 +275,6 @@ function mapGenerator(ms)
         end
     end
     
-    % finalImage = imresize(finalImage, 0.5);
     saveMap = true;
 
     if exist(zonename+".png", "file")
