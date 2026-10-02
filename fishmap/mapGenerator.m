@@ -99,10 +99,10 @@ function mapGenerator(ms)
         end
 
         alphaLayers(:, :, :, iI) = double(alphaTemp)/255;
-        scavMask = scavMask | double(alphaTemp)/255;
 
         % Make spot maps
         if iI > 1 && (~isfield(ms, "makeAlts") || ms.makeAlts)
+            scavMask = scavMask | double(alphaTemp)/255;
             spotIndex = find(spots.LayerName == spot(iI));
 
             if isempty(spotIndex)
