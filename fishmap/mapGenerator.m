@@ -17,9 +17,6 @@ function mapGenerator(ms)
     maxCropFactor = 12.5;
     minCropFactor = 25;
     tinyRadius = minCrop/minCropFactor/sqrt(pi)*7;
-    % b = (log(minCropFactor) - log(maxCropFactor))/(minCrop/minCropFactor - maxCrop/maxCropFactor);
-    % a = minCropFactor/exp(b*minCrop/minCropFactor);
-    % minSize = @(A) min(max(sqrt(A)*a*exp(b*sqrt(A)), minCrop), maxCrop);
     a = (maxCrop - minCrop)/(sqrt(maxCrop/maxCropFactor) - sqrt(minCrop/minCropFactor));
     b = minCrop - a*sqrt(minCrop/minCropFactor);
     minSize = @(A) min(max(a*sqrt(sqrt(A)) + b, minCrop), maxCrop);
@@ -31,6 +28,7 @@ function mapGenerator(ms)
     cmap = cmap/255;
     cmap = min((cmap - 0.5*(1-intensity)*[202 182 112]/255)/(intensity), 1);
     cmapSpot = permute([0 0.3835 0.5824] - (1-intensity2)*[202 182 112]/255, [1 3 2])/intensity2;
+    cmapScav = permute([0 0.3835 0.5824], [1 3 2]);
 
     % Get list of layer images
     path = zonename+"\";
@@ -41,11 +39,12 @@ function mapGenerator(ms)
     zoneImage = imread(path+files(1).name);
     bgImage = double(zoneImage)/255;
     defaultImage = imread("default_00.png");
+    scavImage = double(defaultImage)/255;
     
     %% Do for each subsequent layer
     rgbLayers = zeros([size(zoneImage) length(files)-1]);
     alphaLayers = zeros([size(zoneImage, [1 2]) 1 length(files)-1]);
-    scavLayers = zeros([size(zoneImage, [1 2]) 1 length(files)-1]);
+    scavMask = zeros([size(zoneImage, [1 2]) 1 1]);
     legendRGB = zeros(size(zoneImage));
     spot = strings(length(files)-1, 1);
 
@@ -100,7 +99,7 @@ function mapGenerator(ms)
         end
 
         alphaLayers(:, :, :, iI) = double(alphaTemp)/255;
-        scavLayers(:, :, :, iI) = double(alphaTemp)/255;
+        scavMask = scavMask | double(alphaTemp)/255;
 
         % Make spot maps
         if iI > 1 && (~isfield(ms, "makeAlts") || ms.makeAlts)
@@ -210,7 +209,7 @@ function mapGenerator(ms)
         end
 
         alphaLayers(:, :, :, iI) = 1-(1-imgaussfilt(alphaLayers(:, :, :, iI), 1.5).^4).^4;
-        scavLayers(:, :, :, iI) = 1-(1-imgaussfilt(scavLayers(:, :, :, iI), 1.5).^4).^4;
+        % scavLayers(:, :, :, iI) = 1-(1-imgaussfilt(scavLayers(:, :, :, iI), 1.5).^4).^4;
 
         % Legend cutout
         if iI > 1 || ms.enable0
@@ -224,12 +223,17 @@ function mapGenerator(ms)
         rgbLayers(:, :, 3, iI) = cmap(iI, 3);
     end
 
+    scavMask = imgaussfilt(scavMask*1, 1);
+    scavAlpha = scavMask;
+    scavAlpha(scavMask == 0) = 1;
+    scavImage = (scavImage.*(1-scavMask) + cmapScav.*scavMask).*scavAlpha;
+
     legendAlpha = any(legendRGB > 0, 3);
     
     load("patterns.mat", "patterns")
     patterns(:, :, :, length(files):end) = [];
     
-    scavIntensity = intensity .* sum(scavLayers, 4);
+    % scavIntensity = intensity .* sum(scavLayers, 4);
     intensity = intensity .* sum(alphaLayers, 4);
     finalImage = bgImage;
     % Add spot colourings
@@ -249,7 +253,7 @@ function mapGenerator(ms)
         finalImage = finalImage.*(1-legendAlpha) + legendRGB/255.*legendAlpha;
     end
 
-    scavImage = sum(patterns.*rgbLayers.*scavLayers.*scavIntensity, 4).*(1-markerAlpha) + markerRGB.*markerAlpha;
+    scavImage = scavImage.*(1-markerAlpha) + markerRGB.*markerAlpha;
     imwrite(scavImage, zonename+" Scav.png")
     
     if ms.legendBox
