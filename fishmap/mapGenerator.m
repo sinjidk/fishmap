@@ -237,9 +237,24 @@ function mapGenerator(ms)
     % Add spot colourings
     finalImage = (finalImage.*(1-intensity) + sum(patterns.*rgbLayers.*alphaLayers.*intensity, 4));
 
+    % http://xahlee.info/comp/unicode_circled_numbers.html
+    sumSpecial = 0;
     if ~isfield(ms, "markerPriority") || ms.markerPriority
         % Add legend
         finalImage = finalImage.*(1-legendAlpha) + legendRGB/255.*legendAlpha;
+
+        for iF = (3 - ms.enable0):length(files)
+            if iF-1 == ms.specialLayer
+                sumSpecial = sumSpecial+1;
+                finalImage = insertText(finalImage, [ms.legendX + 9 + 50, ms.legendY + 25 + lineSpacing*(ms.skip(iF-1)+iF-2)], ...
+                    sprintf("%s. %s", '@'+sumSpecial, spot(iF-1)), "FontSize", 53, ...
+                    "AnchorPoint", "LeftCenter", "BoxOpacity", 1*ms.highlight, "BoxColor", [202 182 112]/255);
+            else
+                finalImage = insertText(finalImage, [ms.legendX + 9 + 50, ms.legendY + 25 + lineSpacing*(ms.skip(iF-1)+iF-2)], ...
+                    sprintf("%.0f. %s", iF-2-sumSpecial, spot(iF-1)), "FontSize", 53, ...
+                    'AnchorPoint', 'LeftCenter', "BoxOpacity", 1*ms.highlight, "BoxColor", [202 182 112]/255);
+            end
+        end
 
         % Add zone markers
         finalImage = finalImage.*(1-markerAlpha) + markerRGB.*markerAlpha;
@@ -249,6 +264,19 @@ function mapGenerator(ms)
     
         % Add legend
         finalImage = finalImage.*(1-legendAlpha) + legendRGB/255.*legendAlpha;
+
+        for iF = (3 - ms.enable0):length(files)
+            if iF-1 == ms.specialLayer
+                sumSpecial = sumSpecial+1;
+                finalImage = insertText(finalImage, [ms.legendX + 9 + 50, ms.legendY + 25 + lineSpacing*(ms.skip(iF-1)+iF-2)], ...
+                    sprintf("%s. %s", '@'+sumSpecial, spot(iF-1)), "FontSize", 53, ...
+                    "AnchorPoint", "LeftCenter", "BoxOpacity", 1*ms.highlight, "BoxColor", [202 182 112]/255);
+            else
+                finalImage = insertText(finalImage, [ms.legendX + 9 + 50, ms.legendY + 25 + lineSpacing*(ms.skip(iF-1)+iF-2)], ...
+                    sprintf("%.0f. %s", iF-2-sumSpecial, spot(iF-1)), "FontSize", 53, ...
+                    'AnchorPoint', 'LeftCenter', "BoxOpacity", 1*ms.highlight, "BoxColor", [202 182 112]/255);
+            end
+        end
     end
 
     scavImage = scavImage.*(1-markerAlpha) + markerRGB.*markerAlpha;
@@ -259,21 +287,7 @@ function mapGenerator(ms)
             26 + lineSpacing*(length(files)-2) + lineHeight, -26 + lineSpacing*(1-ms.enable0), -26 + lineSpacing*(1-ms.enable0)]'], ...
             'LineWidth', 2, 'Color', [116 88 54]/255);
     end
-    
-    sumSpecial = 0;
-    % http://xahlee.info/comp/unicode_circled_numbers.html
-    for iF = (3 - ms.enable0):length(files)
-        if iF-1 == ms.specialLayer
-            sumSpecial = sumSpecial+1;
-            finalImage = insertText(finalImage, [ms.legendX + 9 + 50, ms.legendY + 25 + lineSpacing*(ms.skip(iF-1)+iF-2)], ...
-                sprintf("%s. %s", '@'+sumSpecial, spot(iF-1)), "FontSize", 53, ...
-                "AnchorPoint", "LeftCenter", "BoxOpacity", 1*ms.highlight, "BoxColor", [202 182 112]/255);
-        else
-            finalImage = insertText(finalImage, [ms.legendX + 9 + 50, ms.legendY + 25 + lineSpacing*(ms.skip(iF-1)+iF-2)], ...
-                sprintf("%.0f. %s", iF-2-sumSpecial, spot(iF-1)), "FontSize", 53, ...
-                'AnchorPoint', 'LeftCenter', "BoxOpacity", 1*ms.highlight, "BoxColor", [202 182 112]/255);
-        end
-    end
+   
     
     saveMap = true;
 
